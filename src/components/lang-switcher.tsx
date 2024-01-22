@@ -1,12 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import En from "@/assets/en.png";
 import Id from "@/assets/id.png";
 import useLanguage from "@/lib/lang-switcher";
-import { useState } from "react";
 
-const LangSwicther = () => {
+const LangSwicther: React.FC = () => {
   const { lang, setLang } = useLanguage();
 
   const changeLanguage = (lang: "id" | "en") => {

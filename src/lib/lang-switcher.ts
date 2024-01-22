@@ -4,9 +4,8 @@ import { create } from "zustand";
 
 interface AppState {
   loadingLang: boolean;
-  lang: string;
+  lang: "en" | "id";
   setLang: (lang: "en" | "id") => void;
-  // Add other state properties and actions as needed
 }
 
 const useLanguage = create<AppState>((set) => ({
