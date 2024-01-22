@@ -8,15 +8,13 @@ const WhatWeDo = () => {
   const text = getTranslation(lang as "en" | "id");
 
   return (
-    <>
-      <Container className="pt-24 pb-8">
+    <section className="py-24">
+      <Container>
         <div className="md:pb-12 pb-6">
-          <h2 className="text-3xl text-secondary font-semibold">
+          <h2 className="text-5xl font-bold text-secondary mb-4">
             {text["what-we-do"]}
           </h2>
-          <span className="text-muted text-lg block mt-4">
-            {text["we-connect"]}
-          </span>
+          <p className="text-muted text-xl">{text["we-connect"]}</p>
         </div>
         <div className="md:flex md:items-center ">
           <div className="hidden md:w-[10%] md:block"></div>
@@ -36,7 +34,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </Container>
-    </>
+    </section>
   );
 };
 

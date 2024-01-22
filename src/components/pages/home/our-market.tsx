@@ -12,13 +12,13 @@ const OurMarket = () => {
   const text = getTranslation(lang as "en" | "id");
 
   return (
-    <>
-      <div className="py-12">
-        <h2 className="text-3xl font-bold text-center text-secondary">
-          {text["our-market"]}
-        </h2>
+    <section className="flex flex-col gap-12">
+      <div className="w-full">
+        <Container>
+          <h2 className="text-5xl font-bold text-center text-secondary mb-8">
+            {text["our-market"]}
+          </h2>
 
-        <Container className="mt-12">
           <div className="mt-4 bg-white p-4 md:p-10 shadow-custom rounded-lg md:leading-8">
             <span className="text-gray-600 text-sm md:text-base">
               {text.employment}
@@ -39,7 +39,7 @@ const OurMarket = () => {
             <Image
               src={OurMarketChartMobile}
               alt="Our Market Chart"
-              className="mt-8 md:hidden block"
+              className="mt-8 md:hidden block w-full"
             />
 
             <div className="mt-4  text-muted md:flex text-[10px] md:text-sm items-center gap-8">
@@ -53,9 +53,9 @@ const OurMarket = () => {
         </Container>
       </div>
 
-      <div className="py-12">
+      <div className="w-full">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white shadow-custom p-6 md:p-10 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <h2 className="font-semibold text-xl text-secondary">
@@ -98,7 +98,7 @@ const OurMarket = () => {
           </div>
         </Container>
       </div>
-    </>
+    </section>
   );
 };
 
