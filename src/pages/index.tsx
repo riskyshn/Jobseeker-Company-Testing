@@ -7,6 +7,8 @@ import WhatWeDo from "@/components/pages/what-we-do";
 import { useEffect } from "react";
 import useLanguage from "@/lib/lang-switcher";
 import Head from "next/head";
+import OurMarket from "@/components/pages/our-market";
+import HowWeHelp from "@/components/pages/how-we-help";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +32,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <WhatWeDo />
+        <OurMarket />
+        <HowWeHelp />
       </Layout>
     </>
   );

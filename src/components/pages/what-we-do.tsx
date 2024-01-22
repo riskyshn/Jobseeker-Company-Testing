@@ -10,7 +10,7 @@ const WhatWeDo = () => {
   return (
     <>
       <Container className="pt-24 pb-8">
-        <div className="pb-12">
+        <div className="md:pb-12 pb-6">
           <h2 className="text-3xl text-secondary font-semibold">
             {text["what-we-do"]}
           </h2>
@@ -18,9 +18,9 @@ const WhatWeDo = () => {
             {text["we-connect"]}
           </span>
         </div>
-        <div className="flex items-center ">
-          <div className="w-[10%]"></div>
-          <div className="w-[90%] border-l pl-6 py-4">
+        <div className="md:flex md:items-center ">
+          <div className="hidden md:w-[10%] md:block"></div>
+          <div className="md:w-[90%] md:border-l md:pl-6 md:py-4">
             <span className="text-textdefault text-lg">
               Was established in February 2022 with the goal of creating a
               reliable economic ecosystem for the workforce. Our platform aims

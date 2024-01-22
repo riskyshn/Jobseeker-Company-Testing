@@ -24,6 +24,9 @@ module.exports = {
         info: "#2563eb", // blue-600
         "primary-blue": "",
       },
+      boxShadow: {
+        custom: "0 4px 6px rgba(50, 50, 93, 0.25), 0 0 3px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
   plugins: [],

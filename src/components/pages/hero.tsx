@@ -26,8 +26,9 @@ const Hero = () => {
       <div
         className="w-full h-screen flex items-center"
         style={{
-          background:
-            "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('./bg-landing.jpg')",
+          // background:
+          //   "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('./landing.png')",
+          background: "url('./landing.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}

@@ -15,7 +15,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full p-3 flex items-center justify-between bg-white/70 fixed top-0 left-0 backdrop-blur-md">
+      <div
+        className={`w-full p-3 flex items-center justify-between fixed top-0 left-0 backdrop-blur-md ${
+          isOpen ? "bg-white/100" : "bg-white/70"
+        }`}
+      >
         <Container className="flex justify-between items-center">
           <Logo width={150} />
 
@@ -62,7 +66,7 @@ const Navbar = () => {
               leaveTo="opacity-0"
             >
               <div
-                className={`w-full h-screen backdrop-blur-md bg-white/90 p-5 absolute transition duration-300 ease-in-out left-0 z-50`}
+                className={`w-full h-screen backdrop-blur-md bg-white/100 p-5 absolute transition duration-300 ease-in-out left-0 z-50`}
                 style={{ marginTop: "22px" }}
               >
                 <div className="py-2">
@@ -81,6 +85,10 @@ const Navbar = () => {
                   <span className="text-xl font-medium text-white">
                     {text.menu["contact-us"]}
                   </span>
+                </div>
+
+                <div className="py-2 mt-8 flex items-center justify-center rounded-full text-center">
+                  <LangSwicther />
                 </div>
               </div>
             </Transition>
