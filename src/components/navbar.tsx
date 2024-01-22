@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full p-3 flex items-center justify-between fixed top-0 left-0 backdrop-blur-md ${
+        className={`w-full py-3 flex items-center justify-between fixed top-0 left-0 backdrop-blur-md ${
           isOpen ? "bg-white/100" : "bg-white/70"
         }`}
       >
