@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "../container";
+import Container from "../../container";
 import OurMarketChart from "@/assets/chart.png";
 import OurMarketChartMobile from "@/assets/chart-mobile.png";
 import Indonesia from "@/assets/indonesia.png";
@@ -62,7 +62,7 @@ const OurMarket = () => {
                   {text["first-market"]}
                 </h2>
                 <span className="block mt-3">
-                  {/* In 2022,{" "}
+                  In 2022,{" "}
                   <span className="text-secondary font-semibold">
                     Indonesia
                   </span>{" "}
@@ -70,7 +70,7 @@ const OurMarket = () => {
                   <span className="text-secondary font-semibold">
                     75 million workforces
                   </span>{" "}
-                  who are junior high school graduates to diplomas. */}
+                  who are junior high school graduates to diplomas.
                   {text["first-market-desc"]}
                 </span>
 

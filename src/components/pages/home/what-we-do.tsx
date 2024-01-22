@@ -1,5 +1,5 @@
 import useLanguage from "@/lib/lang-switcher";
-import Container from "../container";
+import Container from "../../container";
 import { getTranslation } from "@/lang";
 
 const WhatWeDo = () => {
