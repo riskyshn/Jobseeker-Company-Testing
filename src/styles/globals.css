@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .shadow-custom {
-  @apply shadow border border-gray-200;
+  @apply border border-gray-200 shadow;
 }

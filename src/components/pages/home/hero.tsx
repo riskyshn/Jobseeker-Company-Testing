@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="w-full h-screen flex items-center"
+        className="flex h-screen w-full items-center"
         style={{
           // background:
           //   "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('./landing.png')",
@@ -38,10 +38,10 @@ const Hero = () => {
             <Image src={Connecting} width={700} alt="Connecting word" />
             <h1 className="hidden">Connecting people with Opportunities</h1>
             <div className="flex items-center gap-2">
-              <span className="text-2xl md:text-4xl text-muted">
+              <span className="text-2xl text-muted md:text-4xl">
                 People with
               </span>
-              <span className="text-2xl md:text-4xl text-primary font-semibold">
+              <span className="text-2xl font-semibold text-primary md:text-4xl">
                 {text}.
               </span>
             </div>

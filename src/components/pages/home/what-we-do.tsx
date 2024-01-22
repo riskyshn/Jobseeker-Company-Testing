@@ -8,18 +8,19 @@ const WhatWeDo = () => {
   const text = getTranslation(lang as "en" | "id");
 
   return (
-    <section className="py-24">
+    <section className="py-16 md:py-24">
       <Container>
-        <div className="md:pb-12 pb-6">
-          <h2 className="text-5xl font-bold text-secondary mb-4">
+        <div className="pb-6 md:pb-12">
+          <h2 className="mb-4 text-4xl font-bold text-secondary md:text-5xl">
             {text["what-we-do"]}
           </h2>
-          <p className="text-muted text-xl">{text["we-connect"]}</p>
+          <p className="text-xl text-muted">{text["we-connect"]}</p>
         </div>
-        <div className="md:flex md:items-center ">
-          <div className="hidden md:w-[10%] md:block"></div>
-          <div className="md:w-[90%] md:border-l md:pl-6 md:py-4">
-            <span className="text-textdefault text-lg">
+
+        <div className="md:flex md:items-center">
+          <div className="hidden md:block md:w-[10%]"></div>
+          <div className="md:w-[90%] md:border-l md:py-4 md:pl-6">
+            <span className="text-lg text-textdefault">
               Was established in February 2022 with the goal of creating a
               reliable economic ecosystem for the workforce. Our platform aims
               to empower every individual by connecting them with opportunities

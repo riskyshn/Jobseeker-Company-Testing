@@ -16,11 +16,11 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full py-3 flex items-center justify-between fixed top-0 left-0 backdrop-blur-md ${
+        className={`fixed left-0 top-0 flex w-full items-center justify-between py-3 backdrop-blur-md ${
           isOpen ? "bg-white/100" : "bg-white/70"
         }`}
       >
-        <Container className="flex justify-between items-center">
+        <Container className="flex items-center justify-between">
           <Logo width={150} />
 
           {/* desktop menu  */}
@@ -39,7 +39,7 @@ const Navbar = () => {
               <li>
                 <a
                   href=""
-                  className="bg-secondary-light py-2 px-6 rounded-full text-white hover:bg-secondary-light/80"
+                  className="rounded-full bg-secondary-light px-6 py-2 text-white hover:bg-secondary-light/80"
                 >
                   {text.menu["contact-us"]}
                 </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
               leaveTo="opacity-0"
             >
               <div
-                className={`w-full h-screen backdrop-blur-md bg-white/100 p-5 absolute transition duration-300 ease-in-out left-0 z-50`}
+                className={`absolute left-0 z-50 h-screen w-full bg-white/100 p-5 backdrop-blur-md transition duration-300 ease-in-out`}
                 style={{ marginTop: "22px" }}
               >
                 <div className="py-2">
@@ -81,13 +81,13 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="py-2 mt-4 bg-secondary-light rounded-full text-center">
+                <div className="mt-4 rounded-full bg-secondary-light py-2 text-center">
                   <span className="text-xl font-medium text-white">
                     {text.menu["contact-us"]}
                   </span>
                 </div>
 
-                <div className="py-2 mt-8 flex items-center justify-center rounded-full text-center">
+                <div className="mt-8 flex items-center justify-center rounded-full py-2 text-center">
                   <LangSwicther />
                 </div>
               </div>

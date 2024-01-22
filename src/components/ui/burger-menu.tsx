@@ -10,22 +10,22 @@ const BurgerMenu = ({ onClick, isOpen }: Props) => {
         <span
           className={`block h-0.5 w-6 bg-gray-600 ${
             isOpen
-              ? "transform translate-y-2 duration-300 rotate-45"
-              : "duration-300 rotate-0"
+              ? "translate-y-2 rotate-45 transform duration-300"
+              : "rotate-0 duration-300"
           }`}
         ></span>
         <span
           className={`block h-0.5 w-5 bg-gray-600  ${
             isOpen
-              ? "transform -translate-x-1 duration-300 opacity-0"
+              ? "-translate-x-1 transform opacity-0 duration-300"
               : "duration-300"
           }`}
         ></span>
         <span
           className={`block h-0.5 w-6 bg-gray-600 ${
             isOpen
-              ? "transform -translate-y-2 duration-300 -rotate-45"
-              : "duration-300 rotate-0"
+              ? "-translate-y-2 -rotate-45 transform duration-300"
+              : "rotate-0 duration-300"
           }`}
         ></span>
       </div>

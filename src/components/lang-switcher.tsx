@@ -14,7 +14,7 @@ const LangSwicther: React.FC = () => {
   return (
     <div
       onClick={() => changeLanguage(lang === "en" ? "id" : "en")}
-      className="flex items-center gap-2 hover:underline cursor-pointer select-none"
+      className="flex cursor-pointer select-none items-center gap-2 hover:underline"
     >
       <>
         {lang === "en" ? (

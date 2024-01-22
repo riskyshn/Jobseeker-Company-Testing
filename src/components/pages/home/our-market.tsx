@@ -15,18 +15,18 @@ const OurMarket = () => {
     <section className="flex flex-col gap-12">
       <div className="w-full">
         <Container>
-          <h2 className="text-5xl font-bold text-center text-secondary mb-8">
+          <h2 className="mb-8 text-center text-5xl font-bold text-secondary">
             {text["our-market"]}
           </h2>
 
-          <div className="mt-4 bg-white p-4 md:p-10 shadow-custom rounded-lg md:leading-8">
-            <span className="text-gray-600 text-sm md:text-base">
+          <div className="mt-4 rounded-lg bg-white p-4 shadow-custom md:p-10 md:leading-8">
+            <span className="text-sm text-gray-600 md:text-base">
               {text.employment}
             </span>
-            <span className="text-4xl text-secondary block mt-2">
+            <span className="mt-2 block text-4xl text-secondary">
               {text.number}
             </span>
-            <span className="text-gray-600 block mt-2 text-sm md:text-base">
+            <span className="mt-2 block text-sm text-gray-600 md:text-base">
               {text["total-employment"]}
             </span>
 
@@ -39,13 +39,13 @@ const OurMarket = () => {
             <Image
               src={OurMarketChartMobile}
               alt="Our Market Chart"
-              className="mt-8 md:hidden block w-full"
+              className="mt-8 block w-full md:hidden"
             />
 
-            <div className="mt-4  text-muted md:flex text-[10px] md:text-sm items-center gap-8">
+            <div className="mt-4  items-center gap-8 text-[10px] text-muted md:flex md:text-sm">
               <span>{text.axis}</span>
               <div className="flex items-center gap-1 md:gap-3">
-                <div className="w-10 md:w-24 h-1 md:h-2 bg-primary" />
+                <div className="h-1 w-10 bg-primary md:h-2 md:w-24" />
                 <span>{text["total-employment"]}</span>
               </div>
             </div>
@@ -55,19 +55,19 @@ const OurMarket = () => {
 
       <div className="w-full">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white shadow-custom p-6 md:p-10 rounded-lg flex items-center justify-center">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            <div className="flex items-center justify-center rounded-lg bg-white p-6 shadow-custom md:p-10">
               <div className="text-center">
-                <h2 className="font-semibold text-xl text-secondary">
+                <h2 className="text-xl font-semibold text-secondary">
                   {text["first-market"]}
                 </h2>
-                <span className="block mt-3">
+                <span className="mt-3 block">
                   In 2022,{" "}
-                  <span className="text-secondary font-semibold">
+                  <span className="font-semibold text-secondary">
                     Indonesia
                   </span>{" "}
                   have more than{" "}
-                  <span className="text-secondary font-semibold">
+                  <span className="font-semibold text-secondary">
                     75 million workforces
                   </span>{" "}
                   who are junior high school graduates to diplomas.
@@ -77,21 +77,21 @@ const OurMarket = () => {
                 <Image
                   src={Indonesia}
                   alt=""
-                  className="py-12 max-w-[90%] mx-auto"
+                  className="mx-auto max-w-[90%] py-12"
                 />
               </div>
             </div>
-            <div className="bg-white shadow-custom p-6 md:p-10 rounded-lg flex items-center justify-center">
+            <div className="flex items-center justify-center rounded-lg bg-white p-6 shadow-custom md:p-10">
               <div className="text-center">
-                <h2 className="font-semibold text-xl text-secondary">
+                <h2 className="text-xl font-semibold text-secondary">
                   {text["work-based"]}
                 </h2>
-                <span className="block mt-3">{text["work-based-desc"]}</span>
+                <span className="mt-3 block">{text["work-based-desc"]}</span>
 
                 <Image
                   src={Chart2}
                   alt=""
-                  className="py-12 max-w-[80%] mx-auto"
+                  className="mx-auto max-w-[80%] py-12"
                 />
               </div>
             </div>
