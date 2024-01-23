@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./container";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/footerlogo.svg";
 import Image from "next/image";
 import {
   RiTwitterXFill,
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           <Image
             alt="Logo jobseeker.company"
             src={Logo}
-            className="mb-4 block w-32"
+            className="mb-4 block w-20"
           />
 
           <div className="grid grid-cols-1 gap-12 py-4 md:grid-cols-2">
