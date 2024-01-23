@@ -8,7 +8,7 @@ import { Transition } from "@headlessui/react";
 import { getTranslation } from "@/lang";
 import useLanguage from "@/lib/lang-switcher";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { lang } = useLanguage();
 
@@ -22,7 +22,9 @@ const Navbar = () => {
         }`}
       >
         <Container className="flex items-center justify-between">
-          <Logo width={150} />
+          <Link href="/">
+            <Logo width={150} />
+          </Link>
 
           {/* desktop menu  */}
           <div className="hidden md:block">
@@ -38,12 +40,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href=""
+                <Link
+                  href="contact-us"
                   className="rounded-full bg-secondary-light px-6 py-2 text-white hover:bg-secondary-light/80"
                 >
                   {text.menu["contact-us"]}
-                </a>
+                </Link>
               </li>
               <li>
                 <LangSwicther />
@@ -89,9 +91,12 @@ const Navbar = () => {
                 </div>
 
                 <div className="mt-4 rounded-full bg-secondary-light py-2 text-center">
-                  <span className="text-xl font-medium text-white">
+                  <Link
+                    href="/contact-us"
+                    className="text-xl font-medium text-gray-700"
+                  >
                     {text.menu["contact-us"]}
-                  </span>
+                  </Link>
                 </div>
 
                 <div className="mt-8 flex items-center justify-center rounded-full py-2 text-center">

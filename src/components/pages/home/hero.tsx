@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Connecting from "@/assets/home-page/connecting.png";
+import Landing from "@/assets/landing.png";
 import Container from "../../container";
 
 const Hero = () => {
@@ -26,9 +27,7 @@ const Hero = () => {
       <div
         className="flex h-screen w-full items-center"
         style={{
-          // background:
-          //   "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('./landing.png')",
-          background: "url('./landing.png')",
+          background: `url('${Landing.src}')`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
