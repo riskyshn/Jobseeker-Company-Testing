@@ -1,9 +1,10 @@
+import { useState } from "react";
+import Link from "next/link";
 import Container from "./container";
 import Logo from "./logo";
 import LangSwicther from "./lang-switcher";
 import BurgerMenu from "./ui/burger-menu";
 import { Transition } from "@headlessui/react";
-import { useState } from "react";
 import { getTranslation } from "@/lang";
 import useLanguage from "@/lib/lang-switcher";
 
@@ -27,9 +28,9 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-6">
               <li>
-                <a href="" className="hover:underline">
+                <Link href="/about-us" className="hover:underline">
                   {text.menu["about-us"]}
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="" className="hover:underline">
@@ -70,9 +71,12 @@ const Navbar = () => {
                 style={{ marginTop: "22px" }}
               >
                 <div className="py-2">
-                  <span className="text-xl font-medium text-gray-700">
+                  <Link
+                    href="/about-us"
+                    className="text-xl font-medium text-gray-700"
+                  >
                     {text.menu["about-us"]}
-                  </span>
+                  </Link>
                 </div>
 
                 <div className="py-2">

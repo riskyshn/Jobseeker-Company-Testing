@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Container from "@/components/container";
-import img from "@/assets/hrms-demo.png";
+import img from "@/assets/home-page/hrms-demo.png";
 import { FiArrowRight } from "react-icons/fi";
 
 const FeaturedArticles: React.FC = () => {

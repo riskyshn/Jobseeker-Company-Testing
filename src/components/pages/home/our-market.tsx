@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Container from "../../container";
-import OurMarketChart from "@/assets/chart.png";
-import OurMarketChartMobile from "@/assets/chart-mobile.png";
-import Indonesia from "@/assets/indonesia.png";
-import Chart2 from "@/assets/chart-2.png";
+import OurMarketChart from "@/assets/home-page/chart.png";
+import OurMarketChartMobile from "@/assets/home-page/chart-mobile.png";
+import Indonesia from "@/assets/home-page/indonesia.png";
+import Chart2 from "@/assets/home-page/chart-2.png";
 import useLanguage from "@/lib/lang-switcher";
 import { getTranslation } from "@/lang";
 

@@ -1,7 +1,7 @@
 import Container from "@/components/container";
 import { getTranslation } from "@/lang";
 import useLanguage from "@/lib/lang-switcher";
-import jobseekerAppIcon from "@/assets/jobseeker.app-icon.png";
+import jobseekerAppIcon from "@/assets/home-page/jobseeker.app-icon.png";
 import Image from "next/image";
 
 const HowWeHelp: React.FC = () => {

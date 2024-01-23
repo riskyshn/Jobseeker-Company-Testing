@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Container from "../../container";
-import Connecting from "@/assets/connecting.png";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Connecting from "@/assets/home-page/connecting.png";
+import Container from "../../container";
 
 const Hero = () => {
   const [text, setText] = useState<string>("Opportunity");

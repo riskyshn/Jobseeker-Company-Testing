@@ -1,19 +1,19 @@
 import Image from "next/image";
 import Container from "@/components/container";
-import jobseekerAppIcon from "@/assets/jobseeker.app-icon.png";
-import jobseekerAppDemo from "@/assets/jobseeker.app-demo.png";
-import jobseekerPartnersIcon from "@/assets/jobseeker.partners-icon.png";
-import jobseekerPartnersDemo from "@/assets/jobseeker.partners-demo.png";
-import jobseekerLifeDemo from "@/assets/jobseeker.life-demo.png";
-import jobseekerServicesDemo from "@/assets/jobseeker.services-demo.png";
-import playsoteImg from "@/assets/playstore.png";
-import appsoteImg from "@/assets/appstore.png";
-import hrmsDemo from "@/assets/hrms-demo.png";
-import hrisIcon from "@/assets/icon-hris.png";
-import atsIcon from "@/assets/icon-ats.png";
-import hrcIcon from "@/assets/icon-hrc.png";
-import esIcon from "@/assets/icon-es.png";
-import itaSdaIcon from "@/assets/icon-ita-sda.png";
+import jobseekerAppIcon from "@/assets/home-page/jobseeker.app-icon.png";
+import jobseekerAppDemo from "@/assets/home-page/jobseeker.app-demo.png";
+import jobseekerPartnersIcon from "@/assets/home-page/jobseeker.partners-icon.png";
+import jobseekerPartnersDemo from "@/assets/home-page/jobseeker.partners-demo.png";
+import jobseekerLifeDemo from "@/assets/home-page/jobseeker.life-demo.png";
+import jobseekerServicesDemo from "@/assets/home-page/jobseeker.services-demo.png";
+import playsoteImg from "@/assets/home-page/playstore.png";
+import appsoteImg from "@/assets/home-page/appstore.png";
+import hrmsDemo from "@/assets/home-page/hrms-demo.png";
+import hrisIcon from "@/assets/home-page/icon-hris.png";
+import atsIcon from "@/assets/home-page/icon-ats.png";
+import hrcIcon from "@/assets/home-page/icon-hrc.png";
+import esIcon from "@/assets/home-page/icon-es.png";
+import itaSdaIcon from "@/assets/home-page/icon-ita-sda.png";
 
 const HowWeHelp: React.FC = () => {
   return (
