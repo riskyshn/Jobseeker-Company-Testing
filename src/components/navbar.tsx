@@ -33,9 +33,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a href="" className="hover:underline">
+                <Link href="/vacancy" className="hover:underline">
                   {text.menu["join-team"]}
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -80,9 +80,12 @@ const Navbar = () => {
                 </div>
 
                 <div className="py-2">
-                  <span className="text-xl font-medium text-gray-700">
+                  <Link
+                    href="/vacancy"
+                    className="text-xl font-medium text-gray-700"
+                  >
                     {text.menu["join-team"]}
-                  </span>
+                  </Link>
                 </div>
 
                 <div className="mt-4 rounded-full bg-secondary-light py-2 text-center">
