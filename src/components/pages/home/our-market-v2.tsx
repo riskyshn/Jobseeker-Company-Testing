@@ -12,17 +12,17 @@ const OurMarket: React.FC = () => {
   const text = getTranslation(lang);
 
   return (
-    <section className="bg-gray-100 py-16 md:py-24">
-      <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:mb-12 md:text-5xl">
+    <section className="bg-gray-white py-12 md:py-24">
+      <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:mb-12 md:text-6xl">
         {text["our-market"]}
       </h2>
 
-      <Container className="flex flex-col">
-        <div className="rounded-lg bg-white p-4 md:p-10 md:leading-8">
+      <Container className="flex flex-col gap-4 md:gap-8">
+        <div className="rounded-lg bg-white p-4 shadow-custom md:p-10">
           <span className="text-sm text-gray-600 md:text-base">
             {text.employment}
           </span>
-          <span className="mt-2 block text-4xl text-secondary">
+          <span className="mt-2 block text-5xl text-secondary">
             {text.number}
           </span>
           <span className="mt-2 block text-sm text-gray-600 md:text-base">
@@ -50,12 +50,12 @@ const OurMarket: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex rounded-lg bg-white p-6 md:p-10">
-          <div>
-            <h2 className="text-xl font-semibold text-secondary">
+        <div className="flex flex-col gap-8 rounded-lg bg-white px-4 py-8 shadow-custom md:flex-row md:items-center md:p-10">
+          <div className="flex-1">
+            <h2 className="mb-3 text-3xl font-semibold text-secondary md:text-4xl md:font-normal">
               {text["first-market"]}
             </h2>
-            <span className="mt-3 block">
+            <p className="md:text-lg">
               In 2022,{" "}
               <span className="font-semibold text-secondary">Indonesia</span>{" "}
               have more than{" "}
@@ -64,25 +64,23 @@ const OurMarket: React.FC = () => {
               </span>{" "}
               who are junior high school graduates to diplomas.
               {text["first-market-desc"]}
-            </span>
+            </p>
           </div>
-          <div className="text-center">
-            <Image
-              src={Indonesia}
-              alt=""
-              className="mx-auto max-w-[90%] py-12"
-            />
+
+          <div className="text-center md:w-2/5">
+            <Image src={Indonesia} alt="Peta indonesia" className="w-full" />
           </div>
         </div>
 
-        <div className="flex items-center justify-center rounded-lg bg-white p-6 shadow-custom md:p-10">
-          <div className="text-center">
-            <h2 className="text-xl font-semibold text-secondary">
+        <div className="flex flex-col gap-8 rounded-lg bg-white px-4 py-8 shadow-custom md:flex-row-reverse md:items-center md:p-10">
+          <div className="flex-1">
+            <h2 className="mb-3 text-3xl font-semibold text-secondary md:text-4xl md:font-normal">
               {text["work-based"]}
             </h2>
-            <span className="mt-3 block">{text["work-based-desc"]}</span>
-
-            <Image src={Chart2} alt="" className="mx-auto max-w-[80%] py-12" />
+            <p className="md:text-lg">{text["work-based-desc"]}</p>
+          </div>
+          <div className="text-center md:w-1/3">
+            <Image src={Chart2} alt="" className="w-full" />
           </div>
         </div>
       </Container>

@@ -15,7 +15,7 @@ const OurMarket = () => {
     <section className="flex flex-col gap-12">
       <div className="w-full">
         <Container>
-          <h2 className="mb-8 text-center text-5xl font-bold text-secondary">
+          <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:text-6xl">
             {text["our-market"]}
           </h2>
 
@@ -91,7 +91,7 @@ const OurMarket = () => {
                 <Image
                   src={Chart2}
                   alt=""
-                  className="mx-auto max-w-[80%] py-12"
+                  className="mx-auto max-w-[55%] py-12"
                 />
               </div>
             </div>
