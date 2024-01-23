@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Hero from "@/components/pages/home/hero";
-import WhatWeDo from "@/components/pages/home/what-we-do";
-import OurMarket from "@/components/pages/home/our-market";
-import OurMarket2 from "@/components/pages/home/our-market-v2";
-import HowWeHelp from "@/components/pages/home/how-we-help";
-import FeaturedArticles from "@/components/pages/home/featured-articles";
+import Hero from "@/components/pages/about-us/hero";
+import OurAdvisors from "@/components/pages/about-us/our-advisors";
+import CarrerAt from "@/components/pages/about-us/carrer-at";
 
 export default function AboutUs() {
   return (
@@ -12,6 +9,10 @@ export default function AboutUs() {
       <Head>
         <title>About Us</title>
       </Head>
+
+      <Hero />
+      <OurAdvisors />
+      <CarrerAt />
     </>
   );
 }
