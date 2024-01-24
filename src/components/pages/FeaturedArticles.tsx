@@ -3,16 +3,19 @@ import React from 'react'
 import Image from 'next/image'
 import Container from '@/components/Container'
 import { FiArrowRight } from 'react-icons/fi'
+import useLanguage from '@/lib/lang-switcher'
 
 type PropTypes = {
   articles: IArticle[]
 }
 
 const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
+  const { tl } = useLanguage()
+
   return (
     <section className="border-y py-12 md:gap-16 md:py-24">
       <Container className="grid grid-cols-1 gap-8">
-        <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">Featured Articles</h2>
+        <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['featured-articles']}</h2>
 
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {articles.map((el) => (
@@ -33,7 +36,7 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
 
               <div className="mt-auto flex">
                 <a href={el.link} className="flex items-center gap-1 py-2 text-blue-600">
-                  <span className="block">Read More</span>
+                  <span className="block">{tl['featured-articles-read-more']}</span>
                   <FiArrowRight size={20} className="block" />
                 </a>
               </div>
@@ -43,7 +46,7 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
 
         <div className="flex justify-center md:justify-end">
           <a href="https://jobseeker.company/blog" className="rounded-full border border-blue-600 px-4 py-2 text-blue-600">
-            See all articles
+            {tl['featured-articles-see-all-articles']}
           </a>
         </div>
       </Container>

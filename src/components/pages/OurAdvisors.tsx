@@ -11,60 +11,63 @@ import Philip from '@/assets/about-us-page/Ng.png'
 import Steve from '@/assets/about-us-page/Steve.png'
 import Biju from '@/assets/about-us-page/Biju.png'
 import Akhsat from '@/assets/about-us-page/Akhsat.png'
-
-const items = [
-  {
-    name: 'Sandiaga Uno',
-    position: 'Minister of Tourism and Creative Economy',
-    image: Sandi,
-  },
-  {
-    name: 'Helmy Yahya',
-    position: 'Entrepreneur, Coach, and Actor',
-    image: Helmy,
-  },
-  {
-    name: 'Gita Wirjawan',
-    position: 'Entrepreneur and Former Minister of Trade',
-    image: Gita,
-  },
-  {
-    name: 'Rizal Gozali',
-    position: 'Managing Director at Credit Suisse',
-    image: Rizal,
-  },
-  {
-    name: 'Daniel Surya',
-    position: 'Executive Chairman & Co-Founder WIR Group',
-    image: Daniel,
-  },
-  {
-    name: 'Philip Ng',
-    position: 'Co-Founder & CEO BitCyber',
-    image: Philip,
-  },
-  {
-    name: 'Steve Lovato',
-    position: 'Founder & Managing Director, Incentive Dynamics',
-    image: Steve,
-  },
-  {
-    name: 'Biju Mohan',
-    position: 'Managing Director and Partner at Accenture',
-    image: Biju,
-  },
-  {
-    name: 'Akshat Chawla',
-    position: 'Vice President and General Manager (Asia Pacific Japan) Autofleet',
-    image: Akhsat,
-  },
-]
+import useLanguage from '@/lib/lang-switcher'
 
 const OurAdvisors: React.FC = () => {
+  const { tl } = useLanguage()
+
+  const items = [
+    {
+      name: tl.adv1,
+      position: tl['adv-title1'],
+      image: Sandi,
+    },
+    {
+      name: tl.adv2,
+      position: tl['adv-title2'],
+      image: Helmy,
+    },
+    {
+      name: tl.adv3,
+      position: tl['adv-title3'],
+      image: Gita,
+    },
+    {
+      name: tl.adv4,
+      position: tl['adv-title4'],
+      image: Rizal,
+    },
+    {
+      name: tl.adv5,
+      position: tl['adv-title5'],
+      image: Daniel,
+    },
+    {
+      name: tl.adv6,
+      position: tl['adv-title6'],
+      image: Philip,
+    },
+    {
+      name: tl.adv7,
+      position: tl['adv-title7'],
+      image: Steve,
+    },
+    {
+      name: tl.adv8,
+      position: tl['adv-title8'],
+      image: Biju,
+    },
+    {
+      name: tl.adv9,
+      position: tl['adv-title9'],
+      image: Akhsat,
+    },
+  ]
+
   return (
     <section className="py-12 md:gap-16 md:py-24">
       <Container className="grid grid-cols-1 gap-8">
-        <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">Our Advisors</h2>
+        <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl.advisor}</h2>
 
         <div className="flex flex-col flex-wrap items-center justify-center md:flex-row">
           {items.map((el, i) => (

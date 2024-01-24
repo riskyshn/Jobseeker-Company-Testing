@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import HeroImage from '@/assets/about-us-page/AboutUs.png'
 import Container from '@/components/Container'
+import useLanguage from '@/lib/lang-switcher'
 
 const AboutUsHero: React.FC = () => {
+  const { tl } = useLanguage()
   return (
     <section className="py-12 pt-20 md:py-24">
       <Container>
@@ -11,15 +13,9 @@ const AboutUsHero: React.FC = () => {
             <Image alt="" src={HeroImage} className="block w-full" />
           </div>
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold text-secondary md:text-6xl">About Us</h2>
-            <p className="text-textdefault">
-              Jobseeker Company was established in February 2022 with the goal of creating one reliable economic ecosystem for the
-              workforce. Our recruitment platform aims to empower each individual by connecting them with opportunities that align with
-              their skills and experience.
-            </p>
-            <p className="text-textdefault">
-              We want to enable them to improve their standard of living and achieve better prospects for their future.
-            </p>
+            <h2 className="text-4xl font-bold text-secondary md:text-6xl">{tl['about-us']}</h2>
+            <p className="text-textdefault">{tl['about-us-line-1']}</p>
+            <p className="text-textdefault">{tl['about-us-line-2']}</p>
           </div>
         </div>
       </Container>

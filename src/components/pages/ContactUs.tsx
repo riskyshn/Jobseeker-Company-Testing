@@ -5,8 +5,10 @@ import { Input, Select, Textarea } from '@/components/Forms'
 import Landing from '@/assets/landing.png'
 import Logo from '@/assets/footerlogo.svg'
 import { FiArrowRightCircle } from 'react-icons/fi'
+import useLanguage from '@/lib/lang-switcher'
 
 const ContactUs: React.FC = () => {
+  const { tl } = useLanguage()
   return (
     <section className="pb-12 pt-24">
       <Container>
@@ -24,15 +26,15 @@ const ContactUs: React.FC = () => {
             </div>
           </div>
           <form className="flex-1 p-6">
-            <h2 className="text-3xl font-bold text-secondary">Reach Out to Our Team</h2>
-            <p className="mb-6 text-textdefault">Please fill out the form below to start</p>
+            <h2 className="text-3xl font-bold text-secondary">{tl.inquiry}</h2>
+            <p className="mb-6 text-textdefault">{tl['inquiry-desc']}</p>
 
-            <Input className="mb-4" label="Full Name" name="name" />
-            <Input className="mb-4" label="Email Address" name="email" />
-            <Input className="mb-4" label="Phone Number" name="phone" />
+            <Input className="mb-4" label={tl['full-name']} name="name" />
+            <Input className="mb-4" label={tl['email-address']} name="email" />
+            <Input className="mb-4" label={tl['phone-number']} name="phone" />
             <Select
               className="mb-4"
-              label="I’m an Enterprise/Candidate/SME/Media"
+              label={tl['im-a']}
               name="idn"
               options={[
                 { value: 'option1', label: 'Option 1' },
@@ -40,10 +42,10 @@ const ContactUs: React.FC = () => {
                 { value: 'option3', label: 'Option 3' },
               ]}
             />
-            <Textarea className="mb-4" rows={4} label="Tell us more about what you need?" name="name" />
+            <Textarea className="mb-4" rows={4} label={tl.tell} name="name" />
 
             <button className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-blue-600 px-10 font-semibold text-white transition-colors hover:bg-blue-500">
-              <span className="block uppercase">Submit</span>
+              <span className="block uppercase">{tl['inquiry-cta']}</span>
               <FiArrowRightCircle className="block" size={22} />
             </button>
           </form>

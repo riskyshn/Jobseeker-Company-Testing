@@ -24,7 +24,7 @@ const OurMarket: React.FC = () => {
             <span>{tl.axis}</span>
             <div className="flex items-center gap-1 md:gap-3">
               <div className="h-1 w-10 bg-primary md:h-2 md:w-24" />
-              <span>{tl['total-employment']}</span>
+              <span>{tl['employment-population']}</span>
             </div>
           </div>
         </div>
@@ -36,25 +36,15 @@ const OurMarket: React.FC = () => {
           <div className="flex flex-col gap-16 md:flex-row md:gap-0">
             <div className="md:w-[60%] md:pr-8">
               <Image src={Indonesia} alt="Indonesia map" className="mb-8 block" />
-              <span className="mb-8 block">
-                In 2022, <span className="font-semibold text-secondary">Indonesia</span> have more than{' '}
-                <span className="font-semibold text-secondary">75 million workforces</span> who are junior high school graduates to
-                diplomas.
-              </span>
+              <span className="mb-8 block" dangerouslySetInnerHTML={{ __html: tl['our-first-market-text-1'] }} />
 
-              <span className="font-semibold text-primary">Let’s Start Here</span>
+              <span className="font-semibold text-primary">{tl['lets-start-here']}</span>
             </div>
 
             <div className="md:w-[40%] md:pl-8">
               <Image src={ChartPie} alt="" className="mx-auto mb-8 block w-full md:w-[68%]" />
 
-              <span className="block">
-                <span className="font-semibold text-secondary">Indonesia Work-force Based on Education</span> Total workforce in{' '}
-                <span className="text-secondary">Indonesia</span> in 2019 has reached <span className="text-secondary">136.18 million</span>{' '}
-                people.
-                <br />
-                <span className="text-secondary">129.36 million</span> are working residents, both in the formal and informal sectors.
-              </span>
+              <span className="block" dangerouslySetInnerHTML={{ __html: tl['our-first-market-text-2'] }} />
             </div>
           </div>
         </div>

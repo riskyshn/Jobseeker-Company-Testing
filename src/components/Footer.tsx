@@ -4,8 +4,11 @@ import Container from './Container'
 import Logo from '@/assets/footerlogo.svg'
 import { RiTwitterXFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
 import Link from './Link'
+import useLanguage from '@/lib/lang-switcher'
 
 const Footer: React.FC = () => {
+  const { tl } = useLanguage()
+
   return (
     <footer>
       <Container>
@@ -34,33 +37,33 @@ const Footer: React.FC = () => {
 
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <h5 className="mb-1 text-sm font-bold md:text-base">Company</h5>
+                <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-company']}</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
                     <Link href="/about-us" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
-                      About
+                      {tl['footer-company-menu']['about']}
                     </Link>
                   </li>
                   <li>
                     <Link href="/vacancy" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
-                      Career
+                      {tl['footer-company-menu']['career']}
                     </Link>
                   </li>
                   <li>
                     <Link href="#" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
-                      Press
+                      {tl['footer-company-menu']['press']}
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact-us" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
-                      Contact Us
+                      {tl['footer-company-menu']['contact-us']}
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h5 className="mb-1 text-sm font-bold md:text-base">Candidates</h5>
+                <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-candidates']}</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
                     <a href="https://jobseeker.app/" className="hover:text-gray-900">
@@ -70,7 +73,7 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h5 className="mb-1 text-sm font-bold md:text-base">Employers</h5>
+                <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-employers']}</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
                     <a href="https://play.google.com/store/apps/details?id=com.jobseeker.partners" className="hover:text-gray-900">
@@ -93,7 +96,7 @@ const Footer: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h5 className="mb-1 text-sm font-bold md:text-base">Contact:</h5>
+                <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-contact']}:</h5>
                 <ul className="mb-3 text-xs text-textdefault md:text-sm">
                   <li>
                     <a
@@ -112,32 +115,32 @@ const Footer: React.FC = () => {
                 </ul>
                 <ul className="flex gap-3">
                   <li>
-                    <a rel="noopener nofollow" href="https://www.facebook.com/jobseekercompany">
+                    <a rel="noopener nofollow" aria-label="Facebook" href="https://www.facebook.com/jobseekercompany">
                       <RiFacebookFill />
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow" href="https://www.instagram.com/jobseekercompany/">
+                    <a rel="noopener nofollow" aria-label="Instagram" href="https://www.instagram.com/jobseekercompany/">
                       <RiInstagramFill />
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow" href="https://twitter.com/jobseekerapp">
+                    <a rel="noopener nofollow" aria-label="Twitter" href="https://twitter.com/jobseekerapp">
                       <RiTwitterXFill />
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow" href="https://www.linkedin.com/company/jobseeker-company/">
+                    <a rel="noopener nofollow" aria-label="Linkedin" href="https://www.linkedin.com/company/jobseeker-company/">
                       <RiLinkedinFill />
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow" href="https://www.tiktok.com/@jobseekercompany">
+                    <a rel="noopener nofollow" aria-label="TikTok" href="https://www.tiktok.com/@jobseekercompany">
                       <RiTiktokFill />
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow" href="https://www.youtube.com/channel/UCienG47UYFaRCp9J_j4uGwA">
+                    <a rel="noopener nofollow" aria-label="Youtube" href="https://www.youtube.com/channel/UCienG47UYFaRCp9J_j4uGwA">
                       <RiYoutubeFill />
                     </a>
                   </li>
@@ -148,16 +151,16 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 justify-center gap-4 pb-6 pt-3 md:grid-cols-2">
-          <p className="text-center text-sm md:text-left">Copyright © 2022 Jobseeker Company</p>
+          <p className="text-center text-sm md:text-left">{tl['footer-copyright']}</p>
           <div className="flex gap-6 md:justify-end">
             <div className="w-full text-center md:w-auto">
               <a rel="noopener nofollow" href="https://jobseeker.company/dot-app-privacy-policy" className="text-sm hover:text-gray-900">
-                Privacy Policy
+                {tl['footer-privacy-policy']}
               </a>
             </div>
             <div className="w-full text-center md:w-auto">
               <a rel="noopener nofollow" href="https://jobseeker.company/dot-app-tnc" className="text-sm hover:text-gray-900">
-                Terms of Service
+                {tl['footer-terms-of-service']}
               </a>
             </div>
           </div>

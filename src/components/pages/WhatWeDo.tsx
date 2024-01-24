@@ -16,12 +16,10 @@ const WhatWeDo: React.FC = () => {
           <div className="hidden md:block md:w-[10%]"></div>
           <div className="md:w-[90%] md:border-l md:py-4 md:pl-6">
             <p className="text-textdefault md:text-lg">
-              Was established in February 2022 with the goal of creating a reliable economic ecosystem for the workforce. Our platform aims
-              to empower every individual by connecting them with opportunities that align with their skills and experience.
-              <br /> <br />
-              We strive to go beyond traditional employment and also support compliance management through innovative solutions. Our
-              approach emphasizes the use of technology, collaboration, and empowerment to bring about positive transformations in
-              individuals lives and make a meaningful contribution to the overall economic landscape
+              {tl['we-connect-text-line-1']}
+              <br />
+              <br />
+              {tl['we-connect-text-line-2']}
             </p>
           </div>
         </div>
