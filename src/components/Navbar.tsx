@@ -1,24 +1,24 @@
-import { useState } from "react";
-import Link from "next/link";
-import Container from "./container";
-import Logo from "./logo";
-import LangSwicther from "./lang-switcher";
-import BurgerMenu from "./ui/burger-menu";
-import { Transition } from "@headlessui/react";
-import { getTranslation } from "@/lang";
-import useLanguage from "@/lib/lang-switcher";
+import { useState } from 'react'
+import Link from 'next/link'
+import { Transition } from '@headlessui/react'
+import useLanguage from '@/lib/lang-switcher'
+import { getTranslation } from '@/lang'
+import Container from './Container'
+import Logo from './Logo'
+import BurgerMenu from './BurgerMenu'
+import LangSwicther from './LangSwitcher'
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { lang } = useLanguage();
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { lang } = useLanguage()
 
-  const text = getTranslation(lang as "en" | "id");
+  const text = getTranslation(lang as 'en' | 'id')
 
   return (
     <>
       <div
         className={`fixed left-0 top-0 flex w-full items-center justify-between py-3 backdrop-blur-md ${
-          isOpen ? "bg-white/100" : "bg-white/70"
+          isOpen ? 'bg-white/100' : 'bg-white/70'
         }`}
       >
         <Container className="flex items-center justify-between">
@@ -31,20 +31,17 @@ const Navbar: React.FC = () => {
             <ul className="flex items-center gap-6">
               <li>
                 <Link href="/about-us" className="hover:underline">
-                  {text.menu["about-us"]}
+                  {text.menu['about-us']}
                 </Link>
               </li>
               <li>
                 <Link href="/vacancy" className="hover:underline">
-                  {text.menu["join-team"]}
+                  {text.menu['join-team']}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="contact-us"
-                  className="rounded-full bg-secondary-light px-6 py-2 text-white hover:bg-secondary-light/80"
-                >
-                  {text.menu["contact-us"]}
+                <Link href="contact-us" className="rounded-full bg-secondary-light px-6 py-2 text-white hover:bg-secondary-light/80">
+                  {text.menu['contact-us']}
                 </Link>
               </li>
               <li>
@@ -55,10 +52,7 @@ const Navbar: React.FC = () => {
 
           {/* mobile menu  */}
           <div className="block md:hidden">
-            <BurgerMenu
-              isOpen={isOpen}
-              onClick={() => setIsOpen((prev) => !prev)}
-            />
+            <BurgerMenu isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)} />
             <Transition
               show={isOpen}
               enter="transition-opacity ease-linear duration-150"
@@ -70,32 +64,23 @@ const Navbar: React.FC = () => {
             >
               <div
                 className={`absolute left-0 z-50 h-screen w-full bg-white/100 p-5 backdrop-blur-md transition duration-300 ease-in-out`}
-                style={{ marginTop: "22px" }}
+                style={{ marginTop: '22px' }}
               >
                 <div className="py-2">
-                  <Link
-                    href="/about-us"
-                    className="text-xl font-medium text-gray-700"
-                  >
-                    {text.menu["about-us"]}
+                  <Link href="/about-us" className="text-xl font-medium text-gray-700">
+                    {text.menu['about-us']}
                   </Link>
                 </div>
 
                 <div className="py-2">
-                  <Link
-                    href="/vacancy"
-                    className="text-xl font-medium text-gray-700"
-                  >
-                    {text.menu["join-team"]}
+                  <Link href="/vacancy" className="text-xl font-medium text-gray-700">
+                    {text.menu['join-team']}
                   </Link>
                 </div>
 
                 <div className="mt-4 rounded-full bg-secondary-light py-2 text-center">
-                  <Link
-                    href="/contact-us"
-                    className="text-xl font-medium text-gray-700"
-                  >
-                    {text.menu["contact-us"]}
+                  <Link href="/contact-us" className="text-xl font-medium text-gray-700">
+                    {text.menu['contact-us']}
                   </Link>
                 </div>
 
@@ -108,7 +93,7 @@ const Navbar: React.FC = () => {
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

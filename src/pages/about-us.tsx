@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Hero from "@/components/pages/about-us/hero";
-import OurAdvisors from "@/components/pages/about-us/our-advisors";
-import CarrerAt from "@/components/pages/about-us/carrer-at";
+import Head from 'next/head'
+import AboutUsHero from '@/components/pages/AboutUsHero'
+import CarrerAt from '@/components/pages/CarrerAt'
+import OurAdvisors from '@/components/pages/OurAdvisors'
 
 export default function AboutUs() {
   return (
@@ -10,9 +10,9 @@ export default function AboutUs() {
         <title>About Us</title>
       </Head>
 
-      <Hero />
+      <AboutUsHero />
       <OurAdvisors />
       <CarrerAt />
     </>
-  );
+  )
 }

@@ -4,13 +4,13 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "jobseeker.company",
-        port: "",
-        pathname: "/blog/wp-content/uploads/**",
+        protocol: 'https',
+        hostname: 'jobseeker.company',
+        port: '',
+        pathname: '/blog/wp-content/uploads/**',
       },
     ],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

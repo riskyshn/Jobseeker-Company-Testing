@@ -1,6 +1,6 @@
 interface Props {
-  children?: JSX.Element | JSX.Element[];
-  className?: string;
+  children?: JSX.Element | JSX.Element[]
+  className?: string
 }
 
 const Container = ({ children, className }: Props) => {
@@ -8,7 +8,7 @@ const Container = ({ children, className }: Props) => {
     <div className="w-full px-4">
       <div className={`mx-auto max-w-screen-xl ${className}`}>{children}</div>
     </div>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container
