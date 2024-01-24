@@ -160,12 +160,12 @@ const HowWeHelp: React.FC = () => {
               </p>
 
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <a href="#" className="block">
+                <div>
                   <Image src={playsoteImg} alt="" className="block w-full" />
-                </a>
-                <a href="#" className="block">
+                </div>
+                <div>
                   <Image src={appsoteImg} alt="" className="block w-full" />
-                </a>
+                </div>
               </div>
             </div>
           </div>
