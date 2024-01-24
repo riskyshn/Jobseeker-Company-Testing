@@ -3,9 +3,10 @@ import { useEffect } from 'react'
 import useLanguage from '@/lib/lang-switcher'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import '@/styles/globals.css'
 import Head from 'next/head'
 import { getTranslation } from '@/lang'
+import LoadingBar from '@/components/LoadingBar'
+import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   const { lang, setLang } = useLanguage()
@@ -40,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://jobseeker.company/assets/image/jobseeker-company-featured.jpg" />
       </Head>
 
+      <LoadingBar />
       <Navbar />
       <main className="min-h-screen">
         <Component {...pageProps} />
