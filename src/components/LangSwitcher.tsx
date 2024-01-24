@@ -14,7 +14,7 @@ const LangSwicther: React.FC = () => {
   return (
     <button
       type="button"
-      className="flex cursor-pointer select-none items-center gap-2 hover:underline"
+      className="flex cursor-pointer select-none items-center gap-2 text-gray-600 transition-colors hover:text-gray-900"
       onClick={() => changeLanguage(lang === 'en' ? 'id' : 'en')}
     >
       <>

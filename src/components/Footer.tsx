@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Container from './Container'
 import Logo from '@/assets/footerlogo.svg'
 import { RiTwitterXFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
+import Link from './Link'
 
 const Footer: React.FC = () => {
   return (
@@ -36,32 +37,33 @@ const Footer: React.FC = () => {
                 <h5 className="mb-1 text-sm font-bold md:text-base">Company</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="/about-us" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="/vacancy" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
                       Career
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="#" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
                       Press
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="/contact-us" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
+
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">Candidates</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="https://jobseeker.app/" className="hover:text-gray-900">
                       Jobseeker App
                     </a>
                   </li>
@@ -71,17 +73,17 @@ const Footer: React.FC = () => {
                 <h5 className="mb-1 text-sm font-bold md:text-base">Employers</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="https://play.google.com/store/apps/details?id=com.jobseeker.partners" className="hover:text-gray-900">
                       Jobseeker Partners
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="https://jobseeker.software/" className="hover:text-gray-900">
                       Jobseeker Software
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="https://jobseeker.services/" className="hover:text-gray-900">
                       Jobseeker Services
                     </a>
                   </li>
@@ -94,44 +96,48 @@ const Footer: React.FC = () => {
                 <h5 className="mb-1 text-sm font-bold md:text-base">Contact:</h5>
                 <ul className="mb-3 text-xs text-textdefault md:text-sm">
                   <li>
-                    <a href="tel:+6281318817887" className="hover:underline">
+                    <a
+                      rel="noopener nofollow"
+                      href="https://api.whatsapp.com/send?text=Hello&phone=+6281318817887"
+                      className="hover:text-gray-900"
+                    >
                       +62 813 1881 7887
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@jobseeker.company" className="hover:underline">
+                    <a rel="noopener nofollow" href="mailto:info@jobseeker.company" className="hover:text-gray-900">
                       info@jobseeker.company
                     </a>
                   </li>
                 </ul>
                 <ul className="flex gap-3">
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://www.facebook.com/jobseekercompany">
                       <RiFacebookFill />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://www.instagram.com/jobseekercompany/">
                       <RiInstagramFill />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://twitter.com/jobseekerapp">
                       <RiTwitterXFill />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://www.linkedin.com/company/jobseeker-company/">
                       <RiLinkedinFill />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://www.tiktok.com/@jobseekercompany">
                       <RiTiktokFill />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a rel="noopener nofollow" href="https://www.youtube.com/channel/UCienG47UYFaRCp9J_j4uGwA">
                       <RiYoutubeFill />
                     </a>
                   </li>
@@ -145,12 +151,12 @@ const Footer: React.FC = () => {
           <p className="text-center text-sm md:text-left">Copyright © 2022 Jobseeker Company</p>
           <div className="flex gap-6 md:justify-end">
             <div className="w-full text-center md:w-auto">
-              <a href="#" className="text-sm underline">
+              <a rel="noopener nofollow" href="https://jobseeker.company/dot-app-privacy-policy" className="text-sm hover:text-gray-900">
                 Privacy Policy
               </a>
             </div>
             <div className="w-full text-center md:w-auto">
-              <a href="#" className="text-sm underline">
+              <a rel="noopener nofollow" href="https://jobseeker.company/dot-app-tnc" className="text-sm hover:text-gray-900">
                 Terms of Service
               </a>
             </div>
