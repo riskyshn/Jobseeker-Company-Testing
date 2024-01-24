@@ -1,17 +1,15 @@
 import useLanguage from '@/lib/lang-switcher'
 import Container from '@/components/Container'
-import { getTranslation } from '@/lang'
 
 const WhatWeDo: React.FC = () => {
-  const { lang } = useLanguage()
-  const t = getTranslation(lang)
+  const { tl } = useLanguage()
 
   return (
     <section className="py-12 md:py-24">
       <Container>
         <div className="pb-6 md:pb-12">
-          <h2 className="mb-4 text-4xl font-bold text-secondary md:text-6xl">{t['what-we-do']}</h2>
-          <p className="text-xl text-muted">{t['we-connect']}</p>
+          <h2 className="mb-4 text-4xl font-bold text-secondary md:text-6xl">{tl['what-we-do']}</h2>
+          <p className="text-xl text-muted">{tl['we-connect']}</p>
         </div>
 
         <div className="md:flex md:items-center">

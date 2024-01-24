@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
 import useLanguage from '@/lib/lang-switcher'
-import { getTranslation } from '@/lang'
 import Container from './Container'
 import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
@@ -11,8 +10,7 @@ import { useRouter } from 'next/router'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { lang } = useLanguage()
-  const text = getTranslation(lang)
+  const { lang, tl } = useLanguage()
   const router = useRouter()
 
   useEffect(() => {
@@ -40,7 +38,7 @@ const Navbar: React.FC = () => {
                 nonActiveClassName="text-gray-600"
                 activeClassName="text-gray-900"
               >
-                {text.menu['about-us']}
+                {tl.menu['about-us']}
               </Link>
             </li>
             <li>
@@ -50,7 +48,7 @@ const Navbar: React.FC = () => {
                 nonActiveClassName="text-gray-600"
                 activeClassName="text-gray-900"
               >
-                {text.menu['join-team']}
+                {tl.menu['join-team']}
               </Link>
             </li>
             <li>
@@ -60,7 +58,7 @@ const Navbar: React.FC = () => {
                 nonActiveClassName="bg-blue-600"
                 activeClassName="bg-blue-500"
               >
-                {text.menu['contact-us']}
+                {tl.menu['contact-us']}
               </Link>
             </li>
             <li>
@@ -92,7 +90,7 @@ const Navbar: React.FC = () => {
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
-                  {text.menu['about-us']}
+                  {tl.menu['about-us']}
                 </Link>
               </div>
 
@@ -103,7 +101,7 @@ const Navbar: React.FC = () => {
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
-                  {text.menu['join-team']}
+                  {tl.menu['join-team']}
                 </Link>
               </div>
 
@@ -114,7 +112,7 @@ const Navbar: React.FC = () => {
                   nonActiveClassName="bg-blue-600"
                   activeClassName="bg-blue-500"
                 >
-                  {text.menu['contact-us']}
+                  {tl.menu['contact-us']}
                 </Link>
               </div>
 
