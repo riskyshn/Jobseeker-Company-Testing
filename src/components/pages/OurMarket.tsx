@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
-import OurMarketChart from '@/assets/home-page/chart.png'
-import OurMarketChartMobile from '@/assets/home-page/chart-mobile.png'
+import Chart from '@/assets/home-page/chart.png'
 import Indonesia from '@/assets/home-page/indonesia.png'
-import Chart2 from '@/assets/home-page/chart-2.png'
+import ChartPie from '@/assets/home-page/chart-pie.png'
 import useLanguage from '@/lib/lang-switcher'
 import { getTranslation } from '@/lang'
 
@@ -21,9 +20,7 @@ const OurMarket: React.FC = () => {
           <span className="mt-2 block text-4xl text-secondary">{text.number}</span>
           <span className="mt-2 block text-sm text-gray-600 md:text-base">{text['total-employment']}</span>
 
-          <Image src={OurMarketChart} alt="Our Market Chart" className="mt-8 hidden md:block" />
-
-          <Image src={OurMarketChartMobile} alt="Our Market Chart" className="mt-8 block w-full md:hidden" />
+          <Image src={Chart} alt="Our Market Chart" className="mt-8 block w-full" />
 
           <div className="mt-4  items-center gap-8 text-[10px] text-muted md:flex md:text-sm">
             <span>{text.axis}</span>
@@ -39,9 +36,9 @@ const OurMarket: React.FC = () => {
           <span className="mb-8 mt-2 block text-4xl text-secondary">Indonesia</span>
 
           <div className="flex flex-col gap-16 md:flex-row md:gap-0">
-            <div className="md:w-[64%] md:pr-8">
+            <div className="md:w-[60%] md:pr-8">
               <Image src={Indonesia} alt="Indonesia map" className="mb-8 block" />
-              <span className="mb-8 block pt-1">
+              <span className="mb-8 block">
                 In 2022, <span className="font-semibold text-secondary">Indonesia</span> have more than{' '}
                 <span className="font-semibold text-secondary">75 million workforces</span> who are junior high school graduates to
                 diplomas.
@@ -50,8 +47,8 @@ const OurMarket: React.FC = () => {
               <span className="font-semibold text-primary">Let’s Start Here</span>
             </div>
 
-            <div className="md:w-[36%] md:pl-8">
-              <Image src={Chart2} alt="" className="mx-auto mb-8 block w-[80%] md:w-full" />
+            <div className="md:w-[40%] md:pl-8">
+              <Image src={ChartPie} alt="" className="mx-auto mb-8 block w-full md:w-[68%]" />
 
               <span className="block">
                 <span className="font-semibold text-secondary">Indonesia Work-force Based on Education</span> Total workforce in{' '}
