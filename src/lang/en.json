@@ -4,6 +4,17 @@
     "join-team": "Join Our Team",
     "contact-us": "Contact Us"
   },
+
+  "seo": {
+    "title": "Jobseeker Company - Connecting People with Opportunities",
+    "description": "Our products are designed to empower businesses to find the right talent, and also help every individual to discover fulfilling career opportunities.",
+    "meta": {
+      "name": "Jobseeker Company",
+      "description": "Our products and services created not only to empower businesses to find the right talent, but also help every individual to discover fulfilling career opportunities.",
+      "tags": "Jobseeker Company, HRMS, HRIS, HR Software, HR Software Indonesia, HCMS, HRIS Software, Application for HR"
+    }
+  },
+
   "what-we-do": "What We Do",
   "we-connect": "We Connect People with Opportunities",
   "we-connect-text-line-1": "Was established in February 2022 with the goal of creating a reliable economic ecosystem for the workforce. Our platform aims to empower every individual by connecting them with opportunities that align with their skills and experience.",

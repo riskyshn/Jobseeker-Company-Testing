@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from 'next'
 import type { IArticle } from '@/types'
-import Head from 'next/head'
 import HomeHero from '@/components/pages/HomeHero'
 import WhatWeDo from '@/components/pages/WhatWeDo'
 import OurMarket from '@/components/pages/OurMarket'
@@ -14,10 +13,6 @@ type PropTypes = {
 export default function Home({ articles }: PropTypes) {
   return (
     <>
-      <Head>
-        <title>Jobseeker Company</title>
-      </Head>
-
       <HomeHero />
       <WhatWeDo />
       <OurMarket />

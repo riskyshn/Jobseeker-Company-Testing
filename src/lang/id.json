@@ -4,6 +4,17 @@
     "join-team": "Gabung ke Tim Kami!",
     "contact-us": "Hubungi Kami"
   },
+
+  "seo": {
+    "title": "Jobseeker Company - Connecting People with Opportunities",
+    "description": "OProduk kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
+    "meta": {
+      "name": "Jobseeker Company",
+      "description": "Produk dan layanan kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
+      "tags": "Jobseeker Company, HRMS, HRIS, Software HR, Software HR Indonesia, HCMS, Software HRIS, Aplikasi untuk HR"
+    }
+  },
+
   "what-we-do": "Apa Yang Kami Lakukan",
   "we-connect": "Kami Menghubungkan Orang dengan Peluang",
   "we-connect-text-line-1": "Didirikan pada Februari 2022 dengan tujuan menciptakan ekosistem ekonomi yang dapat diandalkan bagi tenaga kerja. Platform kami bertujuan memberdayakan setiap individu dengan menghubungkannya dengan peluang yang sesuai dengan keterampilan dan pengalaman mereka.",
