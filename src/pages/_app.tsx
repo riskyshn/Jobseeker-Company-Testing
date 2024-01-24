@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="min-h-screen">
         <Component {...pageProps} />
       </main>
       <Footer />

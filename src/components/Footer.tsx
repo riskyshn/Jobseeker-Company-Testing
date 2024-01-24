@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="border-b py-12">
           <Image alt="Logo jobseeker.company" src={Logo} className="mb-4 block w-20" />
 
-          <div className="grid grid-cols-1 gap-12 py-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 py-4 md:grid-cols-2 md:gap-24">
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">HEADQUARTER</h5>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">Company</h5>
                 <ul className="text-xs text-textdefault md:text-sm">
