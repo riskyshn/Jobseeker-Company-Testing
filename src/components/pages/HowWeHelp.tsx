@@ -31,7 +31,7 @@ const HowWeHelp: React.FC = () => {
           <p className="mb-8 text-center text-lg text-textdefault md:mx-auto md:max-w-3xl">{tl['how-we-help-line-1']}</p>
         </div>
 
-        <a href="https://jobseeker.app/" className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg md:py-12">
+        <a href="https://jobseeker.app" className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-primary md:px-6 md:py-2 md:text-base">
               JOBSEEKER APP
@@ -66,7 +66,7 @@ const HowWeHelp: React.FC = () => {
           <p className="mb-8 text-center text-lg text-textdefault md:mx-auto md:max-w-3xl">{tl['how-we-help-line-2']}</p>
         </div>
 
-        <div className="rounded-lg bg-white p-4 shadow-custom md:py-12">
+        <a href="https://jobseeker.services" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-secondary px-4 py-1 text-center text-xs font-bold text-white md:px-6 md:py-2 md:text-base">
               JOBSEEKER SOFTWARE (HRMS)
@@ -93,9 +93,9 @@ const HowWeHelp: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div className="rounded-lg bg-white p-4 shadow-custom md:py-12">
+        <a href="https://jobseeker.partners" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-secondary px-4 py-1 text-center text-xs font-bold text-white md:px-6 md:py-2 md:text-base">
               JOBSEEKER SERVICES
@@ -134,12 +134,9 @@ const HowWeHelp: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <a
-          href="https://play.google.com/store/apps/details?id=com.jobseeker.partners"
-          className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg md:py-12"
-        >
+        <a href="https://jobseeker.partners" className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-secondary md:px-6 md:py-2 md:text-base">
               JOBSEEKER PARTNERS
