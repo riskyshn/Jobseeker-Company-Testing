@@ -1,40 +1,45 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Layout from "@/components/layout";
-import Navbar from "@/components/navbar";
-import Hero from "@/components/pages/hero";
-import WhatWeDo from "@/components/pages/what-we-do";
-import { useEffect } from "react";
-import useLanguage from "@/lib/lang-switcher";
-import Head from "next/head";
-import OurMarket from "@/components/pages/our-market";
-import HowWeHelp from "@/components/pages/how-we-help";
+import type { GetServerSideProps } from 'next'
+import type { IArticle } from '@/types'
+import HomeHero from '@/components/pages/HomeHero'
+import WhatWeDo from '@/components/pages/WhatWeDo'
+import OurMarket from '@/components/pages/OurMarket'
+import HowWeHelp from '@/components/pages/HowWeHelp'
+import FeaturedArticles from '@/components/pages/FeaturedArticles'
+import { fetchFeaturedArticles } from '@/lib/api'
 
-const inter = Inter({ subsets: ["latin"] });
+type PropTypes = {
+  articles: IArticle[]
+}
 
-export default function Home() {
-  const { setLang } = useLanguage();
-
-  // configure default language
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.localStorage) {
-      const getLang = localStorage.getItem("lang") ?? "en";
-      setLang(getLang as "en" | "id");
-    }
-  }, []);
-
+export default function Home({ articles }: PropTypes) {
   return (
     <>
-      <Head>
-        <title>Jobseeker Company</title>
-      </Head>
-      <Layout>
-        <Navbar />
-        <Hero />
-        <WhatWeDo />
-        <OurMarket />
-        <HowWeHelp />
-      </Layout>
+      <HomeHero />
+      <WhatWeDo />
+      <OurMarket />
+      <HowWeHelp />
+      <FeaturedArticles articles={articles} />
     </>
-  );
+  )
+}
+
+export const getServerSideProps: GetServerSideProps<PropTypes> = async () => {
+  try {
+    const articles = await fetchFeaturedArticles()
+
+    return {
+      props: {
+        articles,
+      },
+    }
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Error fetching data:', error)
+
+    return {
+      props: {
+        articles: [],
+      },
+    }
+  }
 }

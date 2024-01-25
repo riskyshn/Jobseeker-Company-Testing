@@ -1,18 +1,22 @@
-"use client";
-
-import { create } from "zustand";
+import { create } from 'zustand'
+import en from '@/lang/en.json'
+import id from '@/lang/id.json'
 
 interface AppState {
-  loadingLang: boolean;
-  lang: string;
-  setLang: (lang: "en" | "id") => void;
-  // Add other state properties and actions as needed
+  tl: typeof en | typeof id
+  lang: 'en' | 'id'
+  setLang: (lang: 'en' | 'id') => void
 }
 
 const useLanguage = create<AppState>((set) => ({
-  loadingLang: false,
-  lang: "en",
-  setLang: (lang: "en" | "id") => set(() => ({ lang: lang })),
-}));
+  lang: 'en',
+  tl: en,
+  setLang: (lang: 'en' | 'id') => {
+    const messages = { en, id }
 
-export default useLanguage;
+    document.documentElement.lang = lang
+    set(() => ({ lang: lang, tl: messages[lang] }))
+  },
+}))
+
+export default useLanguage
