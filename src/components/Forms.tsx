@@ -22,7 +22,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ name, cla
         ref={ref}
         name={name}
         id={name}
-        className="block h-12 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+        className="block h-12 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
         {...props}
       />
       {!!error && <span className="block text-sm text-red-600">{error}</span>}
@@ -38,7 +38,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ 
         ref={ref}
         name={name}
         id={name}
-        className="block w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+        className="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
         {...props}
       />
       {!!error && <span className="block text-sm text-red-600">{error}</span>}
@@ -54,7 +54,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ name, 
         ref={ref}
         name={name}
         id={name}
-        className="block h-12 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+        className="block h-12 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
         {...props}
       >
         {options.map((option) => (
