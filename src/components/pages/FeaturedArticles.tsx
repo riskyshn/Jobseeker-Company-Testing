@@ -10,7 +10,7 @@ type PropTypes = {
 }
 
 const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
-  const { tl } = useLanguage()
+  const { tl, lang } = useLanguage()
 
   return (
     <section className="border-y py-12 md:gap-16 md:py-24">
@@ -35,8 +35,10 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
               </div>
 
               <div className="mt-auto flex">
-                <a href={el.link} className="flex items-center gap-1 py-2 text-blue-600">
-                  <span className="block">{tl['featured-articles-read-more']}</span>
+                <a href={el.link} aria-label={el.title} className="flex items-center gap-1 py-2 text-blue-600">
+                  <span
+                    className={`block after:inline ${lang === 'en' ? "after:content-['Read_More']" : "after:content-['Baca_Selengkapnya']"} "`}
+                  />
                   <FiArrowRight size={20} className="block" />
                 </a>
               </div>

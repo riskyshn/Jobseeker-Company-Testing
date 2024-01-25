@@ -62,7 +62,7 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
             <a key={i} href="#" className="block rounded-lg p-3 shadow-custom">
               <span className="flex items-center justify-between">
                 <span className="block text-sm text-secondary">JOBSEEKER COMPANY</span>
-                <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-600">
+                <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
                   <FiClock size={12} className="block" />
                   Kemarin
                 </span>
