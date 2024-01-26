@@ -4,6 +4,7 @@ import LoadingBar from './LoadingBar'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useLanguage } from '@/contexts/LanguageContext'
+import Preloader from './Preloader'
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { setLang, tl } = useLanguage()
@@ -36,7 +37,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         <meta name="twitter:site" content="@jobseekerapp" />
         <meta name="twitter:image" content="https://jobseeker.company/assets/image/jobseeker-company-featured.jpg" />
       </Head>
-
+      <Preloader />
       <LoadingBar />
       <Navbar />
       <main className="min-h-screen">{children}</main>
