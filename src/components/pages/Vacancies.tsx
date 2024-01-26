@@ -62,7 +62,7 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
 
       <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
         {Array.from(Array(12)).map((_, i) => (
-          <a key={i} href="#" className="shadow-custom block rounded-lg p-3">
+          <a key={i} href="#" className="block rounded-lg border p-3 transition-shadow hover:shadow">
             <span className="flex items-center justify-between">
               <span className="block text-sm text-secondary">JOBSEEKER COMPANY</span>
               <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
@@ -76,15 +76,15 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
             <span className="flex gap-4">
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiMapPinBold size={12} className="block" />
-                <span className="text-textdefault">Jakarta Barat</span>
+                <span>Jakarta Barat</span>
               </span>
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiBagBold size={12} className="block" />
-                <span className="text-textdefault">Full Time</span>
+                <span>Full Time</span>
               </span>
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiMoneyBold size={12} className="block" />
-                <span className="text-textdefault">Negotiable</span>
+                <span>Negotiable</span>
               </span>
             </span>
           </a>

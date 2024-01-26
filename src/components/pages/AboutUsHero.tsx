@@ -12,8 +12,8 @@ const AboutUsHero: React.FC = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl font-bold text-secondary md:text-6xl">{tl['about-us']}</h2>
-          <p className="text-textdefault">{tl['about-us-line-1']}</p>
-          <p className="text-textdefault">{tl['about-us-line-2']}</p>
+          <p>{tl['about-us-line-1']}</p>
+          <p>{tl['about-us-line-2']}</p>
         </div>
       </div>
     </section>

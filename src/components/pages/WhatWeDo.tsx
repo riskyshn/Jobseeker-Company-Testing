@@ -13,7 +13,7 @@ const WhatWeDo: React.FC = () => {
       <div className="md:flex md:items-center">
         <div className="hidden md:block md:w-[10%]"></div>
         <div className="md:w-[90%] md:border-l md:py-4 md:pl-6">
-          <p className="text-textdefault md:text-lg">
+          <p className="md:text-lg">
             {tl['we-connect-text-line-1']}
             <br />
             <br />

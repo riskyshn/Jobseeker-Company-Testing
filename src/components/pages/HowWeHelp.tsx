@@ -27,7 +27,7 @@ const HowWeHelp: React.FC = () => {
           <h3 className="mb-3 text-center text-2xl font-semibold text-primary before:h-1 before:flex-1 before:bg-gray-100 after:h-1 after:flex-1 after:bg-gray-100 md:flex md:items-center md:gap-3 md:before:block md:before:content-['_'] md:after:block md:after:content-['_']">
             <span className="block">{tl['how-we-help-h3-1']}</span>
           </h3>
-          <p className="text-textdefault mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-1']}</p>
+          <p className="mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-1']}</p>
         </div>
 
         <a href="https://jobseeker.app" className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg md:py-12">
@@ -62,7 +62,7 @@ const HowWeHelp: React.FC = () => {
           <h3 className="mb-3 text-center text-2xl font-semibold text-secondary before:h-1 before:flex-1 before:bg-gray-100 after:h-1 after:flex-1 after:bg-gray-100 md:flex md:items-center md:gap-3 md:before:block md:before:content-['_'] md:after:block md:after:content-['_']">
             <span className="block">{tl['how-we-help-h3-2']}</span>
           </h3>
-          <p className="text-textdefault mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-2']}</p>
+          <p className="mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-2']}</p>
         </div>
 
         <a href="https://jobseeker.services" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg md:py-12">

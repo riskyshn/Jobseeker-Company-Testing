@@ -11,7 +11,7 @@ const OurMarket: React.FC = () => {
     <section className="container py-12 md:py-24">
       <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['our-market']}</h2>
 
-      <div className="shadow-custom mb-8 mt-4 rounded-lg bg-white p-4 md:p-10 md:leading-8">
+      <div className="mb-8 mt-4 rounded-lg border bg-white p-4 md:p-10 md:leading-8">
         <span className="text-sm text-gray-600 md:text-base">{tl.employment}</span>
         <span className="mt-2 block text-4xl text-secondary">{tl.number}</span>
         <span className="mt-2 block text-sm text-gray-600 md:text-base">{tl['total-employment']}</span>
@@ -27,7 +27,7 @@ const OurMarket: React.FC = () => {
         </div>
       </div>
 
-      <div className="shadow-custom rounded-lg bg-white p-4 md:p-10 md:leading-8">
+      <div className="rounded-lg border bg-white p-4 md:p-10 md:leading-8">
         <span className="text-sm text-gray-600 md:text-base">Our First Market</span>
         <span className="mb-8 mt-2 block text-4xl text-secondary">Indonesia</span>
 
