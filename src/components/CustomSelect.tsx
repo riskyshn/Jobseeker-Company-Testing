@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 
 type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
@@ -8,14 +8,7 @@ type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
 }
 
 export const CustomSelect = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ name, containerClassName, className, placeholder, options, value, onChange, ...props }, ref) => {
-    const [selected, setSelected] = useState(value)
-
-    const onSelectChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
-      onChange?.(e)
-      setSelected(e.currentTarget.value)
-    }
-
+  ({ name, containerClassName, className, placeholder, options, value, ...props }, ref) => {
     return (
       <div className={`relative flex overflow-hidden ${containerClassName || ''}`}>
         <span className={`pointer-events-none absolute bottom-px left-px right-px top-px flex items-center justify-end px-4`}>
@@ -27,7 +20,6 @@ export const CustomSelect = React.forwardRef<HTMLSelectElement, SelectProps>(
           id={name}
           value={value}
           className={`block h-full w-full cursor-pointer appearance-none border bg-white focus:outline-0 ${className || ''}`}
-          onChange={onSelectChange}
           {...props}
         >
           <option value="">{placeholder || 'Select'}</option>
