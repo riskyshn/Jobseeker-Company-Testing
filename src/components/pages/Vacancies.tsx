@@ -4,6 +4,7 @@ import Container from '@/components/Container'
 import { FiClock } from 'react-icons/fi'
 import { PiBagBold, PiMapPinBold, PiMoneyBold } from 'react-icons/pi'
 import useLanguage from '@/lib/lang-switcher'
+import CustomSelect from '../CustomSelect'
 
 type PropTypes = {
   vacancies: IVacancy[]
@@ -28,24 +29,28 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
                 />
               </div>
               <div>
-                <select className="block h-12 w-full border border-x-0 border-blue-600 bg-white px-4 text-xs text-blue-600 focus:outline-0 md:h-16 md:text-base">
-                  <option value="" selected disabled>
-                    {tl.location}
-                  </option>
-                  <option>Item 1</option>
-                  <option>Item 2</option>
-                  <option>Item 3</option>
-                </select>
+                <CustomSelect
+                  className="border-x-0 border-blue-600 px-4 text-blue-600"
+                  containerClassName="h-12 md:h-16"
+                  placeholder={tl.location}
+                  options={[
+                    { value: 'val1', label: 'Value 1' },
+                    { value: 'val2', label: 'Value 2' },
+                    { value: 'val3', label: 'Value 3' },
+                  ]}
+                />
               </div>
               <div>
-                <select className="block h-12 w-full rounded-r-xl border border-blue-600 bg-white px-4 text-xs text-blue-600 focus:outline-0 md:h-16 md:text-base">
-                  <option value="" selected disabled>
-                    {tl.department}
-                  </option>
-                  <option>Item 1</option>
-                  <option>Item 2</option>
-                  <option>Item 3</option>
-                </select>
+                <CustomSelect
+                  className="rounded-r-xl border-blue-600 px-4 text-blue-600"
+                  containerClassName="h-12  md:h-16"
+                  placeholder={tl.department}
+                  options={[
+                    { value: 'val1', label: 'Value 1' },
+                    { value: 'val2', label: 'Value 2' },
+                    { value: 'val3', label: 'Value 3' },
+                  ]}
+                />
               </div>
             </div>
 

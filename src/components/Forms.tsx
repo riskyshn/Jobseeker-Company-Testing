@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomSelect from './CustomSelect'
 
 type BaseProps = {
   label?: string
@@ -50,19 +51,15 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ name, 
   return (
     <div className={className}>
       {!!label && <label htmlFor={name}>{label}</label>}
-      <select
+      <CustomSelect
         ref={ref}
-        name={name}
         id={name}
-        className="block h-12 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+        name={name}
+        className="rounded-lg border-gray-300 px-3 focus:border-blue-500"
+        containerClassName="h-12"
+        options={options}
         {...props}
-      >
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+      />
       {!!error && <span className="block text-sm text-red-600">{error}</span>}
     </div>
   )
