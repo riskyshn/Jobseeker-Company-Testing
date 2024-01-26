@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CareerImage from '@/assets/about-us-page/Career.png'
 import { FiArrowRight } from 'react-icons/fi'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const CarrerAt: React.FC = () => {
   const { tl } = useLanguage()

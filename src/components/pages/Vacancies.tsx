@@ -2,7 +2,7 @@ import type { IVacancy } from '@/types'
 import React from 'react'
 import { FiClock } from 'react-icons/fi'
 import { PiBagBold, PiMapPinBold, PiMoneyBold } from 'react-icons/pi'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 import CustomSelect from '../CustomSelect'
 
 type PropTypes = {

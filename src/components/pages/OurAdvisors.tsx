@@ -10,7 +10,7 @@ import Philip from '@/assets/about-us-page/Ng.png'
 import Steve from '@/assets/about-us-page/Steve.png'
 import Biju from '@/assets/about-us-page/Biju.png'
 import Akhsat from '@/assets/about-us-page/Akhsat.png'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const OurAdvisors: React.FC = () => {
   const { tl } = useLanguage()

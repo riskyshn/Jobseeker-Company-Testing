@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Logo from '@/assets/footerlogo.svg'
 import { RiTwitterXFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
 import Link from './Link'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Footer: React.FC = () => {
   const { tl } = useLanguage()

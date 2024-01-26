@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 import En from '@/assets/en.png'
 import Id from '@/assets/id.png'
 

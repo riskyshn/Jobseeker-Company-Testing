@@ -1,4 +1,4 @@
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const WhatWeDo: React.FC = () => {
   const { tl } = useLanguage()

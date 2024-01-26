@@ -7,7 +7,7 @@ import { Input, Select, Textarea } from '@/components/Forms'
 import Landing from '@/assets/landing.png'
 import Logo from '@/assets/footerlogo.svg'
 import { FiArrowRightCircle } from 'react-icons/fi'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const ContactUs: React.FC = () => {
   const { tl } = useLanguage()

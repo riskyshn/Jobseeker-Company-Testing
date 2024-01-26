@@ -2,7 +2,7 @@ import type { IArticle } from '@/types'
 import React from 'react'
 import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 type PropTypes = {
   articles: IArticle[]

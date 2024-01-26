@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Chart from '@/assets/home-page/chart.png'
 import Indonesia from '@/assets/home-page/indonesia.png'
 import ChartPie from '@/assets/home-page/chart-pie.png'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const OurMarket: React.FC = () => {
   const { tl } = useLanguage()

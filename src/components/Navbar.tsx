@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import LangSwicther from './LangSwitcher'

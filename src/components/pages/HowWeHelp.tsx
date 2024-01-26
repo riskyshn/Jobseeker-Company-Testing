@@ -13,7 +13,7 @@ import atsIcon from '@/assets/home-page/icon-ats.png'
 import hrcIcon from '@/assets/home-page/icon-hrc.png'
 import esIcon from '@/assets/home-page/icon-es.png'
 import itaSdaIcon from '@/assets/home-page/icon-ita-sda.png'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const HowWeHelp: React.FC = () => {
   const { tl } = useLanguage()

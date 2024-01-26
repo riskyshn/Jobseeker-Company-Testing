@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import HeroImage from '@/assets/about-us-page/AboutUs.png'
-import useLanguage from '@/lib/lang-switcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const AboutUsHero: React.FC = () => {
   const { tl } = useLanguage()
