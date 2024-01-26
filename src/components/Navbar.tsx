@@ -53,9 +53,9 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/contact-us"
-                className="inline-block rounded-full px-6 py-2 leading-5 text-white transition-colors hover:bg-blue-500"
-                nonActiveClassName="bg-blue-600"
-                activeClassName="bg-blue-500"
+                className="inline-block rounded-full px-6 py-2 leading-5 text-white transition-colors hover:bg-secondary-light/80"
+                nonActiveClassName="bg-secondary-light"
+                activeClassName="bg-secondary-light/80"
               >
                 {tl.menu['contact-us']}
               </Link>
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/about-us"
-                  className=" text-xl transition-colors hover:text-gray-900"
+                  className="text-xl transition-colors hover:text-gray-900"
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/vacancy"
-                  className=" text-xl transition-colors hover:text-gray-900"
+                  className="text-xl transition-colors hover:text-gray-900"
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
@@ -107,9 +107,9 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/contact-us"
-                  className="block rounded-full py-2 text-center text-xl leading-8 text-white transition-colors hover:bg-blue-500"
-                  nonActiveClassName="bg-blue-600"
-                  activeClassName="bg-blue-500"
+                  className="block rounded-full py-2 text-center text-xl leading-8 text-white transition-colors hover:bg-secondary-light/80"
+                  nonActiveClassName="bg-secondary-light"
+                  activeClassName="bg-secondary-light/80"
                 >
                   {tl.menu['contact-us']}
                 </Link>

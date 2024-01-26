@@ -23,12 +23,12 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
               <input
                 type="text"
                 placeholder={tl['job-title']}
-                className="block h-12 w-full rounded-l-xl border border-blue-600 bg-white px-4 text-xs placeholder-blue-600 focus:outline-0 md:h-16 md:text-base"
+                className="block h-12 w-full rounded-l-xl border border-secondary-light bg-white px-4 text-xs placeholder-secondary-light focus:outline-0 md:h-16 md:text-base"
               />
             </div>
             <div>
               <CustomSelect
-                className="border-x-0 border-blue-600 px-4 text-blue-600"
+                className="border-x-0 border-secondary-light px-4 text-secondary-light"
                 containerClassName="h-12 md:h-16"
                 placeholder={tl.location}
                 options={[
@@ -40,7 +40,7 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
             </div>
             <div>
               <CustomSelect
-                className="rounded-r-xl border-blue-600 px-4 text-blue-600"
+                className="rounded-r-xl border-secondary-light px-4 text-secondary-light"
                 containerClassName="h-12  md:h-16"
                 placeholder={tl.department}
                 options={[
@@ -53,7 +53,7 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
           </div>
 
           <div className="flex items-center justify-center">
-            <button className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-2 text-sm font-semibold text-white hover:bg-blue-500 md:px-12 md:py-3 md:text-base">
+            <button className="flex items-center justify-center gap-2 rounded-full bg-secondary-light px-8 py-2 text-sm font-semibold text-white transition-colors hover:bg-secondary-light/80 md:px-12 md:py-3 md:text-base">
               {tl.search}
             </button>
           </div>

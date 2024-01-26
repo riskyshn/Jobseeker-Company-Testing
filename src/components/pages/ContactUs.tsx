@@ -84,7 +84,7 @@ const ContactUs: React.FC = () => {
           <Textarea className="mb-4" rows={4} label={tl.tell} {...register('message')} error={errors.message?.message} />
 
           <button
-            className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-blue-600 px-10 font-semibold text-white transition-colors hover:bg-blue-500 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-blue-600"
+            className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-secondary-light px-10 font-semibold text-white transition-colors hover:bg-secondary-light/80 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-secondary-light"
             disabled={isLoading || isSuccess}
           >
             <span className="block uppercase">{tl['inquiry-cta']}</span>

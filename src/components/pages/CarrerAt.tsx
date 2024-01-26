@@ -22,7 +22,7 @@ const CarrerAt: React.FC = () => {
           <div className="flex">
             <Link
               href="/vacancy"
-              className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-500"
+              className="flex items-center justify-center gap-2 rounded-full bg-secondary-light px-5 py-3 font-semibold text-white hover:bg-secondary-light/80"
             >
               <span className="block">{tl['career-cta']}</span>
               <span className="block">

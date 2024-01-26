@@ -54,7 +54,7 @@ const LoadingBar: React.FC = () => {
 
   return width ? (
     <i className="fixed left-0 top-0 z-[9999] block h-[2px] w-full">
-      <i className="block h-full bg-secondary transition-all duration-300 ease-in-out" style={{ width: `${width}%` }} />
+      <i className="block h-full bg-secondary-light transition-all duration-300 ease-in-out" style={{ width: `${width}%` }} />
     </i>
   ) : null
 }
