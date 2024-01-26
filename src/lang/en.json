@@ -109,7 +109,13 @@
   "full-name": "Full Name",
   "email-address": "Email Address",
   "phone-number": "Phone Number",
-  "im-a": "I’m an Enterprise/Candidate/SME/Media",
+  "im-a": "I’m an",
+  "im-a-options": {
+    "Enterprise": "Enterprise",
+    "Candidate": "Candidate",
+    "SME": "SME",
+    "Media": "Media"
+  },
   "tell": "Tell us more about what you need?",
   "inquiry-cta": "Submit"
 }

@@ -10,31 +10,30 @@ import Logo from '@/assets/footerlogo.svg'
 import { FiArrowRightCircle } from 'react-icons/fi'
 import useLanguage from '@/lib/lang-switcher'
 
-const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/
-
-const imAOptions = [
-  { value: 'option1', label: 'Option 1' },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' },
-]
-
-const i = imAOptions.map((option) => option.value)
-
-const validationSchema = z.object({
-  name: z.string().min(3),
-  email: z.string().email(),
-  phone: z.string().regex(phoneNumberRegex, 'Phone number is invalid'),
-  im_a: z.string().refine((v) => imAOptions.map((option) => option.value).includes(v), 'I am is invalid'),
-  message: z.string().min(1),
-})
-
-type ValidationSchema = z.infer<typeof validationSchema>
-
 const ContactUs: React.FC = () => {
   const { tl } = useLanguage()
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+
+  const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/
+
+  const imAOptions = [
+    { value: 'Enterprise', label: tl['im-a-options']['Enterprise'] },
+    { value: 'Candidate', label: tl['im-a-options']['Candidate'] },
+    { value: 'SME', label: tl['im-a-options']['SME'] },
+    { value: 'Media', label: tl['im-a-options']['Media'] },
+  ]
+
+  const validationSchema = z.object({
+    name: z.string().min(3),
+    email: z.string().email(),
+    phone: z.string().regex(phoneNumberRegex, 'Phone number is invalid'),
+    im_a: z.string().refine((v) => imAOptions.map((option) => option.value).includes(v), 'I am is invalid'),
+    message: z.string().min(1),
+  })
+
+  type ValidationSchema = z.infer<typeof validationSchema>
 
   const {
     register,
