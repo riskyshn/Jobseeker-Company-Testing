@@ -16,7 +16,7 @@ const CarrerAt: React.FC = () => {
         </div>
         <div className="flex flex-col gap-6">
           <h2 className="text-4xl font-bold text-secondary md:text-6xl">{tl.career}</h2>
-          <div className="flex flex-col gap-3 text-textdefault">
+          <div className="text-textdefault flex flex-col gap-3">
             <p>{tl['career-desc-1']}</p>
             <p>{tl['career-desc-2']}</p>
           </div>

@@ -74,7 +74,7 @@ const OurAdvisors: React.FC = () => {
             <div key={i} className="w-2/3 p-3 md:w-1/5">
               <Image alt="" src={el.image} className="mx-auto mb-3 block w-4/5" />
               <h3 className="text-center text-lg font-semibold">{el.name}</h3>
-              <p className="text-center text-textdefault">{el.position}</p>
+              <p className="text-textdefault text-center">{el.position}</p>
             </div>
           ))}
         </div>

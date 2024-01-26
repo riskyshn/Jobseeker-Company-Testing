@@ -19,17 +19,17 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">HEADQUARTER</h5>
-                <p className="text-xs text-textdefault md:text-sm">
+                <p className="text-textdefault text-xs md:text-sm">
                   J-Loft Office, Griya Jimbaran Hub. Jl. Karang Mas, Jimbaran. Bali 80361
                 </p>
               </div>
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">SINGAPORE</h5>
-                <p className="text-xs text-textdefault md:text-sm">10 Anson Road #22-02 International Plaza Singapore 079903</p>
+                <p className="text-textdefault text-xs md:text-sm">10 Anson Road #22-02 International Plaza Singapore 079903</p>
               </div>
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">JAKARTA</h5>
-                <p className="text-xs text-textdefault md:text-sm">
+                <p className="text-textdefault text-xs md:text-sm">
                   AD Premier Office Park, 9th Floor Jl. TB Simatupang No.5 - Ragunan. Pasar Minggu South Jakarta City Jakarta 12550
                 </p>
               </div>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-3 gap-6">
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-company']}</h5>
-                <ul className="text-xs text-textdefault md:text-sm">
+                <ul className="text-textdefault text-xs md:text-sm">
                   <li>
                     <Link href="/about-us" activeClassName="text-gray-900 underline" className="hover:text-gray-900">
                       {tl['footer-company-menu']['about']}
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-candidates']}</h5>
-                <ul className="text-xs text-textdefault md:text-sm">
+                <ul className="text-textdefault text-xs md:text-sm">
                   <li>
                     <a href="https://jobseeker.app/" className="hover:text-gray-900">
                       Jobseeker App
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-employers']}</h5>
-                <ul className="text-xs text-textdefault md:text-sm">
+                <ul className="text-textdefault text-xs md:text-sm">
                   <li>
                     <a href="https://play.google.com/store/apps/details?id=com.jobseeker.partners" className="hover:text-gray-900">
                       Jobseeker Partners
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h5 className="mb-1 text-sm font-bold md:text-base">{tl['footer-contact']}:</h5>
-                <ul className="mb-3 text-xs text-textdefault md:text-sm">
+                <ul className="text-textdefault mb-3 text-xs md:text-sm">
                   <li>
                     <a
                       rel="noopener nofollow"

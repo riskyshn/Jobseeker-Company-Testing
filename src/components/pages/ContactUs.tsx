@@ -59,7 +59,7 @@ const ContactUs: React.FC = () => {
   return (
     <section className="pb-12 pt-24">
       <Container>
-        <div className="flex flex-col overflow-hidden rounded-lg bg-white shadow-custom md:flex-row-reverse">
+        <div className="shadow-custom flex flex-col overflow-hidden rounded-lg bg-white md:flex-row-reverse">
           <div
             className="flex w-full items-center justify-center  md:w-2/5"
             style={{
@@ -74,7 +74,7 @@ const ContactUs: React.FC = () => {
           </div>
           <form className="flex-1 p-6" onSubmit={onSubmit}>
             <h2 className="text-3xl font-bold text-secondary">{tl.inquiry}</h2>
-            <p className="mb-6 text-textdefault">{tl['inquiry-desc']}</p>
+            <p className="text-textdefault mb-6">{tl['inquiry-desc']}</p>
 
             {isSuccess && <div className="mb-4 rounded-lg bg-green-600/10 px-3 py-4 text-green-600">{tl['inquiry-success']}</div>}
             {!!errorMessage && <div className="mb-4 rounded-lg bg-red-600/10 px-3 py-4 text-red-600">{errorMessage}</div>}
