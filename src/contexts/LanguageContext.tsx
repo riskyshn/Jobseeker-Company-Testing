@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import en from '@/lang/en.json'
 import id from '@/lang/id.json'
 
@@ -16,18 +16,31 @@ export const LanguageProvider: React.FC<React.PropsWithChildren> = ({ children }
 
   const setLang: LanguageContextType['setLang'] = (lang) => {
     const messages = { en, id }
+    localStorage.setItem('lang', lang)
     document.documentElement.lang = lang
     setLangState(lang)
     setTl(messages[lang])
   }
 
-  const value: LanguageContextType = {
-    lang,
-    tl,
-    setLang,
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const getLang = localStorage.getItem('lang') ?? 'en'
+      setLang(getLang as 'en' | 'id')
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider
+      value={{
+        lang,
+        tl,
+        setLang,
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export const useLanguage = () => {

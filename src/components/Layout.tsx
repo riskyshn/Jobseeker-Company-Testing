@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import LoadingBar from './LoadingBar'
 import Navbar from './Navbar'
@@ -7,16 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Preloader from './Preloader'
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const { setLang, tl } = useLanguage()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const getLang = localStorage.getItem('lang') ?? 'en'
-      setLang(getLang as 'en' | 'id')
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
+  const { tl } = useLanguage()
   return (
     <>
       <Head>
