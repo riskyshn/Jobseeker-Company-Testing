@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
 import useLanguage from '@/lib/lang-switcher'
-import Container from './Container'
 import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import LangSwicther from './LangSwitcher'
@@ -10,7 +9,7 @@ import { useRouter } from 'next/router'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { lang, tl } = useLanguage()
+  const { tl } = useLanguage()
   const router = useRouter()
 
   useEffect(() => {
@@ -23,13 +22,13 @@ const Navbar: React.FC = () => {
         isOpen ? 'bg-white/100' : 'bg-white/70'
       }`}
     >
-      <Container className="flex items-center justify-between">
+      <nav className="container flex items-center justify-between">
         <Link href="/">
           <Logo width={150} />
         </Link>
 
         {/* desktop menu  */}
-        <nav className="hidden md:block">
+        <div className="hidden md:block">
           <ul className="flex items-center gap-6">
             <li>
               <Link
@@ -65,7 +64,7 @@ const Navbar: React.FC = () => {
               <LangSwicther />
             </li>
           </ul>
-        </nav>
+        </div>
 
         {/* mobile menu  */}
         <div className="block md:hidden">
@@ -122,7 +121,7 @@ const Navbar: React.FC = () => {
             </div>
           </Transition>
         </div>
-      </Container>
+      </nav>
     </header>
   )
 }

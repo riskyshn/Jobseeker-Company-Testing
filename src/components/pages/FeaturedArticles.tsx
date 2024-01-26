@@ -1,7 +1,6 @@
 import type { IArticle } from '@/types'
 import React from 'react'
 import Image from 'next/image'
-import Container from '@/components/Container'
 import { FiArrowRight } from 'react-icons/fi'
 import useLanguage from '@/lib/lang-switcher'
 
@@ -13,8 +12,8 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
   const { tl, lang } = useLanguage()
 
   return (
-    <section className="border-y py-12 md:gap-16 md:py-24">
-      <Container className="grid grid-cols-1 gap-8">
+    <section className="border-y py-12 md:py-24">
+      <div className="container grid grid-cols-1 gap-8">
         <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['featured-articles']}</h2>
 
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -51,7 +50,7 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
             {tl['featured-articles-see-all-articles']}
           </a>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

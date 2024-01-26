@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from '@/components/Container'
 import CareerImage from '@/assets/about-us-page/Career.png'
 import { FiArrowRight } from 'react-icons/fi'
 import useLanguage from '@/lib/lang-switcher'
@@ -9,8 +8,8 @@ import useLanguage from '@/lib/lang-switcher'
 const CarrerAt: React.FC = () => {
   const { tl } = useLanguage()
   return (
-    <section className="py-12 md:gap-16 md:py-24">
-      <Container className="flex flex-col items-center gap-4 md:flex-row">
+    <section className="container py-12 md:py-24">
+      <div className="flex flex-col items-center gap-4 md:flex-row">
         <div>
           <Image alt="" src={CareerImage} className="w-full" />
         </div>
@@ -32,7 +31,7 @@ const CarrerAt: React.FC = () => {
             </Link>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

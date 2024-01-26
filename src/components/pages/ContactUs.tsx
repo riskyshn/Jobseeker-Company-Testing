@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import Container from '@/components/Container'
 import { Input, Select, Textarea } from '@/components/Forms'
 import Landing from '@/assets/landing.png'
 import Logo from '@/assets/footerlogo.svg'
@@ -57,44 +56,42 @@ const ContactUs: React.FC = () => {
   })
 
   return (
-    <section className="pb-12 pt-24">
-      <Container>
-        <div className="shadow-custom flex flex-col overflow-hidden rounded-lg bg-white md:flex-row-reverse">
-          <div
-            className="flex w-full items-center justify-center  md:w-2/5"
-            style={{
-              background: `url('${Landing.src}')`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-            }}
-          >
-            <div className="py-8">
-              <Image alt="" src={Logo} className="block h-24 w-24" />
-            </div>
+    <section className="container pb-12 pt-24">
+      <div className="shadow-custom flex flex-col overflow-hidden rounded-lg bg-white md:flex-row-reverse">
+        <div
+          className="flex w-full items-center justify-center  md:w-2/5"
+          style={{
+            background: `url('${Landing.src}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
+        >
+          <div className="py-8">
+            <Image alt="" src={Logo} className="block h-24 w-24" />
           </div>
-          <form className="flex-1 p-6" onSubmit={onSubmit}>
-            <h2 className="text-3xl font-bold text-secondary">{tl.inquiry}</h2>
-            <p className="text-textdefault mb-6">{tl['inquiry-desc']}</p>
-
-            {isSuccess && <div className="mb-4 rounded-lg bg-green-600/10 px-3 py-4 text-green-600">{tl['inquiry-success']}</div>}
-            {!!errorMessage && <div className="mb-4 rounded-lg bg-red-600/10 px-3 py-4 text-red-600">{errorMessage}</div>}
-
-            <Input className="mb-4" label={tl['full-name']} {...register('name')} error={errors.name?.message} />
-            <Input className="mb-4" label={tl['email-address']} {...register('email')} error={errors.email?.message} />
-            <Input className="mb-4" label={tl['phone-number']} {...register('phone')} error={errors.phone?.message} />
-            <Select className="mb-4" label={tl['im-a']} options={imAOptions} {...register('im_a')} error={errors.im_a?.message} />
-            <Textarea className="mb-4" rows={4} label={tl.tell} {...register('message')} error={errors.message?.message} />
-
-            <button
-              className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-blue-600 px-10 font-semibold text-white transition-colors hover:bg-blue-500 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-blue-600"
-              disabled={isLoading || isSuccess}
-            >
-              <span className="block uppercase">{tl['inquiry-cta']}</span>
-              <FiArrowRightCircle className="block" size={22} />
-            </button>
-          </form>
         </div>
-      </Container>
+        <form className="flex-1 p-6" onSubmit={onSubmit}>
+          <h2 className="text-3xl font-bold text-secondary">{tl.inquiry}</h2>
+          <p className="text-textdefault mb-6">{tl['inquiry-desc']}</p>
+
+          {isSuccess && <div className="mb-4 rounded-lg bg-green-600/10 px-3 py-4 text-green-600">{tl['inquiry-success']}</div>}
+          {!!errorMessage && <div className="mb-4 rounded-lg bg-red-600/10 px-3 py-4 text-red-600">{errorMessage}</div>}
+
+          <Input className="mb-4" label={tl['full-name']} {...register('name')} error={errors.name?.message} />
+          <Input className="mb-4" label={tl['email-address']} {...register('email')} error={errors.email?.message} />
+          <Input className="mb-4" label={tl['phone-number']} {...register('phone')} error={errors.phone?.message} />
+          <Select className="mb-4" label={tl['im-a']} options={imAOptions} {...register('im_a')} error={errors.im_a?.message} />
+          <Textarea className="mb-4" rows={4} label={tl.tell} {...register('message')} error={errors.message?.message} />
+
+          <button
+            className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-blue-600 px-10 font-semibold text-white transition-colors hover:bg-blue-500 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-blue-600"
+            disabled={isLoading || isSuccess}
+          >
+            <span className="block uppercase">{tl['inquiry-cta']}</span>
+            <FiArrowRightCircle className="block" size={22} />
+          </button>
+        </form>
+      </div>
     </section>
   )
 }

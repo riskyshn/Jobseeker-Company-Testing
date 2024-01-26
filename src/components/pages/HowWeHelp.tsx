@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Container from '@/components/Container'
 import jobseekerAppIcon from '@/assets/home-page/jobseeker.app-icon.png'
 import jobseekerAppDemo from '@/assets/home-page/jobseeker.app-demo.png'
 import jobseekerPartnersIcon from '@/assets/home-page/jobseeker.partners-icon.png'
@@ -20,8 +19,8 @@ const HowWeHelp: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="py-12 md:py-24">
-      <Container className="grid grid-cols-1 gap-8">
+    <section className="container py-12 md:py-24">
+      <div className="grid grid-cols-1 gap-8">
         <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['how-we-help']}</h2>
 
         <div>
@@ -167,7 +166,7 @@ const HowWeHelp: React.FC = () => {
             </div>
           </div>
         </a>
-      </Container>
+      </div>
     </section>
   )
 }

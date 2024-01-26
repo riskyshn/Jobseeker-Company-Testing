@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Container from '@/components/Container'
 
 import Sandi from '@/assets/about-us-page/Sandi.png'
 import Helmy from '@/assets/about-us-page/Helmy.png'
@@ -65,8 +64,8 @@ const OurAdvisors: React.FC = () => {
   ]
 
   return (
-    <section className="py-12 md:gap-16 md:py-24">
-      <Container className="grid grid-cols-1 gap-8">
+    <section className="container py-12 md:py-24">
+      <div className="grid grid-cols-1 gap-8">
         <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl.advisor}</h2>
 
         <div className="flex flex-col flex-wrap items-center justify-center md:flex-row">
@@ -78,7 +77,7 @@ const OurAdvisors: React.FC = () => {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   )
 }
