@@ -28,7 +28,7 @@ const OurMarket: React.FC = () => {
       </div>
 
       <div className="rounded-lg border bg-white p-4 md:p-10 md:leading-8">
-        <span className="text-sm text-gray-600 md:text-base">Our First Market</span>
+        <span className="text-sm text-gray-600 md:text-base">{tl['our-first-market']}</span>
         <span className="mb-8 mt-2 block text-4xl text-secondary">Indonesia</span>
 
         <div className="flex flex-col gap-16 md:flex-row md:gap-0">
