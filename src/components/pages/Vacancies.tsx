@@ -1,53 +1,62 @@
 import type { IVacancy } from '@/types'
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { FiClock } from 'react-icons/fi'
 import { PiBagBold, PiMapPinBold, PiMoneyBold } from 'react-icons/pi'
 import { useLanguage } from '@/contexts/LanguageContext'
-import CustomSelect from '../CustomSelect'
+import { useRouter } from 'next/router'
+import { fetchVacancyList } from '@/lib/api'
 
 type PropTypes = {
   vacancies: IVacancy[]
 }
 
-const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
+const Vacancies: React.FC<PropTypes> = (props) => {
   const { tl } = useLanguage()
+  const [vacancies, setVacancies] = useState(props.vacancies)
+  const router = useRouter()
+  const [input, setInput] = useState({
+    filter: router.query.filter?.toString() || '',
+    city: router.query.city?.toString() || '',
+  })
+
+  useEffect(() => {
+    const main = async () => {
+      const data = await fetchVacancyList(router.query)
+      setVacancies(data)
+    }
+    main()
+  }, [router.query])
+
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault()
+    router.push({ pathname: '/vacancy', query: input })
+  }
 
   return (
     <section className="container pb-12 pt-20 md:pb-24 md:pt-32">
       <div className="mx-auto md:max-w-3xl">
         <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['join-us']}</h2>
 
-        <form>
-          <div className="mb-6 grid grid-cols-3">
+        <form onSubmit={onSubmit}>
+          <div className="mb-6 grid grid-cols-2">
             <div>
               <input
                 type="text"
+                name="filter"
+                value={input.filter}
                 placeholder={tl['job-title']}
                 className="block h-12 w-full rounded-l-xl border border-secondary-light bg-white px-4 text-xs placeholder-secondary-light focus:outline-0 md:h-16 md:text-base"
+                onChange={(e) => setInput({ ...input, [e.currentTarget.name]: e.currentTarget.value })}
               />
             </div>
             <div>
-              <CustomSelect
-                className="border-x-0 border-secondary-light px-4 text-secondary-light"
-                containerClassName="h-12 md:h-16"
-                placeholder={tl.location}
-                options={[
-                  { value: 'val1', label: 'Value 1' },
-                  { value: 'val2', label: 'Value 2' },
-                  { value: 'val3', label: 'Value 3' },
-                ]}
-              />
-            </div>
-            <div>
-              <CustomSelect
-                className="rounded-r-xl border-secondary-light px-4 text-secondary-light"
-                containerClassName="h-12  md:h-16"
-                placeholder={tl.department}
-                options={[
-                  { value: 'val1', label: 'Value 1' },
-                  { value: 'val2', label: 'Value 2' },
-                  { value: 'val3', label: 'Value 3' },
-                ]}
+              <input
+                type="text"
+                name="city"
+                value={input.city}
+                placeholder={tl['city']}
+                className="block h-12 w-full rounded-r-xl border border-l-0 border-secondary-light bg-white px-4 text-xs placeholder-secondary-light focus:outline-0 md:h-16 md:text-base"
+                onChange={(e) => setInput({ ...input, [e.currentTarget.name]: e.currentTarget.value })}
               />
             </div>
           </div>
@@ -61,26 +70,26 @@ const Vacancies: React.FC<PropTypes> = ({ vacancies }) => {
       </div>
 
       <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
-        {Array.from(Array(12)).map((_, i) => (
+        {vacancies.map((v, i) => (
           <a key={i} href="#" className="block rounded-lg border p-3 transition-shadow hover:shadow">
             <span className="flex items-center justify-between">
-              <span className="block text-sm text-secondary">JOBSEEKER COMPANY</span>
+              <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
               <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
                 <FiClock size={12} className="block" />
-                Kemarin
+                {new Date(v.publish_date).toDateString()}
               </span>
             </span>
 
-            <span className="my-2 block text-lg font-bold text-secondary">Event Specialist - B2B</span>
+            <span className="my-2 block text-lg font-bold text-secondary">{v.vacancy_name}</span>
 
             <span className="flex gap-4">
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiMapPinBold size={12} className="block" />
-                <span>Jakarta Barat</span>
+                <span>{v.city_name}</span>
               </span>
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiBagBold size={12} className="block" />
-                <span>Full Time</span>
+                <span>{v.job_type_desc}</span>
               </span>
               <span className="flex items-center justify-center gap-1 text-xs">
                 <PiMoneyBold size={12} className="block" />
