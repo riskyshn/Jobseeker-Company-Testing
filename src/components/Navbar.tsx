@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 flex w-full items-center justify-between py-4 shadow-sm backdrop-blur-md ${
+      className={`fixed left-0 top-0 z-50 flex w-full items-center justify-between py-4 shadow-sm backdrop-blur-md ${
         isOpen ? 'bg-white/100' : 'bg-white/70'
       }`}
     >
