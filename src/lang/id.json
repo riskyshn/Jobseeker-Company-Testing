@@ -6,6 +6,16 @@
       "name": "Jobseeker Company",
       "description": "Produk dan layanan kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
       "tags": "Jobseeker Company, HRMS, HRIS, Software HR, Software HR Indonesia, HCMS, Software HRIS, Aplikasi untuk HR"
+    },
+    "pages": {
+      "about-us": {
+        "title": "Tentang Kami",
+        "description": "Jobseeker Company didirikan pada Februari 2022 dengan tujuan menciptakan satu ekosistem ekonomi yang dapat diandalkan seluruh tenaga kerja."
+      },
+      "vacancy": {
+        "title": "Bergabung dengan Tim Kami!",
+        "description": "Jadilah bagian dari tim yang bersemangat untuk membuat perubahan dalam kehidupan banyak orang."
+      }
     }
   },
 
