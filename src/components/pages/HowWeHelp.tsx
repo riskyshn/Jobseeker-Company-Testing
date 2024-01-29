@@ -30,7 +30,10 @@ const HowWeHelp: React.FC = () => {
           <p className="mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-1']}</p>
         </div>
 
-        <a href="https://jobseeker.app" className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg md:py-12">
+        <a
+          href="https://jobseeker.app"
+          className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg hover:shadow-primary md:py-12"
+        >
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-primary md:px-6 md:py-2 md:text-base">
               JOBSEEKER APP
@@ -38,10 +41,10 @@ const HowWeHelp: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-center md:mx-auto md:w-3/4">
-            <div className="w-[45%] md:w-[35%]">
+            <div className="w-[40%] md:w-[30%]">
               <Image className="block h-auto w-full" src={jobseekerAppDemo} alt="" />
             </div>
-            <div className="w-[55%] md:w-[65%]">
+            <div className="w-[60%] md:w-[70%]">
               <Image className="mb-3 block h-10 w-10 md:mb-6 md:h-20 md:w-20" src={jobseekerAppIcon} alt="" />
               <h2 className="mb-3 font-bold text-white md:mb-6 md:text-2xl">#CaraBaruCariKerja</h2>
               <p className="mb-3 text-xs text-white md:mb-6 md:text-lg" dangerouslySetInnerHTML={{ __html: tl['how-we-help-app-desc'] }} />
@@ -65,7 +68,7 @@ const HowWeHelp: React.FC = () => {
           <p className="mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-2']}</p>
         </div>
 
-        <a href="https://jobseeker.services" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg md:py-12">
+        <a href="https://jobseeker.services" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg  md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-secondary px-4 py-1 text-center text-xs font-bold text-white md:px-6 md:py-2 md:text-base">
               JOBSEEKER SOFTWARE (HRMS)
@@ -94,7 +97,7 @@ const HowWeHelp: React.FC = () => {
           </div>
         </a>
 
-        <a href="https://jobseeker.partners" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg md:py-12">
+        <a href="https://jobseeker.partners" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg  md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-secondary px-4 py-1 text-center text-xs font-bold text-white md:px-6 md:py-2 md:text-base">
               JOBSEEKER SERVICES
@@ -135,7 +138,10 @@ const HowWeHelp: React.FC = () => {
           </div>
         </a>
 
-        <a href="https://jobseeker.partners" className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg md:py-12">
+        <a
+          href="https://jobseeker.partners"
+          className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg hover:shadow-secondary  md:py-12"
+        >
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-secondary md:px-6 md:py-2 md:text-base">
               JOBSEEKER PARTNERS
@@ -143,10 +149,10 @@ const HowWeHelp: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-center md:mx-auto md:w-3/4">
-            <div className="w-[45%] md:w-[35%]">
+            <div className="w-[40%] md:w-[30%]">
               <Image className="block h-auto w-full" src={jobseekerPartnersDemo} alt="" />
             </div>
-            <div className="w-[55%] md:w-[65%]">
+            <div className="w-[60%] md:w-[70%]">
               <Image className="mb-3 block h-10 w-10 md:mb-6 md:h-20 md:w-20" src={jobseekerPartnersIcon} alt="" />
               <h2 className="mb-3 font-bold text-white md:mb-6 md:text-2xl">#CaraBaruCariKaryawan</h2>
               <p className="mb-3 text-xs text-white md:mb-6 md:text-lg">
