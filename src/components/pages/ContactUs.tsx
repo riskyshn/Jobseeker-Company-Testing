@@ -8,6 +8,7 @@ import Landing from '@/assets/landing.png'
 import Logo from '@/assets/footerlogo.svg'
 import { FiArrowRightCircle } from 'react-icons/fi'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { postInquiry } from '@/lib/api'
 
 const ContactUs: React.FC = () => {
   const { tl } = useLanguage()
@@ -46,7 +47,7 @@ const ContactUs: React.FC = () => {
     try {
       setErrorMessage('')
       setIsLoading(true)
-      await new Promise((resolve) => setTimeout(resolve, 2000)) // Simulating a 2-second delay
+      await postInquiry(data)
       setIsSuccess(true)
     } catch (error: any) {
       setErrorMessage(error.message)
@@ -77,11 +78,11 @@ const ContactUs: React.FC = () => {
           {isSuccess && <div className="mb-4 rounded-lg bg-green-600/10 px-3 py-4 text-green-600">{tl['inquiry-success']}</div>}
           {!!errorMessage && <div className="mb-4 rounded-lg bg-red-600/10 px-3 py-4 text-red-600">{errorMessage}</div>}
 
-          <Input className="mb-4" label={tl['full-name']} {...register('name')} error={errors.name?.message} />
-          <Input className="mb-4" label={tl['email-address']} {...register('email')} error={errors.email?.message} />
-          <Input className="mb-4" label={tl['phone-number']} {...register('phone')} error={errors.phone?.message} />
-          <Select className="mb-4" label={tl['im-a']} options={imAOptions} {...register('im_a')} error={errors.im_a?.message} />
-          <Textarea className="mb-4" rows={4} label={tl.tell} {...register('message')} error={errors.message?.message} />
+          <Input className="mb-4" label={tl['full-name']} error={errors.name?.message} {...register('name')} />
+          <Input className="mb-4" label={tl['email-address']} error={errors.email?.message} {...register('email')} />
+          <Input className="mb-4" label={tl['phone-number']} error={errors.phone?.message} {...register('phone')} />
+          <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
+          <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
 
           <button
             className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-secondary-light px-10 font-semibold text-white transition-colors hover:bg-secondary-light/80 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-secondary-light"

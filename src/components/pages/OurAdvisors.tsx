@@ -68,7 +68,7 @@ const OurAdvisors: React.FC = () => {
       <div className="grid grid-cols-1 gap-8">
         <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl.advisor}</h2>
 
-        <div className="flex flex-col flex-wrap items-center justify-center md:flex-row">
+        <div className="flex flex-col flex-wrap justify-center md:flex-row">
           {items.map((el, i) => (
             <div key={i} className="w-2/3 p-3 md:w-1/5">
               <Image alt="" src={el.image} className="mx-auto mb-3 block w-4/5" />
