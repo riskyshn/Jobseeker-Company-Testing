@@ -110,7 +110,7 @@
   "full-name": "Full Name",
   "email-address": "Email Address",
   "phone-number": "Phone Number",
-  "im-a": "I’m an",
+  "im-a": "I’m an Enterprise/Candidate/SME/Media",
   "im-a-options": {
     "Enterprise": "Enterprise",
     "Candidate": "Candidate",
