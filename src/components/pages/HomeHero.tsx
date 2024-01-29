@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Container from '@/components/Container'
 import Connecting from '@/assets/home-page/connecting.png'
 import Landing from '@/assets/landing.png'
 
@@ -27,14 +26,14 @@ const HomeHero: React.FC = () => {
         backgroundSize: 'cover',
       }}
     >
-      <Container>
+      <div className="container">
         <Image src={Connecting} width={700} alt="Connecting word" />
         <h1 className="hidden">Connecting people with Opportunities</h1>
         <div className="flex items-center gap-2">
           <span className="text-2xl text-muted md:text-4xl">People with</span>
           <span className="text-2xl font-semibold text-primary md:text-4xl">{text}.</span>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

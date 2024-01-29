@@ -109,7 +109,13 @@
   "full-name": "Nama Lengkap",
   "email-address": "Email Address",
   "phone-number": "Nomor Telephone",
-  "im-a": "Saya adalah Perusahaan/Kandidat/Pengusaha/Media",
+  "im-a": "Saya adalah",
+  "im-a-options": {
+    "Enterprise": "Perusahaan",
+    "Candidate": "Kandidat",
+    "SME": "Pengusaha",
+    "Media": "Media"
+  },
   "tell": "Beritahu kami lebih banyak tentang apa yang Anda butuhkan?",
   "inquiry-cta": "Kirim"
 }

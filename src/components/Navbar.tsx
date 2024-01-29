@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
-import useLanguage from '@/lib/lang-switcher'
-import Container from './Container'
+import { useLanguage } from '@/contexts/LanguageContext'
 import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import LangSwicther from './LangSwitcher'
@@ -10,7 +9,7 @@ import { useRouter } from 'next/router'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { lang, tl } = useLanguage()
+  const { tl } = useLanguage()
   const router = useRouter()
 
   useEffect(() => {
@@ -19,17 +18,17 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 flex w-full items-center justify-between py-4 backdrop-blur-md ${
+      className={`fixed left-0 top-0 z-50 flex w-full items-center justify-between py-4 shadow-sm backdrop-blur-md ${
         isOpen ? 'bg-white/100' : 'bg-white/70'
       }`}
     >
-      <Container className="flex items-center justify-between">
+      <nav className="container flex items-center justify-between">
         <Link href="/">
           <Logo width={150} />
         </Link>
 
         {/* desktop menu  */}
-        <nav className="hidden md:block">
+        <div className="hidden md:block">
           <ul className="flex items-center gap-6">
             <li>
               <Link
@@ -54,9 +53,9 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/contact-us"
-                className="inline-block rounded-full px-6 py-2 leading-5 text-white transition-colors hover:bg-blue-500"
-                nonActiveClassName="bg-blue-600"
-                activeClassName="bg-blue-500"
+                className="inline-block rounded-full px-6 py-2 leading-5 text-white transition-colors hover:bg-secondary-light/80"
+                nonActiveClassName="bg-secondary-light"
+                activeClassName="bg-secondary-light/80"
               >
                 {tl.menu['contact-us']}
               </Link>
@@ -65,7 +64,7 @@ const Navbar: React.FC = () => {
               <LangSwicther />
             </li>
           </ul>
-        </nav>
+        </div>
 
         {/* mobile menu  */}
         <div className="block md:hidden">
@@ -86,7 +85,7 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/about-us"
-                  className=" text-xl transition-colors hover:text-gray-900"
+                  className="text-xl transition-colors hover:text-gray-900"
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
@@ -97,7 +96,7 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/vacancy"
-                  className=" text-xl transition-colors hover:text-gray-900"
+                  className="text-xl transition-colors hover:text-gray-900"
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
@@ -108,9 +107,9 @@ const Navbar: React.FC = () => {
               <div className="mb-3 py-2">
                 <Link
                   href="/contact-us"
-                  className="block rounded-full py-2 text-center text-xl leading-8 text-white transition-colors hover:bg-blue-500"
-                  nonActiveClassName="bg-blue-600"
-                  activeClassName="bg-blue-500"
+                  className="block rounded-full py-2 text-center text-xl leading-8 text-white transition-colors hover:bg-secondary-light/80"
+                  nonActiveClassName="bg-secondary-light"
+                  activeClassName="bg-secondary-light/80"
                 >
                   {tl.menu['contact-us']}
                 </Link>
@@ -122,7 +121,7 @@ const Navbar: React.FC = () => {
             </div>
           </Transition>
         </div>
-      </Container>
+      </nav>
     </header>
   )
 }
