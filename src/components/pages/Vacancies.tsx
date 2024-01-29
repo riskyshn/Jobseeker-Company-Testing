@@ -5,6 +5,7 @@ import { PiBagBold, PiMapPinBold, PiMoneyBold } from 'react-icons/pi'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useRouter } from 'next/router'
 import { fetchVacancyList } from '@/lib/api'
+import MyModal from '../Modal'
 
 type PropTypes = {
   vacancies: IVacancy[]
@@ -13,6 +14,7 @@ type PropTypes = {
 const Vacancies: React.FC<PropTypes> = (props) => {
   const { tl } = useLanguage()
   const [vacancies, setVacancies] = useState(props.vacancies)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const router = useRouter()
   const [input, setInput] = useState({
     filter: router.query.filter?.toString() || '',
@@ -38,6 +40,7 @@ const Vacancies: React.FC<PropTypes> = (props) => {
 
   return (
     <section className="container pb-12 pt-20 md:pb-24 md:pt-32">
+      <MyModal isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} />
       <div className="mx-auto md:max-w-3xl">
         <h2 className="mb-8 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['join-us']}</h2>
 
@@ -76,7 +79,11 @@ const Vacancies: React.FC<PropTypes> = (props) => {
       {!!vacancies.length && (
         <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
           {vacancies.map((v, i) => (
-            <a key={i} href="#" className="block rounded-lg border p-3 transition-shadow hover:shadow">
+            <button
+              key={i}
+              className="block rounded-lg border p-3 text-left transition-shadow hover:shadow focus:outline-none"
+              onClick={() => setIsModalOpen(true)}
+            >
               <span className="flex items-center justify-between">
                 <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
                 <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
@@ -101,7 +108,7 @@ const Vacancies: React.FC<PropTypes> = (props) => {
                   <span>Negotiable</span>
                 </span>
               </span>
-            </a>
+            </button>
           ))}
         </div>
       )}
