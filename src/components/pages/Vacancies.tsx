@@ -29,7 +29,11 @@ const Vacancies: React.FC<PropTypes> = (props) => {
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    router.push({ pathname: '/vacancy', query: input })
+    if (input.city || input.filter) {
+      router.push({ pathname: '/vacancy', query: input })
+    } else {
+      router.push({ pathname: '/vacancy' })
+    }
   }
 
   return (
@@ -69,36 +73,46 @@ const Vacancies: React.FC<PropTypes> = (props) => {
         </form>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
-        {vacancies.map((v, i) => (
-          <a key={i} href="#" className="block rounded-lg border p-3 transition-shadow hover:shadow">
-            <span className="flex items-center justify-between">
-              <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
-              <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
-                <FiClock size={12} className="block" />
-                {new Date(v.publish_date).toDateString()}
+      {!!vacancies.length && (
+        <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
+          {vacancies.map((v, i) => (
+            <a key={i} href="#" className="block rounded-lg border p-3 transition-shadow hover:shadow">
+              <span className="flex items-center justify-between">
+                <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
+                <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
+                  <FiClock size={12} className="block" />
+                  {new Date(v.publish_date).toDateString()}
+                </span>
               </span>
-            </span>
 
-            <span className="my-2 block text-lg font-bold text-secondary">{v.vacancy_name}</span>
+              <span className="my-2 block text-lg font-bold text-secondary">{v.vacancy_name}</span>
 
-            <span className="flex gap-4">
-              <span className="flex items-center justify-center gap-1 text-xs">
-                <PiMapPinBold size={12} className="block" />
-                <span>{v.city_name}</span>
+              <span className="flex gap-4">
+                <span className="flex items-center justify-center gap-1 text-xs">
+                  <PiMapPinBold size={12} className="block" />
+                  <span>{v.city_name}</span>
+                </span>
+                <span className="flex items-center justify-center gap-1 text-xs">
+                  <PiBagBold size={12} className="block" />
+                  <span>{v.job_type_desc}</span>
+                </span>
+                <span className="flex items-center justify-center gap-1 text-xs">
+                  <PiMoneyBold size={12} className="block" />
+                  <span>Negotiable</span>
+                </span>
               </span>
-              <span className="flex items-center justify-center gap-1 text-xs">
-                <PiBagBold size={12} className="block" />
-                <span>{v.job_type_desc}</span>
-              </span>
-              <span className="flex items-center justify-center gap-1 text-xs">
-                <PiMoneyBold size={12} className="block" />
-                <span>Negotiable</span>
-              </span>
-            </span>
-          </a>
-        ))}
-      </div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {!vacancies.length && (router.query.filter || router.query.city) && (
+        <div className="mb-6 mt-12 md:px-10">
+          <h3 className="text-center text-5xl">
+            No Results for <span className="text-primary">"{[router.query.filter, router.query.city].join(', ')}"</span>
+          </h3>
+        </div>
+      )}
     </section>
   )
 }
