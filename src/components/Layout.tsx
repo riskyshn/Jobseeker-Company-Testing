@@ -1,10 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import LoadingBar from './LoadingBar'
+import NextNProgress from 'nextjs-progressbar'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { useLanguage } from '@/contexts/LanguageContext'
 import Preloader from './Preloader'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { tl } = useLanguage()
@@ -29,7 +29,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         <meta name="twitter:image" content="https://jobseeker.company/assets/image/jobseeker-company-featured.jpg" />
       </Head>
       <Preloader />
-      <LoadingBar />
+      <NextNProgress color="#0A84FF" options={{ showSpinner: false }} />
       <Navbar />
       <main className="min-h-screen">{children}</main>
       <Footer />
