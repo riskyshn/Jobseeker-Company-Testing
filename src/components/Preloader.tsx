@@ -2,10 +2,16 @@ import { useEffect, useState } from 'react'
 
 const Preloader: React.FC = () => {
   const [mounted, setMounted] = useState(false)
+  const [show, setShow] = useState(true)
 
   useEffect(() => {
     setMounted(true)
+    setTimeout(() => {
+      setShow(false)
+    }, 200)
   }, [])
+
+  if (!show) return null
 
   return (
     <i
