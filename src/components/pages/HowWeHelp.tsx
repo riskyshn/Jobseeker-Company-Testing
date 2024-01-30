@@ -72,7 +72,7 @@ const HowWeHelp: React.FC = () => {
         <a href="https://jobseeker.software" className="rounded-lg border bg-white p-4 transition-shadow hover:shadow-lg  md:py-12">
           <div className="mb-4 flex justify-center p-4">
             <span className="block items-center justify-center rounded-full bg-secondary px-4 py-1 text-center text-xs font-bold text-white md:px-6 md:py-2 md:text-base">
-              JOBSEEKER SOFTWARE (HRMS)
+              JOBSEEKER SOFTWARE
             </span>
           </div>
 
