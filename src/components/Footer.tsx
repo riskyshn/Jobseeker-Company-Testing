@@ -180,7 +180,9 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 justify-center gap-4 pb-6 pt-3 md:grid-cols-2">
-        <span className="block text-center text-sm md:text-left">{tl['footer-copyright']}</span>
+        <span className="block text-center text-sm md:text-left">
+          {tl['footer-copyright'].replace('[YEAR]', new Date().getFullYear().toString())}
+        </span>
         <div className="flex gap-6 md:justify-end">
           <div className="w-full text-center md:w-auto">
             <a
