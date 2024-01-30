@@ -16,16 +16,16 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 gap-12 py-4 text-gray-600 md:grid-cols-2 md:gap-24">
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">HEADQUARTER</span>
-              <span className="block text-xs md:text-sm">J-Loft Office, Griya Jimbaran Hub. Jl. Karang Mas, Jimbaran. Bali 80361</span>
+              <span className="mb-1 block text-sm font-bold text-gray-900">HEADQUARTER</span>
+              <span className="block ">J-Loft Office, Griya Jimbaran Hub. Jl. Karang Mas, Jimbaran. Bali 80361</span>
             </div>
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">SINGAPORE</span>
-              <span className="block text-xs md:text-sm">10 Anson Road #22-02 International Plaza Singapore 079903</span>
+              <span className="mb-1 block text-sm font-bold text-gray-900">SINGAPORE</span>
+              <span className="block ">10 Anson Road #22-02 International Plaza Singapore 079903</span>
             </div>
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">JAKARTA</span>
-              <span className="block text-xs md:text-sm">
+              <span className="mb-1 block text-sm font-bold text-gray-900">JAKARTA</span>
+              <span className="block ">
                 AD Premier Office Park, 9th Floor Jl. TB Simatupang No.5 - Ragunan. Pasar Minggu South Jakarta City Jakarta 12550
               </span>
             </div>
@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-6">
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">{tl['footer-company']}</span>
-              <ul className="text-xs md:text-sm">
+              <span className="mb-1 block text-sm font-bold text-gray-900">{tl['footer-company']}</span>
+              <ul>
                 <li>
                   <Link href="/about-us" activeClassName="text-gray-900 underline" className="transition-colors hover:text-gray-900">
                     {tl['footer-company-menu']['about']}
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="/https://jobseeker.company/blog" className="transition-colors hover:text-gray-900">
+                  <a href="https://jobseeker.company/blog" className="transition-colors hover:text-gray-900">
                     {tl['footer-company-menu']['press']}
                   </a>
                 </li>
@@ -59,8 +59,8 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">{tl['footer-candidates']}</span>
-              <ul className="text-xs md:text-sm">
+              <span className="mb-1 block text-sm font-bold text-gray-900">{tl['footer-candidates']}</span>
+              <ul>
                 <li>
                   <a href="https://jobseeker.app/" className="transition-colors hover:text-gray-900">
                     Jobseeker App
@@ -69,8 +69,8 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">{tl['footer-employers']}</span>
-              <ul className="text-xs md:text-sm">
+              <span className="mb-1 block text-sm font-bold text-gray-900">{tl['footer-employers']}</span>
+              <ul>
                 <li>
                   <a
                     href="https://play.google.com/store/apps/details?id=com.jobseeker.partners"
@@ -95,8 +95,8 @@ const Footer: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <span className="mb-1 block text-sm font-bold text-gray-900 md:text-base">{tl['footer-contact']}:</span>
-              <ul className="mb-3 text-xs md:text-sm">
+              <span className="mb-1 block text-sm font-bold text-gray-900">{tl['footer-contact']}:</span>
+              <ul className="mb-3 ">
                 <li>
                   <a
                     rel="noopener nofollow"

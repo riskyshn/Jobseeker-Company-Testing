@@ -6,6 +6,16 @@
       "name": "Jobseeker Company",
       "description": "Our products and services created not only to empower businesses to find the right talent, but also help every individual to discover fulfilling career opportunities.",
       "tags": "Jobseeker Company, HRMS, HRIS, HR Software, HR Software Indonesia, HCMS, HRIS Software, Application for HR"
+    },
+    "pages": {
+      "about-us": {
+        "title": "About Us",
+        "description": "Jobseeker Company was established in February 2022 with the goal of creating one reliable economic ecosystem for the workforce."
+      },
+      "vacancy": {
+        "title": "We’re Hiring!",
+        "description": "Join us and be a part of a team that is passionate about making a difference in people's lives."
+      }
     }
   },
 
@@ -20,7 +30,7 @@
   "footer-company": "Company",
   "footer-company-menu": {
     "about": "About",
-    "career": "Carerr",
+    "career": "Career",
     "press": "Press",
     "contact-us": "Contact Us"
   },
@@ -110,6 +120,12 @@
   "email-address": "Email Address",
   "phone-number": "Phone Number",
   "im-a": "I’m an Enterprise/Candidate/SME/Media",
+  "im-a-options": {
+    "Enterprise": "Enterprise",
+    "Candidate": "Candidate",
+    "SME": "SME",
+    "Media": "Media"
+  },
   "tell": "Tell us more about what you need?",
   "inquiry-cta": "Submit"
 }
