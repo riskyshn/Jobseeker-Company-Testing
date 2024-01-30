@@ -13,6 +13,7 @@ import atsIcon from '@/assets/home-page/icon-ats.png'
 import hrcIcon from '@/assets/home-page/icon-hrc.png'
 import esIcon from '@/assets/home-page/icon-es.png'
 import itaSdaIcon from '@/assets/home-page/icon-ita-sda.png'
+import itaIcon from '@/assets/home-page/icon-ita.png'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const HowWeHelp: React.FC = () => {
@@ -110,7 +111,7 @@ const HowWeHelp: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 gap-4 p-4">
               <div>
-                <Image alt="" src={itaSdaIcon} className="mx-auto block w-24" />
+                <Image alt="" src={itaIcon} className="mx-auto block w-24" />
                 <h4 className="font-semibold text-secondary md:text-lg">{tl['how-we-help-services-t-1']}</h4>
                 <p className="text-xs md:text-sm">{tl['how-we-help-services-d-1']}</p>
               </div>
