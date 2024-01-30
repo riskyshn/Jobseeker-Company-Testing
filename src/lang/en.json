@@ -51,8 +51,8 @@
   "axis": "Left Axis: Total employment (in billion)",
   "employment-population": "Total employment to population ratio (% right hand axis)",
   "our-first-market": "Our First Market",
-  "our-first-market-text-1": "In 2022, <span class='font-semibold text-secondary'>Indonesia</span> have more than <span class='font-semibold text-secondary'>75 million workforces</span> who are junior high school graduates to diplomas.",
-  "our-first-market-text-2": "<span class=\"font-semibold text-secondary\">Indonesia Work-force Based on Education</span> Total workforce in <span class=\"text-secondary\">Indonesia</span> in 2019 has reached <span class=\"text-secondary\">136.18 million</span> people. <br /> <span class=\"text-secondary\">129.36 million</span> are working residents, both in the formal and informal sectors.",
+  "our-first-market-text-1": "<span class='font-semibold text-secondary'>Indonesia will be our first market</span> with more than <span class='font-semibold text-secondary'>75 million workforces</span> who are junior high school graduates to diplomas.",
+  "our-first-market-text-2": "The total workforce in 2019 has reached 136.18 million people with 129.36 million are working residents, both in the formal and informal sectors",
   "lets-start-here": "Let’s Start Here",
 
   "how-we-help": "How We Help Our Target Market",
@@ -109,7 +109,6 @@
 
   "join-us": "Join Us and Become a Part of Our Journey",
   "job-title": "Job Title",
-  "city": "City",
   "location": "Location",
   "department": "Department",
   "search": "Find a Job",
