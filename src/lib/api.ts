@@ -31,6 +31,9 @@ export const postInquiry = async (payload: {
   const resp = await fetch('https://devplay.jobseeker.software/api/inquiry', {
     method: 'POST',
     body: JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'application/json',
+    },
   })
 
   const data = await resp.json()
