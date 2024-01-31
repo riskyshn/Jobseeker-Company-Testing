@@ -39,6 +39,7 @@ const ContactUs: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
   })
@@ -48,6 +49,7 @@ const ContactUs: React.FC = () => {
       setErrorMessage('')
       setIsLoading(true)
       await postInquiry(data)
+      reset()
       setIsSuccess(true)
     } catch (error: any) {
       setErrorMessage(error.message)
