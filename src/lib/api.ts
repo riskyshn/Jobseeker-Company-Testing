@@ -28,14 +28,17 @@ export const postInquiry = async (payload: {
   message: string
   im_a: string
 }): Promise<void> => {
-  const resp = await fetch('https://devplay.jobseeker.software/api/company-inquiry', {
+  const resp = await fetch('/api/inquiry', {
     method: 'POST',
     body: JSON.stringify(payload),
-    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
     },
   })
+
+  if (!resp.ok) {
+    throw new Error('Failed to submit the inquiry. Please try again later.')
+  }
 }
 
 export const fetchVacancyList = async ({ filter = '', city = '' }: { filter?: string; city?: string } = {}): Promise<IVacancy[]> => {
