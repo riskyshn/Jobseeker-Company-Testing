@@ -14,16 +14,15 @@ db.connect((err) => {
   if (err) console.error('Error connecting to MySQL database: ' + err.stack)
 })
 
-export const getVacancyList = (params?: { filter?: string; city_name?: string }): Promise<IVacancy[]> => {
+export const getVacancyList = (params?: { filter?: string; city?: string }): Promise<IVacancy[]> => {
   let textFilter = ''
   let cityFilter = ''
 
   if (params?.filter) {
-    textFilter = ` AND (a.vacancy_name LIKE '%${params.filter}%' OR b.employer_name LIKE '%${params.filter}%' OR i.job_type_desc LIKE '%${params.filter}%')`
+    textFilter = ` AND a.vacancy_name LIKE '%${params.filter}%'`
   }
-
-  if (params?.city_name) {
-    cityFilter = ` AND c.city_name LIKE '%${params.city_name}%'`
+  if (params?.city) {
+    cityFilter = ` AND c.city_name LIKE '%${params.city}%'`
   }
 
   return new Promise((resolve, reject) => {
