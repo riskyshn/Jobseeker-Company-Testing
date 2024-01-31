@@ -31,15 +31,11 @@ export const postInquiry = async (payload: {
   const resp = await fetch('https://devplay.jobseeker.software/api/company-inquiry', {
     method: 'POST',
     body: JSON.stringify(payload),
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
     },
   })
-
-  const data = await resp.json()
-  if (!resp.ok) {
-    throw new Error(data)
-  }
 }
 
 export const fetchVacancyList = async ({ filter = '', city = '' }: { filter?: string; city?: string } = {}): Promise<IVacancy[]> => {
