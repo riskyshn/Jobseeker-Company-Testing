@@ -28,10 +28,15 @@ export const postInquiry = async (payload: {
   message: string
   im_a: string
 }): Promise<void> => {
-  await fetch('/', {
+  const resp = await fetch('https://devplay.jobseeker.software/api/inquiry', {
     method: 'POST',
     body: JSON.stringify(payload),
   })
+
+  const data = await resp.json()
+  if (!resp.ok) {
+    throw new Error(data)
+  }
 }
 
 export const fetchVacancyList = async ({ filter = '', city = '' }: { filter?: string; city?: string } = {}): Promise<IVacancy[]> => {
