@@ -6,7 +6,7 @@ import Footer from './Footer'
 import Preloader from './Preloader'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
+const Layout: React.FC<React.PropsWithChildren<{ className?: string }>> = ({ children, className }) => {
   const { tl } = useLanguage()
   return (
     <>
@@ -31,7 +31,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
       <Preloader />
       <NextNProgress color="#0A84FF" options={{ showSpinner: false }} />
       <Navbar />
-      <main className="min-h-screen">{children}</main>
+      <main className={className + ' min-h-screen'}>{children}</main>
       <Footer />
     </>
   )

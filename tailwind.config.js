@@ -16,6 +16,9 @@ module.exports = {
       padding: defaultTheme.spacing['3'],
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: '#E4007E',
         secondary: '#050774',
