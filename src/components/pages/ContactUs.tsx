@@ -22,7 +22,8 @@ const ContactUs: React.FC = () => {
     { value: 'Enterprise', label: tl['im-a-options']['Enterprise'] },
     { value: 'Candidate', label: tl['im-a-options']['Candidate'] },
     { value: 'SME', label: tl['im-a-options']['SME'] },
-    { value: 'Media', label: tl['im-a-options']['Media'] },
+    { value: 'Partnership', label: tl['im-a-options']['Partnership'] },
+    { value: 'Investor', label: tl['im-a-options']['Investor'] },
   ]
 
   const validationSchema = z.object({
