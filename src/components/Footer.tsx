@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
               <ul className="flex gap-3">
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="Facebook"
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                     <RiFacebookFill />
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="Instagram"
@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
                     <RiInstagramFill />
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="Twitter"
@@ -143,27 +143,31 @@ const Footer: React.FC = () => {
                     <RiTwitterXFill />
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="Linkedin"
                     href="https://www.linkedin.com/company/jobseeker-company/"
                     className="transition-colors hover:text-gray-900"
                   >
-                    <RiLinkedinFill />
+                    <span className="inline-flex h-[0.9em] w-[0.9em] items-center justify-center rounded-sm bg-current">
+                      <RiLinkedinFill className="text-[0.75em] text-white" />
+                    </span>
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="TikTok"
                     href="https://www.tiktok.com/@jobseekercompany"
                     className="transition-colors hover:text-gray-900"
                   >
-                    <RiTiktokFill />
+                    <span className="inline-flex h-[0.9em] w-[0.9em] items-center justify-center rounded-full bg-current">
+                      <RiTiktokFill className="text-[0.75em] text-white" />
+                    </span>
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center justify-center">
                   <a
                     rel="noopener nofollow"
                     aria-label="Youtube"
