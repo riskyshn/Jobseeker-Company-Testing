@@ -9,11 +9,11 @@ const CarrerAt: React.FC = () => {
   const { tl } = useLanguage()
   return (
     <section className="container py-12 md:py-24">
-      <div className="flex flex-col items-center gap-4 md:flex-row">
-        <div>
+      <div className="flex flex-col items-center gap-4 md:flex-row md:gap-0">
+        <div className="md:w-1/2 md:pr-2">
           <Image alt="" src={CareerImage} className="w-full" />
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 md:w-1/2 md:pl-2">
           <h2 className="text-4xl font-bold text-secondary md:text-6xl">{tl.career}</h2>
           <div className="flex flex-col gap-3">
             <p>{tl['career-desc-1']}</p>
