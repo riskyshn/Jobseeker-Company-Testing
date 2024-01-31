@@ -1,11 +1,9 @@
+import { Fragment } from 'react'
 import Image from 'next/image'
-import { IVacancy } from '@/types'
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
-import { FiXCircle } from 'react-icons/fi'
 import JsAppImage from '@/assets/vacancy-page/jobseeker.app-popup.jpg'
-import playsoteImg from '@/assets/vacancy-page/playstore.png'
-import appsoteImg from '@/assets/vacancy-page/appstore.png'
+import playsoteImg from '@/assets/playstore.png'
+import appsoteImg from '@/assets/appstore.png'
 
 const Modal: React.FC<{ isOpen: boolean; closeModal: () => void }> = ({ isOpen, closeModal }) => {
   return (

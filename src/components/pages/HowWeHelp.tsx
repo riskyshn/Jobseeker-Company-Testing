@@ -5,8 +5,8 @@ import jobseekerPartnersIcon from '@/assets/home-page/jobseeker.partners-icon.pn
 import jobseekerPartnersDemo from '@/assets/home-page/jobseeker.partners-demo.png'
 import jobseekerLifeDemo from '@/assets/home-page/jobseeker.life-demo.png'
 import jobseekerServicesDemo from '@/assets/home-page/jobseeker.services-demo.png'
-import playsoteImg from '@/assets/home-page/playstore.png'
-import appsoteImg from '@/assets/home-page/appstore.png'
+import playstoreImg from '@/assets/playstore.png'
+import appstoreImg from '@/assets/appstore.png'
 import hrmsDemo from '@/assets/home-page/hrms-demo.png'
 import hrisIcon from '@/assets/home-page/icon-hris.png'
 import atsIcon from '@/assets/home-page/icon-ats.png'
@@ -18,6 +18,10 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const HowWeHelp: React.FC = () => {
   const { tl } = useLanguage()
+
+  const goto = (link: string) => {
+    window.open(link, '_blank')
+  }
 
   return (
     <section className="container py-12 md:py-24">
@@ -31,14 +35,15 @@ const HowWeHelp: React.FC = () => {
           <p className="mb-8 text-center text-lg md:mx-auto md:max-w-3xl">{tl['how-we-help-line-1']}</p>
         </div>
 
-        <a
-          href="https://jobseeker.app"
-          className="block rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg hover:shadow-primary md:py-12"
-        >
+        <div className="rounded-lg bg-primary p-4 transition-shadow hover:shadow-lg hover:shadow-primary md:py-12">
           <div className="mb-4 flex justify-center p-4">
-            <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-primary md:px-6 md:py-2 md:text-base">
+            <a
+              href="https://jobseeker.app"
+              target="_blank"
+              className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-primary md:px-6 md:py-2 md:text-base"
+            >
               JOBSEEKER APP
-            </span>
+            </a>
           </div>
 
           <div className="flex items-center justify-center md:mx-auto md:w-3/4">
@@ -50,17 +55,25 @@ const HowWeHelp: React.FC = () => {
               <h2 className="mb-3 font-bold text-white md:mb-6 md:text-2xl">#CaraBaruCariKerja</h2>
               <p className="mb-3 text-xs text-white md:mb-6 md:text-lg" dangerouslySetInnerHTML={{ __html: tl['how-we-help-app-desc'] }} />
 
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <div>
-                  <Image src={playsoteImg} alt="" className="block w-full" />
-                </div>
-                <div>
-                  <Image src={appsoteImg} alt="" className="block w-full" />
-                </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.jobseeker.app"
+                  target="_blank"
+                  className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
+                >
+                  <Image src={playstoreImg} alt="" className="block h-10 w-auto" />
+                </a>
+                <a
+                  href="https://apps.apple.com/id/app/jobseeker-app-job-search-app/id6447329057"
+                  target="_blank"
+                  className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
+                >
+                  <Image src={appstoreImg} alt="" className="block h-10 w-auto rounded-lg" />
+                </a>
               </div>
             </div>
           </div>
-        </a>
+        </div>
 
         <div className="pt-12">
           <h3 className="mb-3 text-center text-2xl font-semibold text-secondary before:h-1 before:flex-1 before:bg-gray-100 after:h-1 after:flex-1 after:bg-gray-100 md:flex md:items-center md:gap-3 md:before:block md:before:content-['_'] md:after:block md:after:content-['_']">
@@ -139,14 +152,15 @@ const HowWeHelp: React.FC = () => {
           </div>
         </a>
 
-        <a
-          href="https://jobseeker.partners"
-          className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg hover:shadow-secondary  md:py-12"
-        >
+        <div className="block rounded-lg bg-secondary p-4 transition-shadow hover:shadow-lg hover:shadow-secondary  md:py-12">
           <div className="mb-4 flex justify-center p-4">
-            <span className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-secondary md:px-6 md:py-2 md:text-base">
+            <a
+              href="https://jobseeker.partners"
+              target="_blank"
+              className="block items-center justify-center rounded-full bg-white px-4 py-1 text-center text-xs font-bold text-secondary md:px-6 md:py-2 md:text-base"
+            >
               JOBSEEKER PARTNERS
-            </span>
+            </a>
           </div>
 
           <div className="flex items-center justify-center md:mx-auto md:w-3/4">
@@ -156,23 +170,30 @@ const HowWeHelp: React.FC = () => {
             <div className="w-[60%] md:w-[70%]">
               <Image className="mb-3 block h-10 w-10 md:mb-6 md:h-20 md:w-20" src={jobseekerPartnersIcon} alt="" />
               <h2 className="mb-3 font-bold text-white md:mb-6 md:text-2xl">#CaraBaruCariKaryawan</h2>
-              <p className="mb-3 text-xs text-white md:mb-6 md:text-lg">
-                <span className="font-bold">Jobseeker App</span> is recruitment platform with social media format that simplifies the
-                process for job seekers especially non-white-collar workers in Indonesia to get a job that suits their skills and experience
-                in no time. It’s like a job dating app.
-              </p>
+              <p
+                className="mb-3 text-xs text-white md:mb-6 md:text-lg"
+                dangerouslySetInnerHTML={{ __html: tl['how-we-help-partners-desc'] }}
+              />
 
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <div>
-                  <Image src={playsoteImg} alt="" className="block w-full" />
-                </div>
-                <div>
-                  <Image src={appsoteImg} alt="" className="block w-full" />
-                </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.jobseeker.partners"
+                  target="_blank"
+                  className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
+                >
+                  <Image src={playstoreImg} alt="" className="block h-10 w-auto" />
+                </a>
+                <a
+                  href="https://apps.apple.com/id/app/jobseeker-partners-find-staff/id6447542188"
+                  target="_blank"
+                  className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
+                >
+                  <Image src={appstoreImg} alt="" className="block h-10 w-auto rounded-lg" />
+                </a>
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </section>
   )
