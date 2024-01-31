@@ -128,5 +128,8 @@
     "Media": "Media"
   },
   "tell": "Tell us more about what you need?",
-  "inquiry-cta": "Submit"
+  "inquiry-cta": "Submit",
+
+  "modal-line-1": "Download Jobseeker App",
+  "modal-line-2": "Apply, track the progress, and find out the next step by using Jobseeker App."
 }

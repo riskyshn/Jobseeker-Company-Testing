@@ -1,11 +1,13 @@
 import { Fragment } from 'react'
 import Image from 'next/image'
 import { Dialog, Transition } from '@headlessui/react'
-import JsAppImage from '@/assets/vacancy-page/jobseeker.app-popup.jpg'
-import playsoteImg from '@/assets/playstore.png'
-import appsoteImg from '@/assets/appstore.png'
+import JsAppImage from '@/assets/vacancy-page/jobseeker.app-popup.png'
+import playstoreImg from '@/assets/playstore.png'
+import appstoreImg from '@/assets/appstore.png'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Modal: React.FC<{ isOpen: boolean; closeModal: () => void }> = ({ isOpen, closeModal }) => {
+  const { tl } = useLanguage()
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-[100]" onClose={closeModal}>
@@ -38,26 +40,24 @@ const Modal: React.FC<{ isOpen: boolean; closeModal: () => void }> = ({ isOpen, 
                     <Image alt="" src={JsAppImage} className="block w-full" />
                   </div>
                   <div className="flex flex-col justify-center gap-4">
-                    <span className="block text-primary">Unduh Jobseeker App</span>
-                    <span className="block text-2xl">
-                      Lamar, lacak hasil lamaran, dan cari tau langkah selajutnya hanya di Jobseeker App.
-                    </span>
-                    <span className="flex gap-4">
-                      <span className="block">
-                        <a href="https://play.google.com/store/apps/details?id=com.jobseeker.app" target="_blank" rel="noopener nofollow">
-                          <Image src={playsoteImg} alt="" className="block w-32" />
-                        </a>
-                      </span>
-                      <span className="block">
-                        <a
-                          href="https://apps.apple.com/id/app/jobseeker-app-job-search-app/id6447329057"
-                          target="_blank"
-                          rel="noopener nofollow"
-                        >
-                          <Image src={appsoteImg} alt="" className="block w-32" />
-                        </a>
-                      </span>
-                    </span>
+                    <span className="block text-primary">{tl['modal-line-1']}</span>
+                    <span className="block text-2xl">{tl['modal-line-2']}</span>
+                    <div className="flex gap-4">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.jobseeker.app"
+                        target="_blank"
+                        className="block overflow-hidden rounded-lg ring-1 hover:ring"
+                      >
+                        <Image src={playstoreImg} alt="" className="block h-10 w-auto" />
+                      </a>
+                      <a
+                        href="https://apps.apple.com/id/app/jobseeker-app-job-search-app/id6447329057"
+                        target="_blank"
+                        className="block overflow-hidden rounded-lg ring-1 hover:ring"
+                      >
+                        <Image src={appstoreImg} alt="" className="block h-10 w-auto rounded-lg" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </Dialog.Panel>
