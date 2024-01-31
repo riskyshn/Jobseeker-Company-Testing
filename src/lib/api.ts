@@ -28,7 +28,7 @@ export const postInquiry = async (payload: {
   message: string
   im_a: string
 }): Promise<void> => {
-  const resp = await fetch('https://devplay.jobseeker.software/api/inquiry', {
+  const resp = await fetch('https://devplay.jobseeker.software/api/company-inquiry', {
     method: 'POST',
     body: JSON.stringify(payload),
     headers: {
