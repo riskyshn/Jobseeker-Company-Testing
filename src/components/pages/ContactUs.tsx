@@ -38,6 +38,8 @@ const ContactUs: React.FC = () => {
   const {
     register,
     handleSubmit,
+    setValue,
+    getValues,
     formState: { errors },
     reset,
   } = useForm<ValidationSchema>({
@@ -82,7 +84,20 @@ const ContactUs: React.FC = () => {
 
           <Input className="mb-4" label={tl['full-name']} error={errors.name?.message} {...register('name')} />
           <Input className="mb-4" label={tl['email-address']} error={errors.email?.message} {...register('email')} />
-          <Input className="mb-4" label={tl['phone-number']} error={errors.phone?.message} {...register('phone')} />
+          <Input
+            className="mb-4"
+            label={tl['phone-number']}
+            error={errors.phone?.message}
+            maxLength={16}
+            {...register('phone')}
+            onChange={(e) => {
+              if (/^\+?[0-9]*$/.test(e.currentTarget.value)) {
+                setValue('phone', e.currentTarget.value)
+              } else {
+                setValue('phone', getValues().phone)
+              }
+            }}
+          />
           <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
           <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
 
