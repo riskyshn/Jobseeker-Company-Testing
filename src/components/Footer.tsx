@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Logo from '@/assets/footerlogo.svg'
-import { RiTwitterXFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
+import { RiTwitterXFill, RiFacebookFill, RiInstagramLine, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
 import Link from './Link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                     href="https://www.instagram.com/jobseekercompany/"
                     className="transition-colors hover:text-gray-900"
                   >
-                    <RiInstagramFill />
+                    <RiInstagramLine />
                   </a>
                 </li>
                 <li className="flex items-center justify-center">
