@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input, Select, Textarea } from '@/components/Forms'
 import Landing from '@/assets/landing.png'
@@ -15,6 +16,7 @@ const ContactUs: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null)
 
   const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/
 
@@ -51,7 +53,11 @@ const ContactUs: React.FC = () => {
     try {
       setErrorMessage('')
       setIsLoading(true)
-      await postInquiry(data)
+      const token = recaptchaRef.current?.getValue()
+      if (!token) {
+        throw new Error('Failed to submit the form. Please complete the reCAPTCHA verification.')
+      }
+      await postInquiry({ token, ...data })
       reset()
       setIsSuccess(true)
     } catch (error: any) {
@@ -101,7 +107,9 @@ const ContactUs: React.FC = () => {
           />
           <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
           <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
-
+          <div className="flex justify-center">
+            <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''} />
+          </div>
           <button
             className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-secondary-light px-10 font-semibold text-white transition-colors hover:bg-secondary-light/80 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-secondary-light"
             disabled={isLoading || isSuccess}

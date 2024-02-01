@@ -27,6 +27,7 @@ export const postInquiry = async (payload: {
   phone: string
   message: string
   im_a: string
+  token: string
 }): Promise<void> => {
   const resp = await fetch('/api/inquiry', {
     method: 'POST',
