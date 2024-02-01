@@ -5,6 +5,7 @@ import JsAppImage from '@/assets/vacancy-page/jobseeker.app-popup.png'
 import playstoreImg from '@/assets/playstore.png'
 import appstoreImg from '@/assets/appstore.png'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { FiXCircle } from 'react-icons/fi'
 
 const Modal: React.FC<{ isOpen: boolean; closeModal: () => void }> = ({ isOpen, closeModal }) => {
   const { tl } = useLanguage()
@@ -35,6 +36,14 @@ const Modal: React.FC<{ isOpen: boolean; closeModal: () => void }> = ({ isOpen, 
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="relative h-full w-full max-w-3xl transform overflow-hidden overflow-y-auto bg-white p-16 text-left align-middle shadow-xl transition-all md:rounded-lg">
+                <button
+                  type="button"
+                  aria-label="close modal"
+                  className="absolute right-3 top-3 flex hover:text-error"
+                  onClick={closeModal}
+                >
+                  <FiXCircle size={32} strokeWidth={1.2} className="block" />
+                </button>
                 <div className="flex flex-col gap-8 md:flex-row">
                   <div className="w-full px-12 md:w-[550px]">
                     <Image alt="" src={JsAppImage} className="block w-full" />
