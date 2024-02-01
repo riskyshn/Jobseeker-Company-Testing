@@ -55,20 +55,20 @@ const HowWeHelp: React.FC = () => {
               <h2 className="mb-3 font-bold text-white md:mb-6 md:text-2xl">#CaraBaruCariKerja</h2>
               <p className="mb-3 text-xs text-white md:mb-6 md:text-lg" dangerouslySetInnerHTML={{ __html: tl['how-we-help-app-desc'] }} />
 
-              <div className="flex gap-3">
+              <div className="flex gap-2 md:gap-3">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.jobseeker.app"
                   target="_blank"
                   className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
                 >
-                  <Image src={playstoreImg} alt="" className="block h-10 w-auto" />
+                  <Image src={playstoreImg} alt="" className="block h-8 w-auto md:h-10" />
                 </a>
                 <a
                   href="https://apps.apple.com/id/app/jobseeker-app-job-search-app/id6447329057"
                   target="_blank"
                   className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
                 >
-                  <Image src={appstoreImg} alt="" className="block h-10 w-auto rounded-lg" />
+                  <Image src={appstoreImg} alt="" className="block h-8 w-auto md:h-10" />
                 </a>
               </div>
             </div>
@@ -175,20 +175,20 @@ const HowWeHelp: React.FC = () => {
                 dangerouslySetInnerHTML={{ __html: tl['how-we-help-partners-desc'] }}
               />
 
-              <div className="flex gap-3">
+              <div className="flex gap-2 md:gap-3">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.jobseeker.partners"
                   target="_blank"
                   className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
                 >
-                  <Image src={playstoreImg} alt="" className="block h-10 w-auto" />
+                  <Image src={playstoreImg} alt="" className="block h-8 w-auto md:h-10" />
                 </a>
                 <a
                   href="https://apps.apple.com/id/app/jobseeker-partners-find-staff/id6447542188"
                   target="_blank"
                   className="block overflow-hidden rounded-lg ring-1 ring-white/20 hover:ring"
                 >
-                  <Image src={appstoreImg} alt="" className="block h-10 w-auto rounded-lg" />
+                  <Image src={appstoreImg} alt="" className="block h-8 w-auto md:h-10" />
                 </a>
               </div>
             </div>
