@@ -12,6 +12,11 @@ type PropTypes = {
   vacancies: IVacancy[]
 }
 
+const idJobTypes: Record<string, string> = {
+  'Full Time': 'Penuh Waktu',
+  Contract: 'Kontrak',
+}
+
 const Vacancies: React.FC<PropTypes> = (props) => {
   const { tl, lang } = useLanguage()
   const [vacancies, setVacancies] = useState(props.vacancies)
@@ -102,11 +107,11 @@ const Vacancies: React.FC<PropTypes> = (props) => {
                 </span>
                 <span className="flex items-center justify-center gap-1 text-xs">
                   <PiBagBold size={12} className="block" />
-                  <span>{v.job_type_desc}</span>
+                  <span>{(lang === 'id' && idJobTypes[v.job_type_desc]) || v.job_type_desc}</span>
                 </span>
                 <span className="flex items-center justify-center gap-1 text-xs">
                   <PiMoneyBold size={12} className="block" />
-                  <span>Negotiable</span>
+                  <span>{lang === 'en' ? 'Negotiable' : 'Dapat dinegosiasi'}</span>
                 </span>
               </span>
             </button>
