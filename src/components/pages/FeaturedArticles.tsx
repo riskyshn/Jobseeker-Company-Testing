@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
 import { useLanguage } from '@/contexts/LanguageContext'
+import formatDate from '@/lib/format-date'
 
 type PropTypes = {
   articles: IArticle[]
@@ -26,7 +27,7 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
               <div>
                 <div className="mb-3 flex">
                   <span className="block rounded-lg bg-secondary-light/10 px-2 text-sm font-semibold leading-7 text-black">
-                    {new Date(el.date).toDateString()}
+                    {formatDate(new Date(el.date), lang)}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold">{el.title}</h3>

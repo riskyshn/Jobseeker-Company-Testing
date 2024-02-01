@@ -6,13 +6,14 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { useRouter } from 'next/router'
 import { fetchVacancyList } from '@/lib/api'
 import MyModal from '../Modal'
+import formatDate from '@/lib/format-date'
 
 type PropTypes = {
   vacancies: IVacancy[]
 }
 
 const Vacancies: React.FC<PropTypes> = (props) => {
-  const { tl } = useLanguage()
+  const { tl, lang } = useLanguage()
   const [vacancies, setVacancies] = useState(props.vacancies)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const router = useRouter()
@@ -88,7 +89,7 @@ const Vacancies: React.FC<PropTypes> = (props) => {
                 <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
                 <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
                   <FiClock size={12} className="block" />
-                  {new Date(v.publish_date).toDateString()}
+                  {formatDate(new Date(v.publish_date), lang)}
                 </span>
               </span>
 
