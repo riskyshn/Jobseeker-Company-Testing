@@ -12,7 +12,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { postInquiry } from '@/lib/api'
 
 const ContactUs: React.FC = () => {
-  const { tl } = useLanguage()
+  const { tl, lang } = useLanguage()
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -57,7 +57,7 @@ const ContactUs: React.FC = () => {
       if (!token) {
         throw new Error('Failed to submit the form. Please complete the reCAPTCHA verification.')
       }
-      await postInquiry({ token, ...data })
+      await postInquiry({ token, lang, ...data })
       reset()
       setIsSuccess(true)
     } catch (error: any) {
@@ -108,11 +108,11 @@ const ContactUs: React.FC = () => {
           <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
           <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
           <div className="flex justify-center">
-            <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''} />
+            {/* <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''} /> */}
           </div>
           <button
             className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-secondary-light px-10 font-semibold text-white transition-colors hover:bg-secondary-light/80 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-secondary-light"
-            disabled={isLoading || isSuccess}
+            disabled={isLoading}
           >
             <span className="block uppercase">{tl['inquiry-cta']}</span>
             <FiArrowRightCircle className="block" size={22} />

@@ -1,4 +1,5 @@
 import { IArticle, IVacancy } from '@/types'
+import axios from 'axios'
 
 export const fetchFeaturedArticles = async (): Promise<IArticle[]> => {
   const postsResponse = await fetch('https://jobseeker.company/blog/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=3')
@@ -28,18 +29,9 @@ export const postInquiry = async (payload: {
   message: string
   im_a: string
   token: string
+  lang: string
 }): Promise<void> => {
-  const resp = await fetch('/api/inquiry', {
-    method: 'POST',
-    body: JSON.stringify(payload),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-
-  if (!resp.ok) {
-    throw new Error('Failed to submit the inquiry. Please try again later.')
-  }
+  return axios.post('/api/inquiry', payload)
 }
 
 export const fetchVacancyList = async ({ filter = '', city = '' }: { filter?: string; city?: string } = {}): Promise<IVacancy[]> => {

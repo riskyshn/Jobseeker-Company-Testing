@@ -1,17 +1,11 @@
+import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
-      const resp = await fetch('https://devplay.jobseeker.software/api/company-inquiry', {
-        method: 'POST',
-        body: req.body,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-
-      res.status(resp.status).json({ success: resp.ok })
+      const resp = await axios.post('https://devplay.jobseeker.software/api/company-inquiry', req.body)
+      res.status(resp.status).json(resp.data)
     } catch (error: any) {
       res.status(500).json({ success: false, error: error.message })
     }
