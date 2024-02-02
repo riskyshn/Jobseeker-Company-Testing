@@ -61,7 +61,7 @@ const ContactUs: React.FC = () => {
       reset()
       setIsSuccess(true)
     } catch (error: any) {
-      setErrorMessage(error.message)
+      setErrorMessage(error.response?.data?.message || error.message)
     } finally {
       setIsLoading(false)
     }
