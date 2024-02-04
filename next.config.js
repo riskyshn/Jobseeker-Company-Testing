@@ -5,9 +5,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'jobseeker.company',
+        hostname: 'blog.jobseeker.company',
         port: '',
-        pathname: '/blog/wp-content/uploads/**',
+        pathname: '/wp-content/uploads/**',
       },
     ],
   },
