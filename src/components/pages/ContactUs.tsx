@@ -29,11 +29,13 @@ const ContactUs: React.FC = () => {
   ]
 
   const validationSchema = z.object({
-    name: z.string().min(3),
-    email: z.string().email(),
-    phone: z.string().regex(phoneNumberRegex, 'Phone number is invalid'),
-    im_a: z.string().refine((v) => imAOptions.map((option) => option.value).includes(v), 'I am is invalid'),
-    message: z.string().min(1),
+    name: z.string().min(3, lang === 'id' ? 'Nama harus memiliki setidaknya 3 karakter' : 'Name must be at least 3 characters'),
+    email: z.string().email(lang === 'id' ? 'Alamat email tidak valid' : 'Invalid email address'),
+    phone: z.string().regex(phoneNumberRegex, lang === 'id' ? 'Nomor telepon tidak valid' : 'Phone number is invalid'),
+    im_a: z
+      .string()
+      .refine((v) => imAOptions.map((option) => option.value).includes(v), lang === 'id' ? 'Pilihan saya tidak valid' : 'I am is invalid'),
+    message: z.string().min(1, lang === 'id' ? 'Pesan harus memiliki setidaknya 1 karakter' : 'Message must have at least 1 character'),
   })
 
   type ValidationSchema = z.infer<typeof validationSchema>
@@ -55,7 +57,11 @@ const ContactUs: React.FC = () => {
       setIsLoading(true)
       const token = recaptchaRef.current?.getValue()
       if (!token) {
-        throw new Error('Failed to submit the form. Please complete the reCAPTCHA verification.')
+        const errorMessage =
+          lang === 'id'
+            ? 'Gagal mengirimkan formulir. Harap lengkapi verifikasi reCAPTCHA.'
+            : 'Failed to submit the form. Please complete the reCAPTCHA verification.'
+        throw new Error(errorMessage)
       }
       await postInquiry({ token, lang, ...data })
       reset()
