@@ -1,17 +1,13 @@
 import { IVacancy } from '@/types'
-import { createConnection } from 'mysql'
+import { createPool } from 'mysql'
 
-const db = createConnection({
+const db = createPool({
+  connectionLimit: 10,
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
   user: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-})
-
-db.connect((err) => {
-  // eslint-disable-next-line no-console
-  if (err) console.error('Error connecting to MySQL database: ' + err.stack)
 })
 
 export const getVacancyList = (params?: { filter?: string; city?: string }): Promise<IVacancy[]> => {
