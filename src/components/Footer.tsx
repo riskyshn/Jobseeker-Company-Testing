@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://jobseeker.company/blog" className="transition-colors hover:text-gray-900">
+                  <a href="https://blog.jobseeker.company" className="transition-colors hover:text-gray-900">
                     {tl['footer-company-menu']['press']}
                   </a>
                 </li>

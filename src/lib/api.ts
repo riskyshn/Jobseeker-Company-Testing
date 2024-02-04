@@ -2,11 +2,11 @@ import { IArticle, IVacancy } from '@/types'
 import axios from 'axios'
 
 export const fetchFeaturedArticles = async (): Promise<IArticle[]> => {
-  const postsResponse = await fetch('https://jobseeker.company/blog/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=3')
+  const postsResponse = await fetch('https://blog.jobseeker.company/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=3')
   const postsData = await postsResponse.json()
 
   const featuredMediaResponses = await Promise.all(
-    postsData.map((post: any) => fetch(`https://jobseeker.company/blog/wp-json/wp/v2/media/${post.featured_media}`)),
+    postsData.map((post: any) => fetch(`https://blog.jobseeker.company/wp-json/wp/v2/media/${post.featured_media}`)),
   )
   const featuredMediaData = await Promise.all(featuredMediaResponses.map((response) => response.json()))
 

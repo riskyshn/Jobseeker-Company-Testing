@@ -48,7 +48,7 @@ const FeaturedArticles: React.FC<PropTypes> = ({ articles }) => {
 
         <div className="flex justify-center md:justify-end">
           <a
-            href="https://jobseeker.company/blog"
+            href="https://blog.jobseeker.company"
             className="rounded-full border border-secondary-light px-4 py-2 text-secondary-light transition-colors hover:bg-secondary-light hover:text-white"
           >
             {tl['featured-articles-see-all-articles']}
