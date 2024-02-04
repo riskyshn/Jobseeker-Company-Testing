@@ -8,18 +8,14 @@ import { fetchVacancyList } from '@/lib/api'
 import MyModal from '../Modal'
 import formatDate from '@/lib/format-date'
 
-type PropTypes = {
-  vacancies: IVacancy[]
-}
-
 const idJobTypes: Record<string, string> = {
   'Full Time': 'Penuh Waktu',
   Contract: 'Kontrak',
 }
 
-const Vacancies: React.FC<PropTypes> = (props) => {
+const Vacancies: React.FC = () => {
   const { tl, lang } = useLanguage()
-  const [vacancies, setVacancies] = useState(props.vacancies)
+  const [vacancies, setVacancies] = useState<IVacancy[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const router = useRouter()
   const [input, setInput] = useState({
