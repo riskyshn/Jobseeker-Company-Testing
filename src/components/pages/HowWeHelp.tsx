@@ -19,10 +19,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const HowWeHelp: React.FC = () => {
   const { tl } = useLanguage()
 
-  const goto = (link: string) => {
-    window.open(link, '_blank')
-  }
-
   return (
     <section className="container py-12 md:py-24">
       <div className="grid grid-cols-1 gap-8">

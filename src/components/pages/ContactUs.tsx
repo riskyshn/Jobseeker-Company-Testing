@@ -6,10 +6,10 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input, Select, Textarea } from '@/components/Forms'
 import Landing from '@/assets/landing.png'
-import Logo from '@/assets/footerlogo.svg'
 import { FiArrowRightCircle } from 'react-icons/fi'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { postInquiry } from '@/lib/api'
+import LogoJobseeker from '../svg/LogoJobseeker'
 
 const ContactUs: React.FC = () => {
   const { tl, lang } = useLanguage()
@@ -85,7 +85,7 @@ const ContactUs: React.FC = () => {
           }}
         >
           <div className="py-8">
-            <Image alt="" src={Logo} className="block h-24 w-24" />
+            <LogoJobseeker className="block h-24" />
           </div>
         </div>
         <form className="flex-1 p-6" onSubmit={onSubmit}>

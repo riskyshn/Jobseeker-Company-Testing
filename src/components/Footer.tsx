@@ -1,9 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
-import Logo from '@/assets/footerlogo.svg'
 import { RiTwitterXFill, RiFacebookFill, RiInstagramLine, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from 'react-icons/ri'
 import Link from './Link'
 import { useLanguage } from '@/contexts/LanguageContext'
+import LogoJobseeker from './svg/LogoJobseeker'
 
 const Footer: React.FC = () => {
   const { tl } = useLanguage()
@@ -11,7 +10,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="container">
       <div className="border-b py-12">
-        <Image alt="Logo jobseeker.company" src={Logo} className="mb-4 block w-20" />
+        <LogoJobseeker className="mb-4 block w-16" />
 
         <div className="grid grid-cols-1 gap-12 py-4 text-gray-600 md:grid-cols-2 md:gap-24">
           <div className="grid grid-cols-2 gap-6">

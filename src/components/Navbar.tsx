@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import LangSwicther from './LangSwitcher'
-import { useRouter } from 'next/router'
+import LogoJobseeker from './svg/LogoJobseekerCompany'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
     >
       <nav className="container flex items-center justify-between">
         <Link href="/">
-          <Logo width={150} />
+          <LogoJobseeker height={36} />
         </Link>
 
         {/* desktop menu  */}
