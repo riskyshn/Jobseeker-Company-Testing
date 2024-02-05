@@ -1,19 +1,36 @@
+import type { GetServerSideProps } from 'next'
 import React from 'react'
 import Head from 'next/head'
 import Vacancies from '@/components/pages/Vacancies'
+import { getVacancyList } from '@/lib/db'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const JobVacancies: React.FC = () => {
+type PropTypes = {
+  vacancies: string
+  statusCode?: number
+}
+
+const JobVacancies: React.FC<PropTypes> = ({ vacancies, statusCode }) => {
   const { tl } = useLanguage()
+
   return (
     <>
       <Head>
         <title>{tl.seo.pages.vacancy.title}</title>
         <meta name="description" content={tl.seo.pages.vacancy.description} />
       </Head>
-      <Vacancies />
+      <Vacancies vacancies={JSON.parse(vacancies)} />
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps<PropTypes> = async ({ query, res }) => {
+  const vacancies = await getVacancyList(query)
+  return {
+    props: {
+      vacancies: JSON.stringify(vacancies),
+    },
+  }
 }
 
 export default JobVacancies

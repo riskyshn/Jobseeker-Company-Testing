@@ -1,35 +1,25 @@
 import type { IVacancy } from '@/types'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { FiClock } from 'react-icons/fi'
 import { PiBagBold, PiMapPinBold, PiMoneyBold } from 'react-icons/pi'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { useRouter } from 'next/router'
-import { fetchVacancyList } from '@/lib/api'
-import MyModal from '../Modal'
 import formatDate from '@/lib/format-date'
+import MyModal from '../Modal'
 
 const idJobTypes: Record<string, string> = {
   'Full Time': 'Penuh Waktu',
   Contract: 'Kontrak',
 }
 
-const Vacancies: React.FC = () => {
+const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
   const { tl, lang } = useLanguage()
-  const [vacancies, setVacancies] = useState<IVacancy[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const router = useRouter()
   const [input, setInput] = useState({
     filter: router.query.filter?.toString() || '',
     city: router.query.city?.toString() || '',
   })
-
-  useEffect(() => {
-    const main = async () => {
-      const data = await fetchVacancyList(router.query)
-      setVacancies(data)
-    }
-    main()
-  }, [router.query])
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
