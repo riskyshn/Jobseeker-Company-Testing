@@ -120,12 +120,12 @@
   "full-name": "Nama Lengkap",
   "email-address": "Alamat Email",
   "phone-number": "Nomor Telephone",
-  "im-a": "Saya adalah Perusahaan/Kandidat/Pengusaha/Media",
+  "im-a": "Saya adalah Perusahaan/Kandidat/UMKM/Partner/Investor",
   "im-a-options": {
     "Enterprise": "Perusahaan",
     "Candidate": "Kandidat",
-    "SME": "Pengusaha",
-    "Partnership": "Partnership",
+    "SME": "UMKM",
+    "Partnership": "Partner",
     "Investor": "Investor"
   },
   "tell": "Beritahu kami lebih banyak tentang apa yang Anda butuhkan?",
