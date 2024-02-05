@@ -80,9 +80,9 @@ const Vacancies: React.FC = () => {
 
       {!!vacancies.length && (
         <div className="grid grid-cols-1 gap-4 pt-12 md:grid-cols-2">
-          {vacancies.map((v, i) => (
+          {vacancies.map((v) => (
             <button
-              key={i}
+              key={v.vacancy_id}
               className="block rounded-lg border p-3 text-left transition-shadow hover:shadow focus:outline-none"
               onClick={() => setIsModalOpen(true)}
             >
