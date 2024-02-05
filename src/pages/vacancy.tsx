@@ -23,7 +23,7 @@ const JobVacancies: React.FC<PropTypes> = ({ vacancies }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<PropTypes> = async ({ query, res }) => {
+export const getServerSideProps: GetServerSideProps<PropTypes> = async ({ query }) => {
   const vacancies = await getVacancyList(query)
   return {
     props: {
