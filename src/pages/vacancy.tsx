@@ -7,10 +7,9 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 type PropTypes = {
   vacancies: string
-  statusCode?: number
 }
 
-const JobVacancies: React.FC<PropTypes> = ({ vacancies, statusCode }) => {
+const JobVacancies: React.FC<PropTypes> = ({ vacancies }) => {
   const { tl } = useLanguage()
 
   return (
