@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Connecting from '@/assets/home-page/connecting.png'
-import Landing from '@/assets/landing.png'
+// import Landing from '@/assets/landing.png'
 
 const textGenerated = ['Opportunity', 'Better Job', 'Better Life']
 
@@ -22,11 +22,11 @@ const HomeHero: React.FC = () => {
   return (
     <section
       className="mb-12 flex h-screen w-full items-center md:mb-24"
-      style={{
-        background: `url('${Landing.src}')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
+      // style={{
+      //   background: `url('${Landing.src}')`,
+      //   backgroundPosition: 'center',
+      //   backgroundSize: 'cover',
+      // }}
     >
       <div className="container">
         <Image src={Connecting} width={700} alt="Connecting word" />
