@@ -188,22 +188,14 @@ const Footer: React.FC = () => {
         </span>
         <div className="flex gap-6 md:justify-end">
           <div className="w-full text-center md:w-auto">
-            <a
-              rel="noopener nofollow"
-              href="https://jobseeker.company/dot-app-privacy-policy"
-              className="text-sm transition-colors hover:text-gray-900"
-            >
+            <Link href="/privacy-policy" className="text-sm transition-colors hover:text-gray-900">
               {tl['footer-privacy-policy']}
-            </a>
+            </Link>
           </div>
           <div className="w-full text-center md:w-auto">
-            <a
-              rel="noopener nofollow"
-              href="https://jobseeker.company/dot-app-tnc"
-              className="text-sm transition-colors hover:text-gray-900"
-            >
+            <Link href="/terms-of-service" className="text-sm transition-colors hover:text-gray-900">
               {tl['footer-terms-of-service']}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
