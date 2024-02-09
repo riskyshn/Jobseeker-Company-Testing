@@ -33,6 +33,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(({ addBase, theme }) => {
       addBase({
         html: { color: theme('colors.default') },
