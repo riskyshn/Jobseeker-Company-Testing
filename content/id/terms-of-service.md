@@ -1,4 +1,4 @@
-# Syarat & Ketentuan untuk Memindahkan Kandidat 2M dari ATS ke MS
+# Ketentuan Layanan
 
 ## Dari ATS
 

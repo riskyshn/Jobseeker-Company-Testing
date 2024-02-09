@@ -1,4 +1,4 @@
-# Terms & Conditions for Transferring 2M Candidates from ATS to MS
+# Terms of Services
 
 ## From ATS
 

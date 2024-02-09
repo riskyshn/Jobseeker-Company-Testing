@@ -1,4 +1,4 @@
-# Privacy Policy for Jobseeker Company
+# Privacy Policy
 
 At Jobseeker Company, accessible from https://jobseeker.company/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Jobseeker Company and how we use it.
 

@@ -1,4 +1,4 @@
-# Kebijakan Privasi untuk Perusahaan Pencari Kerja
+# Kebijakan Privasi
 
 Di Jobseeker Company, dapat diakses dari https://jobseeker.company/, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh Perusahaan Pencari Kerja dan bagaimana kami menggunakannya.
 
