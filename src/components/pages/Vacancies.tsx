@@ -108,7 +108,8 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
       {!vacancies.length && (router.query.filter || router.query.city) && (
         <div className="mb-6 mt-12 md:px-10">
           <h3 className="text-center text-5xl">
-            No Results for <span className="text-primary">"{[router.query.filter, router.query.city].join(', ')}"</span>
+            No Results for{' '}
+            <span className="text-primary">"{[router.query.filter, router.query.city].filter((el) => !!el).join(', ')}"</span>
           </h3>
         </div>
       )}
