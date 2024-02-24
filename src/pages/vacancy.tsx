@@ -2,8 +2,8 @@ import type { GetServerSideProps } from 'next'
 import React from 'react'
 import Head from 'next/head'
 import Vacancies from '@/components/pages/Vacancies'
-import { getVacancyList } from '@/lib/db'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { fetchVacancyList } from '@/lib/api'
 
 type PropTypes = {
   vacancies: string
@@ -24,7 +24,7 @@ const JobVacancies: React.FC<PropTypes> = ({ vacancies }) => {
 }
 
 export const getServerSideProps: GetServerSideProps<PropTypes> = async ({ query }) => {
-  const vacancies = await getVacancyList(query)
+  const vacancies = await fetchVacancyList(query)
   return {
     props: {
       vacancies: JSON.stringify(vacancies),

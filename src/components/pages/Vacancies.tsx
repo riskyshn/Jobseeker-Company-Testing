@@ -17,14 +17,17 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const router = useRouter()
   const [input, setInput] = useState({
-    filter: router.query.filter?.toString() || '',
-    city: router.query.city?.toString() || '',
+    vacancy_name: router.query.vacancy_name?.toString() || '',
+    city_name: router.query.city_name?.toString() || '',
   })
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    if (input.city || input.filter) {
-      router.push({ pathname: '/vacancy', query: input })
+
+    const filteredInput = Object.fromEntries(Object.entries(input).filter(([_, value]) => !!value))
+
+    if (Object.keys(filteredInput).length > 0) {
+      router.push({ pathname: '/vacancy', query: filteredInput })
     } else {
       router.push({ pathname: '/vacancy' })
     }
@@ -41,8 +44,8 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
             <div>
               <input
                 type="text"
-                name="filter"
-                value={input.filter}
+                name="vacancy_name"
+                value={input.vacancy_name}
                 placeholder={tl['job-title']}
                 className="block h-12 w-full rounded-l-xl border border-secondary-light bg-white px-4 text-xs placeholder-secondary-light focus:outline-0 md:h-16 md:text-base"
                 onChange={(e) => setInput({ ...input, [e.currentTarget.name]: e.currentTarget.value })}
@@ -51,8 +54,8 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
             <div>
               <input
                 type="text"
-                name="city"
-                value={input.city}
+                name="city_name"
+                value={input.city_name}
                 placeholder={tl['city']}
                 className="block h-12 w-full rounded-r-xl border border-l-0 border-secondary-light bg-white px-4 text-xs placeholder-secondary-light focus:outline-0 md:h-16 md:text-base"
                 onChange={(e) => setInput({ ...input, [e.currentTarget.name]: e.currentTarget.value })}
@@ -105,11 +108,11 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
         </div>
       )}
 
-      {!vacancies.length && (router.query.filter || router.query.city) && (
+      {!vacancies.length && (router.query.vacancy_name || router.query.city_name) && (
         <div className="mb-6 mt-12 md:px-10">
           <h3 className="text-center text-5xl">
             No Results for{' '}
-            <span className="text-primary">"{[router.query.filter, router.query.city].filter((el) => !!el).join(', ')}"</span>
+            <span className="text-primary">"{[router.query.vacancy_name, router.query.city_name].filter((el) => !!el).join(', ')}"</span>
           </h3>
         </div>
       )}

@@ -2,24 +2,38 @@ import { IArticle, IVacancy } from '@/types'
 import axios from 'axios'
 
 export const fetchFeaturedArticles = async (): Promise<IArticle[]> => {
-  const postsResponse = await fetch('https://blog.jobseeker.company/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=3')
-  const postsData = await postsResponse.json()
+  try {
+    const postsResponse = await axios.get('https://blog.jobseeker.company/wp-json/wp/v2/posts', {
+      params: {
+        orderby: 'date',
+        order: 'desc',
+        per_page: 3,
+      },
+    })
 
-  const featuredMediaResponses = await Promise.all(
-    postsData.map((post: any) => fetch(`https://blog.jobseeker.company/wp-json/wp/v2/media/${post.featured_media}`)),
-  )
-  const featuredMediaData = await Promise.all(featuredMediaResponses.map((response) => response.json()))
+    const postsData = postsResponse.data
 
-  const articles: IArticle[] = postsData.map((post: any, index: number) => ({
-    id: post.id,
-    date: post.date,
-    link: post.link,
-    title: post.title?.rendered || '',
-    hero_url: featuredMediaData[index]?.media_details?.sizes?.medium_large?.source_url || '',
-    description: post.excerpt?.rendered || '',
-  }))
+    const featuredMediaResponses = await Promise.all(
+      postsData.map((post: any) => axios.get(`https://blog.jobseeker.company/wp-json/wp/v2/media/${post.featured_media}`)),
+    )
 
-  return articles
+    const featuredMediaData = featuredMediaResponses.map((response) => response.data)
+
+    const articles: IArticle[] = postsData.map((post: any, index: number) => ({
+      id: post.id,
+      date: post.date,
+      link: post.link,
+      title: post.title?.rendered || '',
+      hero_url: featuredMediaData[index]?.media_details?.sizes?.medium_large?.source_url || '',
+      description: post.excerpt?.rendered || '',
+    }))
+
+    return articles
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Error fetching featured articles:', error)
+    return []
+  }
 }
 
 export const postInquiry = async (payload: {
@@ -34,14 +48,15 @@ export const postInquiry = async (payload: {
   return axios.post('/api/inquiry', payload)
 }
 
-export const fetchVacancyList = async ({ filter = '', city = '' }: { filter?: string; city?: string } = {}): Promise<IVacancy[]> => {
+export const fetchVacancyList = async (params: { vacancy_name?: string; city_name?: string } = {}): Promise<IVacancy[]> => {
   try {
-    const resp = await fetch(`/api/vacancy?filter=${filter}&city=${city}`)
-    const data = await resp.json()
-    return data
+    const { data } = await axios.get('https://vacancy.api-jobseeker.site/find-vacancy/jobseeker-vacancy', {
+      params,
+    })
+    return data.data
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Error fetching vacancy list:', error)
-    return [] // Or handle the error appropriately
+    return []
   }
 }
