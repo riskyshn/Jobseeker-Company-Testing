@@ -52,6 +52,10 @@ export const fetchVacancyList = async (params: { vacancy_name?: string; city_nam
   try {
     const { data } = await axios.get('https://vacancy.api-jobseeker.site/find-vacancy/jobseeker-vacancy', {
       params,
+      headers: {
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwIiwibmFtZSI6Ikd1ZXN0IiwiaWF0IjoiRGVmYXVsdCBHdWVzdCBVc2VyIn0.jZrdQzdVcW-L1jRtZ6eZfciKE0mUvP17Je05zbPSpH8',
+      },
     })
     return data.data
   } catch (error) {
