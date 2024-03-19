@@ -7,39 +7,39 @@ import HowWeHelp from '@/components/pages/HowWeHelp'
 import FeaturedArticles from '@/components/pages/FeaturedArticles'
 import { fetchFeaturedArticles } from '@/lib/api'
 
-type PropTypes = {
-  articles: IArticle[]
-}
+// type PropTypes = {
+//   articles: IArticle[]
+// }
 
-export default function Home({ articles }: PropTypes) {
+export default function Home() {
   return (
     <>
       <HomeHero />
       <WhatWeDo />
       <OurMarket />
       <HowWeHelp />
-      <FeaturedArticles articles={articles} />
+      <FeaturedArticles />
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps<PropTypes> = async () => {
-  try {
-    const articles = await fetchFeaturedArticles()
+// export const getServerSideProps: GetServerSideProps<PropTypes> = async () => {
+//   try {
+//     const articles = await fetchFeaturedArticles()
 
-    return {
-      props: {
-        articles,
-      },
-    }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error fetching data:', error)
+//     return {
+//       props: {
+//         articles,
+//       },
+//     }
+//   } catch (error) {
+//     // eslint-disable-next-line no-console
+//     console.error('Error fetching data:', error)
 
-    return {
-      props: {
-        articles: [],
-      },
-    }
-  }
-}
+//     return {
+//       props: {
+//         articles: [],
+//       },
+//     }
+//   }
+// }
