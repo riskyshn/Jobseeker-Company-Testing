@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import JobseekerLogo from '@/assets/LogoJobseeker.svg'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -24,7 +26,7 @@ const Navbar: React.FC = () => {
     >
       <nav className="container flex items-center justify-between">
         <Link href="/">
-          <LogoJobseeker height={36} />
+          <Image src={JobseekerLogo} alt="Jobseeker Logo" height={36}/>
         </Link>
 
         {/* desktop menu  */}
@@ -32,12 +34,12 @@ const Navbar: React.FC = () => {
           <ul className="flex items-center gap-6">
             <li>
               <Link
-                href="/about-us"
+                href="/"
                 className="transition-colors hover:text-gray-900"
                 nonActiveClassName="text-gray-600"
                 activeClassName="text-gray-900"
               >
-                {tl.menu['about-us']}
+                {tl.menu['homepage']}
               </Link>
             </li>
             <li>
@@ -84,12 +86,12 @@ const Navbar: React.FC = () => {
             >
               <div className="mb-3 py-2">
                 <Link
-                  href="/about-us"
+                  href="/"
                   className="text-xl transition-colors hover:text-gray-900"
                   nonActiveClassName="text-gray-600"
                   activeClassName="text-gray-900"
                 >
-                  {tl.menu['about-us']}
+                  {tl.menu['homepage']}
                 </Link>
               </div>
 

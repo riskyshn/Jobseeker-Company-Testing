@@ -20,8 +20,8 @@
   },
 
   "menu": {
-    "about-us": "Tentang Kami",
-    "join-team": "Gabung ke Tim Kami!",
+    "homepage": "Beranda",
+    "join-team": "Cari Pekerjaan!",
     "contact-us": "Hubungi Kami"
   },
 
@@ -38,7 +38,7 @@
   "footer-copyright": "Hak Cipta © [YEAR] Jobseeker Company",
   "footer-privacy-policy": "Kebijakan Privasi",
   "footer-terms-of-service": "Syarat Layanan",
-
+  "view-demo": "Lihat Demo",
   "what-we-do": "Apa Yang Kami Lakukan",
   "we-connect": "Kami Menghubungkan Orang dengan Peluang",
   "we-connect-text-line-1": "Jobseeker Company didirikan pada Februari 2022 dengan tujuan menciptakan satu ekosistem ekonomi yang dapat diandalkan seluruh tenaga kerja. Platform rekrutmen kami bertujuan untuk memberdayakan setiap individu dengan menghubungkan mereka kepada kesempatan kerja yang sesuai keterampilan dan pengalaman.",
@@ -106,31 +106,38 @@
   "career-desc-1": "Di Jobseeker Company, kami percaya bahwa menghubungkan orang dengan peluang dapat memiliki dampak positif yang signifikan pada kehidupan mereka. Dedikasi kami terhadap tujuan ini tercermin dalam komitmen kami untuk merangsang kreativitas, mempromosikan kesetaraan, mendukung pertumbuhan, dan memberikan dampak sosial positif melalui pekerjaan kami.",
   "career-desc-2": "Bergabunglah dengan kami dan menjadi bagian dari tim yang bersemangat untuk memberikan perubahan positif dalam kehidupan orang.",
   "career-cta": "Bergabung dengan Tim Kami",
-
+  "1-minute-demo": "Demo 1 Menit",
+  "10-minute-demo": "Demo 10 Menit",
   "join-us": "Bergabunglah dengan Kami dan Jadilah Bagian dari Perjalanan Kami",
   "job-title": "Nama Posisi",
   "city": "Kota",
   "location": "Lokasi",
   "department": "Departemen",
   "search": "Cari Pekerjaan",
-
+  "contact-us" : "Hubungi Kami",
+  "trusted": "Dipercaya oleh Perusahaan besar",
+  "trusted-detail": "Kami sangat bangga dalam melayani dan memberikan layanan terbaik kepada perusahaan terkemuka di industri ini.",
+  "recruitment-title": "Proses Penerimaan",
+  "human-resource": "Sumber Daya Manusia",
+  "product-demo": "Demo Produk",
   "inquiry": "Hubungi Tim Kami",
   "inquiry-desc": "Silakan isi form di bawah ini untuk memulai",
   "inquiry-success": "Terima kasih telah menghubungi kami! Kami telah menerima pertanyaan Anda dan akan segera meresponsnya.",
   "full-name": "Nama Lengkap",
   "email-address": "Alamat Email",
   "phone-number": "Nomor Telephone",
-  "im-a": "Saya adalah Perusahaan/Kandidat/UMKM/Partner/Investor",
-  "im-a-options": {
-    "Enterprise": "Perusahaan",
-    "Candidate": "Kandidat",
-    "SME": "UMKM",
-    "Partnership": "Partner",
-    "Investor": "Investor"
+  "im-a": "Sumber",
+  "options": {
+    "LinkedIn": "LinkedIn",
+    "Instagram": "Instagram",
+    "Website": "Website",
+    "Facebook": "Facebook",
+    "Iklan": "Iklan"
   },
   "tell": "Beritahu kami lebih banyak tentang apa yang Anda butuhkan?",
   "inquiry-cta": "Kirim",
 
   "modal-line-1": "Unduh Jobseeker App",
-  "modal-line-2": "Lamar, lacak hasil lamaran, dan cari tau langkah selajutnya hanya di Jobseeker App."
+  "modal-line-2": "Lamar, lacak hasil lamaran, dan cari tau langkah selajutnya hanya di Jobseeker App.",
+  "modal-line-3": "Lamar, lacak hasil lamaran, dan cari tau langkah selajutnya hanya di Jobseeker App."
 }

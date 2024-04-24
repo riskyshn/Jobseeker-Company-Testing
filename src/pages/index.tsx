@@ -1,11 +1,9 @@
-import type { GetServerSideProps } from 'next'
-import type { IArticle } from '@/types'
 import HomeHero from '@/components/pages/HomeHero'
-import WhatWeDo from '@/components/pages/WhatWeDo'
-import OurMarket from '@/components/pages/OurMarket'
-import HowWeHelp from '@/components/pages/HowWeHelp'
+import WhatWeDo from '@/components/pages/TrustedBy'
+import HumanResource from '@/components/pages/HumanResource'
+import HowWeHelp from '@/components/pages/Product'
 import FeaturedArticles from '@/components/pages/FeaturedArticles'
-import { fetchFeaturedArticles } from '@/lib/api'
+import Recruitment from '@/components/pages/Recruitment '
 
 // type PropTypes = {
 //   articles: IArticle[]
@@ -16,7 +14,8 @@ export default function Home() {
     <>
       <HomeHero />
       <WhatWeDo />
-      <OurMarket />
+      <Recruitment />
+      <HumanResource />
       <HowWeHelp />
       <FeaturedArticles />
     </>

@@ -21,11 +21,11 @@ const ContactUs: React.FC = () => {
   const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/
 
   const imAOptions = [
-    { value: 'Enterprise', label: tl['im-a-options']['Enterprise'] },
-    { value: 'Candidate', label: tl['im-a-options']['Candidate'] },
-    { value: 'SME', label: tl['im-a-options']['SME'] },
-    { value: 'Partnership', label: tl['im-a-options']['Partnership'] },
-    { value: 'Investor', label: tl['im-a-options']['Investor'] },
+    { value: 'LinkedIn', label: 'LinkedIn' },
+    { value: 'Instagram', label: 'Instagram' },
+    { value: 'Website', label: 'Website' },
+    { value: 'Facebook', label: 'Facebook' },
+    { value: 'Iklan', label: 'Iklan' },
   ]
 
   const validationSchema = z.object({
@@ -34,7 +34,7 @@ const ContactUs: React.FC = () => {
     phone: z.string().regex(phoneNumberRegex, lang === 'id' ? 'Nomor telepon tidak valid' : 'Phone number is invalid'),
     im_a: z
       .string()
-      .refine((v) => imAOptions.map((option) => option.value).includes(v), lang === 'id' ? 'Pilihan saya tidak valid' : 'I am is invalid'),
+      .refine((v) => imAOptions.map((option) => option.value).includes(v), lang === 'id' ? 'Pilihan tidak valid' : 'Option is invalid'),
     message: z.string().min(1, lang === 'id' ? 'Pesan harus memiliki setidaknya 1 karakter' : 'Message must have at least 1 character'),
   })
 
@@ -112,10 +112,12 @@ const ContactUs: React.FC = () => {
             }}
           />
           <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
-          <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
-          <div className="flex justify-center">
-            <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''} />
+          <div className="mb-4">
+          <label htmlFor="setup-meeting" className="block text-sm font-medium text-gray-700">
+            Setup Meeting
+          </label>
           </div>
+          <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
           <button
             className="my-6 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-secondary-light px-10 font-semibold text-white transition-colors hover:bg-secondary-light/80 disabled:cursor-wait disabled:opacity-80 hover:disabled:bg-secondary-light"
             disabled={isLoading}

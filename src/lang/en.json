@@ -20,8 +20,8 @@
   },
 
   "menu": {
-    "about-us": "About Us",
-    "join-team": "Join Our Team",
+    "homepage": "Homepage",
+    "join-team": "Find a Job",
     "contact-us": "Contact Us"
   },
 
@@ -38,7 +38,7 @@
   "footer-copyright": "Copyright © [YEAR] Jobseeker Company",
   "footer-privacy-policy": "Privacy Policy",
   "footer-terms-of-service": "Terms of Service",
-
+  "view-demo": "View Demo",
   "what-we-do": "What We Do",
   "we-connect": "We Connect People with Opportunities",
   "we-connect-text-line-1": "Jobseeker Company, founded in February 2022, aims to connect people with various opportunities and create a reliable economic ecosystem. Our platform empowers individuals by linking them to opportunities matching their skills.",
@@ -113,20 +113,27 @@
   "location": "Location",
   "department": "Department",
   "search": "Find a Job",
-
+  "trusted": "Trusted by Giants in The Industry",
+  "trusted-detail" : "We take great pride in serving and delivering top-notch services to the leading companies in the industry.",
+  "contact-us" : "Contact Us",
+  "recruitment-title": "Recruitment",
+  "human-resource": "Human Resource",
+  "1-minute-demo": "1 Minute Demo",
+  "10-minute-demo": "10 Minute Demo",
+  "product-demo": "Product Demo",
   "inquiry": "Reach Out to Our Team",
   "inquiry-desc": "Please fill out the form below to start",
   "inquiry-success": "Thank you for contacting us! We have received your inquiry and will get back to you as soon as possible.",
   "full-name": "Full Name",
   "email-address": "Email Address",
   "phone-number": "Phone Number",
-  "im-a": "I’m an Enterprise/Candidate/SME/Partnership/Investor",
-  "im-a-options": {
-    "Enterprise": "Enterprise",
-    "Candidate": "Candidate",
-    "SME": "SME",
-    "Partnership": "Partnership",
-    "Investor": "Investor"
+  "im-a": "Source",
+  "options": {
+    "LinkedIn": "LinkedIn",
+    "Instagram": "Instagram",
+    "Website": "Website",
+    "Facebook": "Facebook",
+    "Ads": "Ads"
   },
   "tell": "Tell us more about what you need?",
   "inquiry-cta": "Submit",
