@@ -11,73 +11,60 @@ const Recruitment: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container py-12 md:py-24 flex">
-      <div className="flex flex-1 flex-col justify-center mr-5">
+    <section className="container flex py-12 md:py-24">
+      <div className="mr-5 flex flex-1 flex-col justify-center">
         <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['recruitment-title']}</h2>
-        <p className="md:text-lg text-justify">
+        <p className="text-justify md:text-lg">
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis. Sed consequuntur doloribus sint repudiandae cupiditate? Modi nam doloribus eum, labore cumque dolores ducimus culpa cupiditate vel vitae quam ipsum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis. Sed consequuntur doloribus sint repudiandae
+          cupiditate? Modi nam doloribus eum, labore cumque dolores ducimus culpa cupiditate vel vitae quam ipsum.
         </p>
 
         <ul className="mt-5 w-5/6">
-        <li className="border-2 rounded-lg border-blue-100 cursor-pointer bg-secondary mb-6">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={Homecareersite} alt="Careersite" />
-            <p className="text-secondary font-semibold text-base text-white">
-              Careersite
-            </p>
-          </div>
-        </li>
+          <li className="mb-6 cursor-pointer rounded-lg border-2 border-blue-100 bg-secondary">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={Homecareersite} alt="Careersite" />
+              <p className="text-base font-semibold text-secondary text-white">Careersite</p>
+            </div>
+          </li>
 
-        <li className="mt-2 border-2 rounded-lg border-blue-100 cursor-pointer group hover:bg-blue">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={HomeDashboard} alt="Dashboard" />
-            <p className="text-secondary font-semibold text-base width-100">
-                Dashboard
-            </p>
-          </div>
-        </li>
+          <li className="hover:bg-blue group mt-2 cursor-pointer rounded-lg border-2 border-blue-100">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={HomeDashboard} alt="Dashboard" />
+              <p className="width-100 text-base font-semibold text-secondary">Dashboard</p>
+            </div>
+          </li>
 
-        <li className="mt-2 border-2 rounded-lg border-blue-100 cursor-pointer group hover:bg-blue">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={HomeJobManagement} alt="Job Management" />
-            <p className="text-secondary font-semibold text-base width-100">
-                Job Management
-            </p>
-          </div>
-        </li>
+          <li className="hover:bg-blue group mt-2 cursor-pointer rounded-lg border-2 border-blue-100">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={HomeJobManagement} alt="Job Management" />
+              <p className="width-100 text-base font-semibold text-secondary">Job Management</p>
+            </div>
+          </li>
 
-        <li className="mt-2 border-2 rounded-lg border-blue-100 cursor-pointer group hover:bg-blue">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={Homecandidate} alt="Candidate" />
-            <p className="text-secondary font-semibold text-base width-100">
-                Candidate
-            </p>
-          </div>
-        </li>
+          <li className="hover:bg-blue group mt-2 cursor-pointer rounded-lg border-2 border-blue-100">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={Homecandidate} alt="Candidate" />
+              <p className="width-100 text-base font-semibold text-secondary">Candidate</p>
+            </div>
+          </li>
 
-        <li className="mt-2 border-2 rounded-lg border-blue-100 cursor-pointer group hover:bg-blue">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={HomeProcess} alt="Process" />
-            <p className="text-secondary font-semibold text-base width-100">
-                Process
-            </p>
-          </div>
-        </li>
+          <li className="hover:bg-blue group mt-2 cursor-pointer rounded-lg border-2 border-blue-100">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={HomeProcess} alt="Process" />
+              <p className="width-100 text-base font-semibold text-secondary">Process</p>
+            </div>
+          </li>
 
-        <li className="mt-2 border-2 rounded-lg border-blue-100 cursor-pointer group hover:bg-blue">
-          <div className="flex items-center hover:text-white p-3">
-            <Image className='p-1' src={HomeJobManagement} alt="Careersite" />
-            <p className="text-secondary font-semibold text-base width-100">
-                Report
-            </p>
-          </div>
-        </li>
-
-      </ul>
-
+          <li className="hover:bg-blue group mt-2 cursor-pointer rounded-lg border-2 border-blue-100">
+            <div className="flex items-center p-3 hover:text-white">
+              <Image className="p-1" src={HomeJobManagement} alt="Careersite" />
+              <p className="width-100 text-base font-semibold text-secondary">Report</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div className="md:flex flex-1 md:items-center justify-center items-center">
+      <div className="flex-1 items-center justify-center md:flex md:items-center">
         <div className="flex items-center">
           <Image src={HomepageImage3} width={1500} alt="Software Demo" />
         </div>

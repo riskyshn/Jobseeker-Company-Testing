@@ -114,8 +114,8 @@
   "department": "Department",
   "search": "Find a Job",
   "trusted": "Trusted by Giants in The Industry",
-  "trusted-detail" : "We take great pride in serving and delivering top-notch services to the leading companies in the industry.",
-  "contact-us" : "Contact Us",
+  "trusted-detail": "We take great pride in serving and delivering top-notch services to the leading companies in the industry.",
+  "contact-us": "Contact Us",
   "recruitment-title": "Recruitment",
   "human-resource": "Human Resource",
   "1-minute-demo": "1 Minute Demo",
@@ -127,13 +127,13 @@
   "full-name": "Full Name",
   "email-address": "Email Address",
   "phone-number": "Phone Number",
-  "im-a": "Source",
-  "options": {
-    "LinkedIn": "LinkedIn",
-    "Instagram": "Instagram",
-    "Website": "Website",
-    "Facebook": "Facebook",
-    "Ads": "Ads"
+  "im-a": "I’m an Enterprise/Candidate/SME/Partnership/Investor",
+  "im-a-options": {
+    "Enterprise": "Enterprise",
+    "Candidate": "Candidate",
+    "SME": "SME",
+    "Partnership": "Partnership",
+    "Investor": "Investor"
   },
   "tell": "Tell us more about what you need?",
   "inquiry-cta": "Submit",

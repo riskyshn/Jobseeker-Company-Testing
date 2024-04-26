@@ -6,7 +6,7 @@ const WhatWeDo: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container py-12 md:py-24 flex">
+    <section className="container flex py-12 md:py-24">
       <div className="flex flex-col justify-center">
         <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['trusted']}</h2>
         <p className="md:text-lg">
@@ -14,7 +14,7 @@ const WhatWeDo: React.FC = () => {
           {tl['trusted-detail']}
         </p>
       </div>
-      <div className="md:flex md:items-center justify-center items-center">
+      <div className="items-center justify-center md:flex md:items-center">
         <div className="">
           <Image src={HomepageImage2} width={700} alt="Software Demo" />
         </div>

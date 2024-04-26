@@ -114,7 +114,7 @@
   "location": "Lokasi",
   "department": "Departemen",
   "search": "Cari Pekerjaan",
-  "contact-us" : "Hubungi Kami",
+  "contact-us": "Hubungi Kami",
   "trusted": "Dipercaya oleh Perusahaan besar",
   "trusted-detail": "Kami sangat bangga dalam melayani dan memberikan layanan terbaik kepada perusahaan terkemuka di industri ini.",
   "recruitment-title": "Proses Penerimaan",
@@ -126,13 +126,13 @@
   "full-name": "Nama Lengkap",
   "email-address": "Alamat Email",
   "phone-number": "Nomor Telephone",
-  "im-a": "Sumber",
-  "options": {
-    "LinkedIn": "LinkedIn",
-    "Instagram": "Instagram",
-    "Website": "Website",
-    "Facebook": "Facebook",
-    "Iklan": "Iklan"
+  "im-a": "Saya adalah Perusahaan/Kandidat/UMKM/Partner/Investor",
+  "im-a-options": {
+    "Enterprise": "Perusahaan",
+    "Candidate": "Kandidat",
+    "SME": "UMKM",
+    "Partnership": "Partner",
+    "Investor": "Investor"
   },
   "tell": "Beritahu kami lebih banyak tentang apa yang Anda butuhkan?",
   "inquiry-cta": "Kirim",

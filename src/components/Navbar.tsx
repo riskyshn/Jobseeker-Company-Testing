@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
     >
       <nav className="container flex items-center justify-between">
         <Link href="/">
-          <Image src={JobseekerLogo} alt="Jobseeker Logo" height={36}/>
+          <Image src={JobseekerLogo} alt="Jobseeker Logo" height={36} />
         </Link>
 
         {/* desktop menu  */}
