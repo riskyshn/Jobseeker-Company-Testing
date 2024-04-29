@@ -6,7 +6,7 @@ const WhatWeDo: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container flex py-12 md:py-24">
+    <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
       <div className="flex flex-col justify-center">
         <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['trusted']}</h2>
         <p className="md:text-lg">

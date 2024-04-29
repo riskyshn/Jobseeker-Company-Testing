@@ -29,7 +29,7 @@ const HomeHero: React.FC = () => {
       //   backgroundSize: 'cover',
       // }}
     >
-      <div className="container flex">
+      <div className="container flex flex-row max-md:flex-col">
         <div className="flex-content-wrapper flex flex-1 flex-col justify-center">
           <h1 className="mb-3 text-4xl font-bold text-black md:text-6xl">Your All-in-One </h1>
           <div className="mb-2 flex items-center gap-2">

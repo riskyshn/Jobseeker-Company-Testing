@@ -11,7 +11,7 @@ const Recruitment: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container flex py-12 md:py-24">
+    <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
       <div className="mr-5 flex flex-1 flex-col justify-center">
         <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['recruitment-title']}</h2>
         <p className="text-justify md:text-lg">

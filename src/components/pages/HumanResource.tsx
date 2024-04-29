@@ -11,7 +11,7 @@ const OurMarket: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container flex py-12 md:py-24">
+    <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
       <div className="mr-5 flex-1 items-center justify-center md:flex md:items-center">
         <div className="flex items-center">
           <Image src={Homepage4} width={1500} alt="Homepage Image" />

@@ -21,11 +21,11 @@ const ContactUs: React.FC = () => {
   const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,8}$/
 
   const imAOptions = [
-    { value: 'Enterprise', label: tl['im-a-options']['Enterprise'] },
-    { value: 'Candidate', label: tl['im-a-options']['Candidate'] },
-    { value: 'SME', label: tl['im-a-options']['SME'] },
-    { value: 'Partnership', label: tl['im-a-options']['Partnership'] },
-    { value: 'Investor', label: tl['im-a-options']['Investor'] },
+    { value: 'Jobseeker App', label: tl['source-options']['App'] },
+    { value: 'Jobseeker Software', label: tl['source-options']['Software'] },
+    { value: 'Jobseeker Services', label: tl['source-options']['Services'] },
+    { value: 'Jobseeker Partners', label: tl['source-options']['Partners'] },
+    { value: 'Other', label: tl['source-options']['Other'] },
   ]
 
   const validationSchema = z.object({
@@ -111,7 +111,7 @@ const ContactUs: React.FC = () => {
               }
             }}
           />
-          <Select className="mb-4" label={tl['im-a']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
+          <Select className="mb-4" label={tl['source']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
           <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
           <div className="flex justify-center"></div>
           <button

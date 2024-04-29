@@ -121,19 +121,20 @@
   "1-minute-demo": "1 Minute Demo",
   "10-minute-demo": "10 Minute Demo",
   "product-demo": "Product Demo",
+  "optimized": "Optimized Growth & Efficiency",
   "inquiry": "Reach Out to Our Team",
   "inquiry-desc": "Please fill out the form below to start",
   "inquiry-success": "Thank you for contacting us! We have received your inquiry and will get back to you as soon as possible.",
   "full-name": "Full Name",
   "email-address": "Email Address",
   "phone-number": "Phone Number",
-  "im-a": "I’m an Enterprise/Candidate/SME/Partnership/Investor",
-  "im-a-options": {
-    "Enterprise": "Enterprise",
-    "Candidate": "Candidate",
-    "SME": "SME",
-    "Partnership": "Partnership",
-    "Investor": "Investor"
+  "source": "Source",
+  "source-options": {
+    "App": "Jobseeker App",
+    "Software": "Jobseeker Software",
+    "Services": "Jobseeker Services",
+    "Partners": "Jobseeker Partners",
+    "Other": "Other"
   },
   "tell": "Tell us more about what you need?",
   "inquiry-cta": "Submit",
