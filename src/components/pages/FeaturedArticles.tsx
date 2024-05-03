@@ -29,7 +29,7 @@ const FeaturedArticles: React.FC = () => {
   return (
     <section className="border-y py-12 md:py-24">
       <div className="container grid grid-cols-1 gap-8">
-        <h2 className="mb-6 text-center text-4xl font-bold text-secondary md:text-6xl">{tl['featured-articles']}</h2>
+        <h2 className="text-4D4D4D mb-6 text-center text-4xl font-bold md:text-6xl">{tl['featured-articles']}</h2>
 
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {loading ? (

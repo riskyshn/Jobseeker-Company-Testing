@@ -8,7 +8,7 @@ const WhatWeDo: React.FC = () => {
   return (
     <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
       <div className="flex flex-col justify-center">
-        <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['trusted']}</h2>
+        <h2 className="text-4D4D4D text-4xl font-bold md:text-4xl">{tl['trusted']}</h2>
         <p className="md:text-lg">
           <br />
           {tl['trusted-detail']}

@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import JobseekerLogo from '@/assets/LogoJobseeker.svg'
+import JobseekerLogo from '@/assets/Horizontal_software 1.png'
 import Link from '@/components/Link'
 import { Transition } from '@headlessui/react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import BurgerMenu from './BurgerMenu'
 import LangSwicther from './LangSwitcher'
-import LogoJobseeker from './svg/LogoJobseekerCompany'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

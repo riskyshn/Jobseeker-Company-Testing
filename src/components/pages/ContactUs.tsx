@@ -29,6 +29,9 @@ const ContactUs: React.FC = () => {
   ]
 
   const validationSchema = z.object({
+    company_name: z
+      .string()
+      .min(3, lang === 'id' ? 'Nama Perusahaan harus memiliki setidaknya 3 karakter' : 'Company Name must be at least 3 characters'),
     name: z.string().min(3, lang === 'id' ? 'Nama harus memiliki setidaknya 3 karakter' : 'Name must be at least 3 characters'),
     email: z.string().email(lang === 'id' ? 'Alamat email tidak valid' : 'Invalid email address'),
     phone: z.string().regex(phoneNumberRegex, lang === 'id' ? 'Nomor telepon tidak valid' : 'Phone number is invalid'),
@@ -95,6 +98,7 @@ const ContactUs: React.FC = () => {
           {isSuccess && <div className="mb-4 rounded-lg bg-green-600/10 px-3 py-4 text-green-600">{tl['inquiry-success']}</div>}
           {!!errorMessage && <div className="mb-4 rounded-lg bg-red-600/10 px-3 py-4 text-red-600">{errorMessage}</div>}
 
+          <Input className="mb-4" label={tl['company-name']} error={errors.company_name?.message} {...register('company_name')} />
           <Input className="mb-4" label={tl['full-name']} error={errors.name?.message} {...register('name')} />
           <Input className="mb-4" label={tl['email-address']} error={errors.email?.message} {...register('email')} />
           <Input

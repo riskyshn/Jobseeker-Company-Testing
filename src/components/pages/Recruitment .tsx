@@ -1,6 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
-import HomepageImage3 from '@/assets/Homepage 3.jpg'
 import Homecandidate from '@/assets/candidate-home.png'
 import Homecareersite from '@/assets/careersite-home.png'
 import HomeDashboard from '@/assets/dashboard-home.png'
@@ -13,14 +12,13 @@ const Recruitment: React.FC = () => {
   return (
     <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
       <div className="mr-5 flex flex-1 flex-col justify-center">
-        <h2 className="text-4xl font-bold text-secondary md:text-4xl">{tl['recruitment-title']}</h2>
+        <h2 className="text-4D4D4D text-4xl font-bold md:text-4xl">{tl['recruitment-title']}</h2>
         <p className="text-justify md:text-lg">
           <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis. Sed consequuntur doloribus sint repudiandae
           cupiditate? Modi nam doloribus eum, labore cumque dolores ducimus culpa cupiditate vel vitae quam ipsum.
         </p>
-
-        <ul className="mt-5 w-5/6">
+        <ul className="mt-5 w-5/6 max-md:mx-auto max-md:mb-5 max-md:text-center md:w-full">
           <li className="mb-6 cursor-pointer rounded-lg border-2 border-blue-100 bg-secondary">
             <div className="flex items-center p-3 hover:text-white">
               <Image className="p-1" src={Homecareersite} alt="Careersite" />
@@ -66,7 +64,7 @@ const Recruitment: React.FC = () => {
       </div>
       <div className="flex-1 items-center justify-center md:flex md:items-center">
         <div className="flex items-center">
-          <Image src={HomepageImage3} width={1500} alt="Software Demo" />
+          <iframe src="/Dashboard.mp4" frameBorder="5" height={700} width={700} />
         </div>
       </div>
     </section>

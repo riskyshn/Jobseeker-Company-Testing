@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import jhub from '@/assets/jimbaran-hub.svg'
 import arrowupright from '@/assets/arrowupright.svg'
+import playButton from '@/assets/play-button.png'
 
 const Optimized: React.FC = () => {
   const { tl } = useLanguage()
@@ -18,6 +19,7 @@ const Optimized: React.FC = () => {
           {tl.menu['contact-us']}
         </button>
         <button className="flex items-center justify-center gap-2 rounded-full border border-secondary-light bg-white px-8 py-2 text-sm font-semibold text-secondary-light transition-colors hover:bg-slate-400/80 md:px-12 md:py-3 md:text-base">
+          <Image className="p-1" src={playButton} alt="Careersite" />
           {tl['view-demo']}
         </button>
       </div>
