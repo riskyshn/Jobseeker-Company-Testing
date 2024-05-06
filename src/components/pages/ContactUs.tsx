@@ -35,7 +35,7 @@ const ContactUs: React.FC = () => {
     name: z.string().min(3, lang === 'id' ? 'Nama harus memiliki setidaknya 3 karakter' : 'Name must be at least 3 characters'),
     email: z.string().email(lang === 'id' ? 'Alamat email tidak valid' : 'Invalid email address'),
     phone: z.string().regex(phoneNumberRegex, lang === 'id' ? 'Nomor telepon tidak valid' : 'Phone number is invalid'),
-    im_a: z
+    source: z
       .string()
       .refine((v) => imAOptions.map((option) => option.value).includes(v), lang === 'id' ? 'Pilihan saya tidak valid' : 'I am is invalid'),
     message: z.string().min(1, lang === 'id' ? 'Pesan harus memiliki setidaknya 1 karakter' : 'Message must have at least 1 character'),
@@ -115,7 +115,7 @@ const ContactUs: React.FC = () => {
               }
             }}
           />
-          <Select className="mb-4" label={tl['source']} options={imAOptions} error={errors.im_a?.message} {...register('im_a')} />
+          <Select className="mb-4" label={tl['source']} options={imAOptions} error={errors.source?.message} {...register('source')} />
           <Textarea className="mb-4" label={tl.tell} rows={4} error={errors.message?.message} {...register('message')} />
           <div className="flex justify-center"></div>
           <button

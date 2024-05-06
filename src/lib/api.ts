@@ -37,11 +37,12 @@ export const fetchFeaturedArticles = async (): Promise<IArticle[]> => {
 }
 
 export const postInquiry = async (payload: {
+  company_name: string
   name: string
   email: string
   phone: string
   message: string
-  im_a: string
+  source: string
   token: string
   lang: string
 }): Promise<void> => {
