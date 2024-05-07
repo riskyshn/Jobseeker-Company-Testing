@@ -22,29 +22,19 @@ const HomeHero: React.FC = () => {
   }, [])
 
   return (
-    <section
-      className="mb-12 flex h-screen w-full items-center md:mb-24"
-      // style={{
-      //   background: `url('${Landing.src}')`,
-      //   backgroundPosition: 'center',
-      //   backgroundSize: 'cover',
-      // }}
-    >
-      <div className="container flex flex-row max-md:flex-col">
+    <section className="mb-12 flex h-screen w-full items-center md:mb-24">
+      <div className="container flex flex-row gap-6 max-md:flex-col-reverse md:gap-4">
         <div className="flex-content-wrapper flex flex-1 flex-col justify-center">
-          <h1 className="mb-3 text-4xl font-bold text-black md:text-6xl">{tl['all-in-one']}</h1>
+          <h1 className="text-default-text mb-3 text-4xl font-bold md:text-6xl">{tl['all-in-one']}</h1>
           <div className="mb-2 flex items-center gap-2">
             <span className="mb-4 text-4xl font-bold text-secondary md:text-6xl">{tl['hr-solution']}</span>
           </div>
-          <p className="mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptate quam velit soluta, harum ipsam odio. Earum hic laborum
-            error quos enim quia accusantium provident, eaque nemo labore doloribus velit?
-          </p>
+          <p className="mb-5 text-lg">{tl['hr-solution-desc']}</p>
           <div className="demo-button flex">
-            <button className="flex items-start justify-center gap-2 rounded-full bg-secondary-light px-8 py-2 text-sm font-semibold text-white transition-colors hover:bg-secondary-light/80 md:px-12 md:py-3 md:text-base">
+            <button className="flex items-center justify-center gap-2 rounded-full bg-secondary-light px-6 py-2 text-xs font-semibold text-white transition-colors hover:bg-secondary-light/80 md:py-3 md:text-base lg:px-12">
               {tl.menu['contact-us']}
             </button>
-            <button className="mx-5 flex items-start justify-center gap-2 rounded-full border border-secondary-light bg-white px-8 py-2 text-sm font-semibold text-secondary-light transition-colors hover:bg-slate-400/80 md:px-12 md:py-3 md:text-base">
+            <button className="mx-5 flex items-center justify-center gap-2 rounded-full border border-secondary-light bg-white px-6 py-2 text-xs font-semibold text-secondary-light transition-colors hover:bg-slate-400/80 md:py-3 md:text-base lg:px-12">
               <Image className="p-1" src={playButton} alt="Careersite" />
               {tl['view-demo']}
             </button>

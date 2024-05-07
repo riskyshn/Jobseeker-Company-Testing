@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Jobseeker Company - Connecting People with Opportunities",
-    "description": "OProduk kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
+    "description": "Produk kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
     "meta": {
       "name": "Jobseeker Company",
       "description": "Produk dan layanan kami dirancang untuk mendukung setiap bisnis menemukan talenta yang tepat, dan juga membantu setiap individu menemukan peluang karir yang cocok.",
@@ -35,7 +35,7 @@
     "contact-us": "Hubungi Kami"
   },
   "footer-contact": "Hubungi Kami",
-  "footer-copyright": "Hak Cipta © [YEAR] Jobseeker Company",
+  "footer-copyright": "Hak Cipta © [YEAR] Jobseeker Software",
   "footer-privacy-policy": "Kebijakan Privasi",
   "footer-terms-of-service": "Syarat Layanan",
   "view-demo": "Lihat Demo",
@@ -120,8 +120,9 @@
   "recruitment-title": "Proses Penerimaan",
   "human-resource": "Sumber Daya Manusia",
   "product-demo": "Demo Produk",
-  "all-in-one": "Satu-Untuk-Semua",
+  "all-in-one": "Solusi Lengkap",
   "hr-solution": "Kebutuhan HR Anda",
+  "hr-solution-desc": "Lakukan proses rekrutmen, pengaturan data kandidat, absensi, administrasi karyawan, dan penggajian dengan mudah",
   "optimized": "Pertumbuhan & Efisiensi yang Dioptimalkan",
   "inquiry": "Hubungi Tim Kami",
   "inquiry-desc": "Silakan isi form di bawah ini untuk memulai",

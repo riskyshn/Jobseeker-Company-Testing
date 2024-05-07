@@ -20,6 +20,7 @@ module.exports = {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        'main-text': '#393938',
         primary: '#E4007E',
         secondary: '#050774',
         'secondary-light': '#0A84FF',

@@ -6,13 +6,10 @@ const WhatWeDo: React.FC = () => {
   const { tl } = useLanguage()
 
   return (
-    <section className="container flex flex-row py-12 max-md:flex-col md:py-24">
-      <div className="flex flex-col justify-center">
-        <h2 className="text-4D4D4D text-4xl font-bold md:text-4xl">{tl['trusted']}</h2>
-        <p className="md:text-lg">
-          <br />
-          {tl['trusted-detail']}
-        </p>
+    <section className="container flex flex-row gap-4 py-12 max-md:flex-col md:py-24">
+      <div className="flex flex-col justify-center gap-3">
+        <h2 className="text-default-text text-3xl font-bold md:text-4xl">{tl['trusted']}</h2>
+        <p className="md:text-lg">{tl['trusted-detail']}</p>
       </div>
       <div className="items-center justify-center md:flex md:items-center">
         <div className="">

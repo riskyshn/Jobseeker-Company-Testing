@@ -1,10 +1,10 @@
 import HomeHero from '@/components/pages/HomeHero'
 import WhatWeDo from '@/components/pages/TrustedBy'
 import HumanResource from '@/components/pages/HumanResource'
-import HowWeHelp from '@/components/pages/Product'
+import ProductDemo from '@/components/pages/Product'
 import FeaturedArticles from '@/components/pages/FeaturedArticles'
 import Recruitment from '@/components/pages/Recruitment '
-import Optimized from '@/components/pages/Optimized'
+import Testimony from '@/components/pages/Testimony'
 
 // type PropTypes = {
 //   articles: IArticle[]
@@ -17,8 +17,8 @@ export default function Home() {
       <WhatWeDo />
       <Recruitment />
       <HumanResource />
-      <HowWeHelp />
-      <Optimized />
+      <ProductDemo />
+      <Testimony />
       <FeaturedArticles />
     </>
   )

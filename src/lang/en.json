@@ -35,7 +35,7 @@
     "contact-us": "Contact Us"
   },
   "footer-contact": "Contact Us",
-  "footer-copyright": "Copyright © [YEAR] Jobseeker Company",
+  "footer-copyright": "Copyright © [YEAR] Jobseeker Software",
   "footer-privacy-policy": "Privacy Policy",
   "footer-terms-of-service": "Terms of Service",
   "view-demo": "View Demo",
@@ -123,6 +123,7 @@
   "product-demo": "Product Demo",
   "all-in-one": "Your All-In-One",
   "hr-solution": "HR Solution",
+  "hr-solution-desc": "Seamlessly handles recruitment, candidate management, attendance tracking, employee administration, and payroll processing.",
   "optimized": "Optimized Growth & Efficiency",
   "inquiry": "Reach Out to Our Team",
   "inquiry-desc": "Please fill out the form below to start",
