@@ -36,7 +36,7 @@ const HumanResource: React.FC = () => {
         )}
       </div>
       <div className="mr-5 flex flex-1 flex-col justify-center gap-2">
-        <h2 className="text-main-text text-2xl font-bold md:text-4xl">{tl['human-resource']}</h2>
+        <h2 className="text-2xl font-bold text-main-text md:text-4xl">{tl['human-resource']}</h2>
         <p className="text-justify md:mt-4 md:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing edivt. Maiores, veritatis. Sed consequuntur doloribus sint repudiandae
           cupiditate? Modi nam doloribus eum, labore cumque dolores ducimus culpa cupiditate vel vitae quam ipsum.

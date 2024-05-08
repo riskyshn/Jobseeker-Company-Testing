@@ -51,13 +51,16 @@ export const postInquiry = async (payload: {
 
 export const fetchVacancyList = async (params: { vacancy_name?: string; city_name?: string } = {}): Promise<IVacancy[]> => {
   try {
-    const { data } = await axios.get('https://vacancy.api-jobseeker.site/find-vacancy/software?page=1&limit=10&keyword=admin&city_name=jakarta', {
-      params,
-      headers: {
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwIiwibmFtZSI6Ikd1ZXN0IiwiaWF0IjoiRGVmYXVsdCBHdWVzdCBVc2VyIn0.jZrdQzdVcW-L1jRtZ6eZfciKE0mUvP17Je05zbPSpH8',
+    const { data } = await axios.get(
+      'https://vacancy.api-jobseeker.site/find-vacancy/software?page=1&limit=10&keyword=admin&city_name=jakarta',
+      {
+        params,
+        headers: {
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwIiwibmFtZSI6Ikd1ZXN0IiwiaWF0IjoiRGVmYXVsdCBHdWVzdCBVc2VyIn0.jZrdQzdVcW-L1jRtZ6eZfciKE0mUvP17Je05zbPSpH8',
+        },
       },
-    })
+    )
     return data.data
   } catch (error) {
     // eslint-disable-next-line no-console

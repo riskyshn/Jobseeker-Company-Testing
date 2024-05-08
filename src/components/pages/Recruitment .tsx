@@ -19,7 +19,7 @@ const Recruitment: React.FC = () => {
   return (
     <section className="container flex flex-row gap-5 py-12 max-md:flex-col-reverse md:gap-10 md:py-24">
       <div className="mr-5 flex flex-1 flex-col justify-center gap-3">
-        <h2 className="text-main-text text-2xl font-bold md:text-4xl">{tl['recruitment-title']}</h2>
+        <h2 className="text-2xl font-bold text-main-text md:text-4xl">{tl['recruitment-title']}</h2>
         <p className="text-justify md:mt-4 md:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing edivt. Maiores, veritatis. Sed consequuntur doloribus sint repudiandae
           cupiditate? Modi nam doloribus eum, labore cumque dolores ducimus culpa cupiditate vel vitae quam ipsum.
