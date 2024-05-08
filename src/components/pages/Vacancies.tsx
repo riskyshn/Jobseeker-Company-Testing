@@ -80,7 +80,7 @@ const Vacancies: React.FC<{ vacancies: IVacancy[] }> = ({ vacancies }) => {
               onClick={() => setIsModalOpen(true)}
             >
               <span className="flex items-center justify-between">
-                <span className="block text-sm uppercase text-secondary">{v.employer_name}</span>
+                <span className="block text-sm uppercase text-secondary">{v.company_name}</span>
                 <span className="flex items-center justify-center gap-1 rounded-full bg-green-600/10 px-2 py-[2px] text-xs text-green-800">
                   <FiClock size={12} className="block" />
                   {formatDate(new Date(v.publish_date), lang)}

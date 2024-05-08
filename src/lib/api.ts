@@ -51,7 +51,7 @@ export const postInquiry = async (payload: {
 
 export const fetchVacancyList = async (params: { vacancy_name?: string; city_name?: string } = {}): Promise<IVacancy[]> => {
   try {
-    const { data } = await axios.get('https://vacancy.api-jobseeker.site/find-vacancy/jobseeker-vacancy', {
+    const { data } = await axios.get('https://vacancy.api-jobseeker.site/find-vacancy/software?page=1&limit=10&keyword=admin&city_name=jakarta', {
       params,
       headers: {
         Authorization:

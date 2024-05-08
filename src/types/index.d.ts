@@ -9,9 +9,9 @@ export interface IArticle {
 
 export interface IVacancy {
   vacancy_id: number
-  employer_name: string
-  publish_date: string
   vacancy_name: string
+  publish_date: string
+  company_name: string
   city_name: string
   job_type_desc: string
 }
